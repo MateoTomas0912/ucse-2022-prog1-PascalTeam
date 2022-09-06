@@ -8,5 +8,6 @@ namespace Logica
 {
     public class Logica
     {
+        //Comentario de prueba
     }
 }
