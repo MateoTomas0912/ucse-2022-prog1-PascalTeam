@@ -13,6 +13,6 @@ namespace Logica.Contratos
         public string NombreReceta { get; set; }
         public List<ProductoCantidad> ProductosEnReceta { get; set; }
         public bool EsSaludable { get; set; }
-        public MomentoReceta MomentoReceta { get; set; }
+        public MomentosDelDia MomentoReceta { get; set; }
     }
 }
