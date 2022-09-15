@@ -9,6 +9,8 @@ namespace Logica.Contratos
     //Lista con los productos disponibles
     public class ListaDespensa
     {
-        public List<Producto> ProductosDisponibles { get; set; }
+        public List<Producto> Productos { get; set; }
+
+        //ABM de Ingredientes en la lista
     }
 }

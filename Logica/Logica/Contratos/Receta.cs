@@ -14,5 +14,9 @@ namespace Logica.Contratos
         public List<ProductoCantidad> ProductosEnReceta { get; set; }
         public bool EsSaludable { get; set; }
         public MomentosDelDia MomentoReceta { get; set; }
+
+        //ABM de recetas
+
+        //Descontar productos utilizados de la lista despensa si se carga como comida 
     }
 }

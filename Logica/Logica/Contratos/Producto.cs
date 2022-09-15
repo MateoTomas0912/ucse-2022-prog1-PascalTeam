@@ -15,5 +15,9 @@ namespace Logica.Contratos
         public double Cantidad { get; set; }
         public double CantidadMinima { get; set; }
         public string UnidadMedida { get; set; }
+
+        //ABM de producto
+
+        //Agregar Producto a ListaSuper si se baja de la cantidad minima
     }
 }

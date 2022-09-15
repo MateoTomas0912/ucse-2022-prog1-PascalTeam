@@ -9,5 +9,8 @@ namespace Logica.Contratos
     public class ListaSuper : ListaDespensa 
     {
         public double CostoTotalCompra { get; set; }
+
+        //Visualizar costos por producto 
+        //Aplicacion de 4 filtros
     }
 }
