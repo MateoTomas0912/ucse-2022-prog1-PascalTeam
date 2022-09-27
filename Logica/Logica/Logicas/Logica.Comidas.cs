@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica
+namespace Logica.Logicas
 {
-    public class Logica
-    { 
-
+    public class LogicaComidas : Archivo
+    {
+        List<Comida> Comidas { get; set; }
     }
 }

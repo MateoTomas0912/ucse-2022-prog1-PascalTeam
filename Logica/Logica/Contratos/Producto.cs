@@ -11,10 +11,6 @@ namespace Logica.Contratos
         public int Codigo { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }
-        public Categorias Categoria { get; set; }
-        public double Cantidad { get; set; }
-        public double CantidadMinima { get; set; }
-        public string UnidadMedida { get; set; }
 
         //ABM de producto
 

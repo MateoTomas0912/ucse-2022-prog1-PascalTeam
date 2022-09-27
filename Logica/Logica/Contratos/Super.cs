@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    //Lista con los productos disponibles
-    public class ListaDespensa
+    public class Super  
     {
         public List<Producto> Productos { get; set; }
 
-        //ABM de Ingredientes en la lista
+        //Visualizar costos por producto 
+
+        //Aplicacion de 4 filtros
     }
 }

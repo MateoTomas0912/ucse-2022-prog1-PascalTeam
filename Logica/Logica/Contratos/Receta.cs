@@ -11,9 +11,11 @@ namespace Logica.Contratos
     {
         public string Codigo { get; set; }
         public string Nombre { get; set; }
-        public List<ProductoCantidad> Productos { get; set; }
+        public List<Producto> ProductosNecesarios { get; set; }
         public bool Saludable { get; set; }
         public MomentosDelDia Momento { get; set; }
+
+        public List<Receta> Recetas { get; set; }
 
         //ABM de recetas
 

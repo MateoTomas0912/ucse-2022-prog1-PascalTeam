@@ -11,5 +11,7 @@ namespace Logica
     {
         public Receta RecetaElegida { get; set; }
         public DateTime RegistroDeComida { get; set; }
+
+        //ABM de comidas
     }
 }

@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    //Productos con la cantidad necesaria por receta / comida
-    public class ProductoCantidad : Producto
+    public class Pescado : PorPeso
     {
-        public double CantidadNecesaria { get; set; }
     }
 }
