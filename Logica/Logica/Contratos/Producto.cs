@@ -8,7 +8,7 @@ namespace Logica.Contratos
 {
     public class Producto
     {
-        public int CodProducto { get; set; }
+        public int Codigo { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }
         public Categorias Categoria { get; set; }

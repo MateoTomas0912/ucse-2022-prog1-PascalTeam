@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contratos\Enumerador.cs" />
+    <Compile Include="Contratos\Comida.cs" />
+    <Compile Include="Contratos\PropiedadesAlimentosCtes.cs" />
     <Compile Include="Contratos\ListaDespensa.cs" />
     <Compile Include="Contratos\ListaSuper.cs" />
     <Compile Include="Contratos\Producto.cs" />
