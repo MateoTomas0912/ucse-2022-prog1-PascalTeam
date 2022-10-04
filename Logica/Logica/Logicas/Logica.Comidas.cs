@@ -8,6 +8,40 @@ namespace Logica.Logicas
 {
     public class LogicaComidas : Archivo
     {
-        List<Comida> Comidas { get; set; }
+        private static List<Comida> comidas { get; set; }
+
+        public static List<Comida> ObtenerComidas()
+        {
+            //Comidas se iguala al resultado de la lectura del JSON 
+
+            return comidas;
+        }
+
+        internal static void CrearActualizarComida(Comida comida)
+        {
+            if (string.IsNullOrEmpty(comida.Codigo)) // crear nuevo
+            {
+                //generar codigo
+                comidas.Add(comida);
+            }
+            else
+            {
+                //edito el usuario que tenga el codigo
+                foreach (var u in comidas)
+                {
+                    if (u.Codigo == comida.Codigo) //este quiero editar!
+                    {
+                        //Edicion reemplazando los datos
+                        u.RecetaElegida = comida.RecetaElegida;
+                        u.RegistroDeComida = comida.RegistroDeComida;
+                    }
+                }
+            }
+        }
+
+        internal static void EliminarComida(Comida comida)
+        {
+            comidas.Remove(comida);
+        }
     }
 }

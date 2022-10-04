@@ -41,14 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\Bebida.cs" />
+    <Compile Include="Contratos\Carne.cs" />
     <Compile Include="Contratos\Comida.cs" />
+    <Compile Include="Contratos\Fruta.cs" />
+    <Compile Include="Contratos\HortalizaVerdura.cs" />
+    <Compile Include="Contratos\Lacteo.cs" />
+    <Compile Include="Contratos\Panaderia.cs" />
+    <Compile Include="Contratos\Pescado.cs" />
+    <Compile Include="Contratos\PorCantidad.cs" />
+    <Compile Include="Contratos\PorPeso.cs" />
     <Compile Include="Contratos\PropiedadesAlimentosCtes.cs" />
-    <Compile Include="Contratos\ListaDespensa.cs" />
-    <Compile Include="Contratos\ListaSuper.cs" />
+    <Compile Include="Contratos\Despensa.cs" />
+    <Compile Include="Contratos\Super.cs" />
     <Compile Include="Contratos\Producto.cs" />
-    <Compile Include="Contratos\ProductoCantidad.cs" />
+    <Compile Include="Contratos\Queso.cs" />
     <Compile Include="Contratos\Receta.cs" />
-    <Compile Include="Logica.cs" />
+    <Compile Include="Logicas\Archivo.cs" />
+    <Compile Include="Logicas\Logica.Comidas.cs" />
+    <Compile Include="Logicas\LogicaDespensa.cs" />
+    <Compile Include="Logicas\LogicaRecetas.cs" />
+    <Compile Include="Logicas\LogicaSuper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

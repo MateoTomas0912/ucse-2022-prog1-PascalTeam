@@ -9,9 +9,15 @@ namespace Logica
 {
     public  class Comida
     {
+        public string Codigo { get; set; }
         public Receta RecetaElegida { get; set; }
         public DateTime RegistroDeComida { get; set; }
 
-        //ABM de comidas
+        public Comida(string codigo, Receta recetaElegida, DateTime registroDeComida)
+        {
+            Codigo = codigo;
+            RegistroDeComida = registroDeComida;
+            RecetaElegida = recetaElegida;
+        }
     }
 }
