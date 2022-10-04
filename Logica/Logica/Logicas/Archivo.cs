@@ -31,28 +31,6 @@ namespace Logica.Logicas
             }
         }
 
-
-
-
-
-
-
-        public void lecturaArchivos(string path )
-        {
-            if (!File.Exists(path ))
-            {
-                camiones = leerListaCamiones();
-                if (File.Exists(pathPaquetes))
-                {
-
-                    paquetes = leerListaPaquetes();
-                }
-            }
-
-        }
-
-
-
         //Metodos para leer y escribir
     }
 }
