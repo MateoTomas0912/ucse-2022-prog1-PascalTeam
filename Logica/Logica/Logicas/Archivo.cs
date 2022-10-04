@@ -16,21 +16,23 @@ namespace Logica.Logicas
             using (StreamWriter writer = new StreamWriter(path , false))
             {
                 string Objeto  = JsonConvert.SerializeObject(objeto);
-                writer.Write(path );
+                writer.Write(Objeto);
                 return true;
             }
         }
 
-        private List<string> Lectura (string path , string objeto)
+        private List<string[]> Lectura (string path)
         {
             using (StreamReader reader = new StreamReader(path))
             {
+                if (!File.Exists(path))
+                {
+                    File.Create(path);
+                }
                 string json = reader.ReadToEnd();
-                List<string > Objeto  = JsonConvert.DeserializeObject<List<string >>(json);
+                List<string[]> Objeto  = JsonConvert.DeserializeObject<List<string[]>>(json);
                 return Objeto ;
             }
         }
-
-        //Metodos para leer y escribir
     }
 }

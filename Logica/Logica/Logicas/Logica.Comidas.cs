@@ -8,11 +8,10 @@ namespace Logica.Logicas
 {
     public class LogicaComidas : Archivo
     {
-        private static List<Comida> comidas { get; set; }
+        private static List<Comida> comidas = null;
 
         public static List<Comida> ObtenerComidas()
         {
-            //Comidas se iguala al resultado de la lectura del JSON 
 
             return comidas;
         }
