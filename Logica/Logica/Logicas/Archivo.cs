@@ -11,23 +11,23 @@ namespace Logica.Logicas
 {
     public abstract class Archivo
     {
-        private bool escribirListaPaquetes(string path, string objeto)
+        private bool Escritura (string path, string objeto)
         {
             using (StreamWriter writer = new StreamWriter(path , false))
             {
-                string serialCamiones = JsonConvert.SerializeObject(objeto);
-                writer.Write(serialCamiones);
+                string Objeto  = JsonConvert.SerializeObject(objeto);
+                writer.Write(path );
                 return true;
             }
         }
 
-        private List<string> leerListaPaquetes(string path , string objeto)
+        private List<string> Lectura (string path , string objeto)
         {
             using (StreamReader reader = new StreamReader(path))
             {
                 string json = reader.ReadToEnd();
-                List<string > PaquetesDesdeArchivo = JsonConvert.DeserializeObject<List<string >>(json);
-                return PaquetesDesdeArchivo;
+                List<string > Objeto  = JsonConvert.DeserializeObject<List<string >>(json);
+                return Objeto ;
             }
         }
 
