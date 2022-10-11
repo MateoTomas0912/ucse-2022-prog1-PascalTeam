@@ -57,7 +57,6 @@
     <Compile Include="Contratos\PorPeso.cs" />
     <Compile Include="Contratos\PropiedadesAlimentosCtes.cs" />
     <Compile Include="Contratos\Despensa.cs" />
-    <Compile Include="Contratos\Super.cs" />
     <Compile Include="Contratos\Producto.cs" />
     <Compile Include="Contratos\Queso.cs" />
     <Compile Include="Contratos\Receta.cs" />
