@@ -9,29 +9,39 @@ using Newtonsoft.Json;
 
 namespace Logica.Logicas
 {
-    public abstract class Archivo
+    public  class Archivo
     {
-        private bool Escritura (string path, string objeto)
+
+        public string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + " \\JSON ";
+        public bool Escritura (string path, string objeto)
         {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
             using (StreamWriter writer = new StreamWriter(path , false))
             {
-                string Objeto  = JsonConvert.SerializeObject(objeto);
-                writer.Write(Objeto);
+                writer.Write(objeto);
                 return true;
             }
         }
 
-        private List<string[]> Lectura (string path)
+        public string  Lectura (string path)
         {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
             using (StreamReader reader = new StreamReader(path))
             {
-                if (!File.Exists(path))
+                if (!File.Exists( path))
                 {
                     File.Create(path);
                 }
                 string json = reader.ReadToEnd();
-                List<string[]> Objeto  = JsonConvert.DeserializeObject<List<string[]>>(json);
-                return Objeto ;
+          
+                return json ;
             }
         }
     }
