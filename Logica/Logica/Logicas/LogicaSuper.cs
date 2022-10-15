@@ -13,14 +13,15 @@ namespace Logica.Logicas
 
         public static List<Producto> ObtenerListaSupermercado()
         {
-            //Lista supermercado se iguala al resultado de la lectura del JSON 
-
+            //Lista supermercado se iguala al resultado de la lectura del JSON
+            Archivo archivo = new Archivo();
+            Supermercado = archivo.Lectura();
             return Supermercado;
         }
         public bool CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
         {
             Supermercado.Add(producto);
-            return true;
+            return true; 
         }
         public bool VaciarLista() //Método para vaciar la lista del super
         {

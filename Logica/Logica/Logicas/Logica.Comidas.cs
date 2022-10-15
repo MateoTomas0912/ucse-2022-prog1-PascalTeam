@@ -12,7 +12,7 @@ namespace Logica.Logicas
 
         public static List<Comida> ObtenerComidas()
         {
-
+            //Leer el JSON de Comidas
             return comidas;
         }
 

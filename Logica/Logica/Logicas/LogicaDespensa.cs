@@ -9,5 +9,7 @@ namespace Logica.Logicas
     public class LogicaDespensa : Archivo 
     {
         List<Contratos.Despensa> Despensa { get; set; }
+
+        //Se iguala la lista de despensa a la lectura del JSON
     }
 }
