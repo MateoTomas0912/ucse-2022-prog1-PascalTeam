@@ -10,7 +10,6 @@ namespace Logica.Logicas
     public class LogicaSuper : Archivo
     {
         private static List<Producto> Supermercado { get; set; }
-        bool Permitir;
 
         public static List<Producto> ObtenerListaSupermercado()
         {
@@ -25,16 +24,8 @@ namespace Logica.Logicas
         }
         public bool VaciarLista() //Método para vaciar la lista del super
         {
-            if (Permitir == true) //Si ya se compro
-            {
-                Supermercado.Clear(); //Vacio la lista
-                return true;
-            }
-            else
-            {
-                return false; //En caso de que no se pueda no me dejaria
-            }
-
+            Supermercado.Clear(); //Vacio la lista
+            return true;           
         }
     }
 }

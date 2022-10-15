@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    public class Producto
+    public abstract class Producto 
     {
         public int Codigo { get; set; }
         public string Nombre { get; set; }

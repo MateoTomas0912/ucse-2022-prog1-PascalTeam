@@ -4,44 +4,60 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Logica.Contratos;
 using Newtonsoft.Json;
 
 namespace Logica.Logicas
 {
-    public  class Archivo
+    public class Archivo
     {
+        public string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
 
-        public string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + " \\JSON ";
-        public bool Escritura (string path, string objeto)
+        public void Escritura (string path, List<Producto> objeto)
         {
-            if (!Directory.Exists(path))
+            string pathEscritura = pathDirectorio + path;
+
+            if (!Directory.Exists(pathDirectorio))
             {
-                Directory.CreateDirectory(path);
+                Directory.CreateDirectory(pathDirectorio);
             }
-            using (StreamWriter writer = new StreamWriter(path , false))
+
+            List<Panaderia> panaderia = new List<Panaderia>();
+
+            foreach (var producto in objeto)
             {
-                writer.Write(objeto);
-                return true;
+                if(producto is Panaderia)
+                {
+                    panaderia.Add((Panaderia)producto);
+                    string serial = JsonConvert.SerializeObject(panaderia);
+                    Serializar(pathEscritura, serial);
+                }
             }
         }
 
-        public string  Lectura (string path)
+        private void Serializar(string path, string serial)
         {
-            if (!Directory.Exists(path))
+            using (StreamWriter writer = new StreamWriter(path, false))
             {
-                Directory.CreateDirectory(path);
+                writer.Write(serial);
             }
+        }
 
-            using (StreamReader reader = new StreamReader(path))
+        public List<Producto> Lectura ()
+        {
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathRenato = pathDirectorio + "panaderia.txt";
+            using (StreamReader reader = new StreamReader(pathRenato))
             {
-                if (!File.Exists( path))
+                if (!File.Exists( pathRenato))
                 {
-                    File.Create(path);
+                    List<Producto> productosVacios = new List<Producto>();
+                    return productosVacios;
                 }
                 string json = reader.ReadToEnd();
+                List<Producto> productos = JsonConvert.DeserializeObject<List<Producto>>(json);
           
-                return json ;
+                return productos ;
             }
         }
     }

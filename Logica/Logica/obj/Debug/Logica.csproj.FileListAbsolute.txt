@@ -4,3 +4,6 @@ C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.dll
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.pdb
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CopyComplete
