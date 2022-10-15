@@ -11,12 +11,18 @@ namespace Logica.Logicas
     {
         private static List<Producto> Supermercado { get; set; }
 
-        public static List<Producto> ObtenerListaSupermercado()
+        public static List<Producto> LecturaSuper()
         {
             //Lista supermercado se iguala al resultado de la lectura del JSON
             Archivo archivo = new Archivo();
             Supermercado = archivo.Lectura();
             return Supermercado;
+        }
+        public void EscribirSuper()
+        {
+            Archivo archivo = new Archivo();
+            string pathDespensa = "super.txt";
+            archivo.Escritura(pathDespensa, Supermercado);
         }
         public bool CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
         {
