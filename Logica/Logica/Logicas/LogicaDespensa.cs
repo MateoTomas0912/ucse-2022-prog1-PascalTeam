@@ -11,15 +11,16 @@ namespace Logica.Logicas
     {
         private List<Producto> Despensa { get; set; }
 
-        Archivo archivo = new Archivo();
 
         public void LeerDespensa()
         {
+            Archivo archivo = new Archivo();
             Despensa = archivo.Lectura();
         }
 
         public void EscribirDespensa()
         {
+            Archivo archivo = new Archivo();
             string pathDespensa = "despensa.txt";
             archivo.Escritura(pathDespensa, Despensa);
         }
@@ -33,12 +34,11 @@ namespace Logica.Logicas
         {
             if (!Despensa.Contains(producto)) // crear nuevo
             {
-                //generar codigo
                 Despensa.Add(producto);
             }
             else
             {
-                //edito el usuario que tenga el codigo
+                //edito la panaderia que tenga el codigo
                 foreach (var item in Despensa)
                 {
                     if (item.Codigo == producto.Codigo) //este quiero editar!

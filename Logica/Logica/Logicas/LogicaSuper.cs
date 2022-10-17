@@ -18,21 +18,21 @@ namespace Logica.Logicas
             Supermercado = archivo.Lectura();
             return Supermercado;
         }
-        public void EscribirSuper()
+        public static void EscribirSuper()
         {
             Archivo archivo = new Archivo();
             string pathDespensa = "super.txt";
             archivo.Escritura(pathDespensa, Supermercado);
         }
-        public bool CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
+        public static void CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
         {
             Supermercado.Add(producto);
-            return true; 
+            EscribirSuper();
         }
-        public bool VaciarLista() //Método para vaciar la lista del super
+        public static void VaciarLista() //Método para vaciar la lista del super
         {
             Supermercado.Clear(); //Vacio la lista
-            return true;           
+            EscribirSuper();
         }
     }
 }

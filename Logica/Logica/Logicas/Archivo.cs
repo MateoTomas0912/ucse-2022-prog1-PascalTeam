@@ -49,10 +49,10 @@ namespace Logica.Logicas
         public List<Producto> Lectura()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
-            string pathRenato = pathDirectorio + "productos.txt";
-            using (StreamReader reader = new StreamReader(pathRenato))
+            string pathProducto = pathDirectorio + "productos.txt";
+            using (StreamReader reader = new StreamReader(pathProducto))
             {
-                if (!File.Exists(pathRenato))
+                if (!File.Exists(pathProducto))
                 {
                     List<Producto> productosVacios = new List<Producto>();
                     return productosVacios;
