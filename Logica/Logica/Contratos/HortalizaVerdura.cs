@@ -24,6 +24,9 @@ namespace Logica.Contratos
                 {
                     if (item.Codigo == producto.Codigo) //este quiero editar!
                     {
+                        item.Nombre = producto.Nombre;
+                        item.Precio = producto.Precio;
+                        item.CantidadMinima = producto.CantidadMinima;
                         item.Cantidad = producto.Cantidad;
                         if (item.Cantidad <= item.CantidadMinima) //Lo envio a la lista del super
                         {
