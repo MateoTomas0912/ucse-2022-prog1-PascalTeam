@@ -35,5 +35,9 @@ namespace Logica.Contratos
                 }
             }
         }
+        public void EliminarProducto(Panaderia producto)
+        {
+            productosPanaderia.RemoveAll(x => x == producto);
+        }
     }
 }
