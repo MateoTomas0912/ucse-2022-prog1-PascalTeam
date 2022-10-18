@@ -1,6 +1,8 @@
 ﻿using Logica.Contratos;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,20 +11,41 @@ namespace Logica.Logicas
 {
     public class LogicaDespensa : Archivo 
     {
-        private List<Producto> Despensa { get; set; }
+        public static List<Producto> Despensa = new List<Producto>();
 
-
-        public void LeerDespensa()
+        public static void EscrituraDespensa()
         {
-            Archivo archivo = new Archivo();
-            Despensa = archivo.Lectura();
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathEscritura = pathDirectorio + "despensa.txt";
+
+            if (!Directory.Exists(pathDirectorio))
+            {
+                Directory.CreateDirectory(pathDirectorio);
+            }
+
+            string serialProductos = JsonConvert.SerializeObject(Despensa);
+
+            using (StreamWriter writer = new StreamWriter(pathEscritura, false))
+            {
+                writer.Write(serialProductos);
+            }
         }
 
-        public void EscribirDespensa()
+        public static List<Producto> LecturaDespensa()
         {
-            Archivo archivo = new Archivo();
-            string pathDespensa = "despensa.txt";
-            archivo.Escritura(pathDespensa, Despensa);
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathProducto = pathDirectorio + "despensa.txt";
+            using (StreamReader reader = new StreamReader(pathProducto))
+            {
+                if (!File.Exists(pathProducto))
+                {
+                    List<Producto> productosVacios = new List<Producto>();
+                    return productosVacios;
+                }
+                string json = reader.ReadToEnd();
+                List<Producto> despensa = JsonConvert.DeserializeObject<List<Producto>>(json);
+                return despensa;
+            }
         }
 
         public void EliminarProducto(Producto producto)
@@ -30,7 +53,7 @@ namespace Logica.Logicas
             Despensa.Remove(producto);
         }
 
-        public void CrearActualizarProducto(Producto producto)
+        public void CrearActualizarDespensa(Producto producto)
         {
             if (!Despensa.Contains(producto)) // crear nuevo
             {
@@ -45,6 +68,7 @@ namespace Logica.Logicas
                     {
                         item.Nombre = producto.Nombre;
                         item.Precio = producto.Precio;
+                        item.Codigo = producto.Codigo;
                     }
                 }
             }

@@ -9,14 +9,13 @@ namespace Logica.Contratos
     //Clase para generar recetas / comidas
     public class Receta
     {
-        public Receta(string codigo, string nombre, List<Producto> productosNecesarios, bool saludable, MomentosDelDia momento, List<Receta> recetas)
+        public Receta(string codigo, string nombre, List<Producto> productosNecesarios, bool saludable, MomentosDelDia momento)
         {
             Codigo = codigo;
             Nombre = nombre;
             ProductosNecesarios = productosNecesarios;
             Saludable = saludable;
             Momento = momento;
-            Recetas = recetas;
         } 
 
         public string Codigo { get; set; }
@@ -24,11 +23,5 @@ namespace Logica.Contratos
         public List<Producto> ProductosNecesarios { get; set; }
         public bool Saludable { get; set; }
         public MomentosDelDia Momento { get; set; }
-
-        public List<Receta> Recetas { get; set; }
-
-        //ABM de recetas
-
-        //Descontar productos utilizados de la lista despensa si se carga como comida 
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +10,41 @@ namespace Logica.Logicas
 {
     public class LogicaComidas : Archivo
     {
-        private static List<Comida> comidas = null;
+        private static List<Comida> comidas = new List<Comida>();
 
-        public static List<Comida> ObtenerComidas()
+        public static void EscrituraComidas()
         {
-            //Leer el JSON de Comidas
-            return comidas;
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathEscritura = pathDirectorio + "comidas.txt";
+
+            if (!Directory.Exists(pathDirectorio))
+            {
+                Directory.CreateDirectory(pathDirectorio);
+            }
+
+            string serialProductos = JsonConvert.SerializeObject(comidas);
+
+            using (StreamWriter writer = new StreamWriter(pathEscritura, false))
+            {
+                writer.Write(serialProductos);
+            }
+        }
+
+        public static List<Comida> LecturaComidas()
+        {
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathProducto = pathDirectorio + "comidas.txt";
+            using (StreamReader reader = new StreamReader(pathProducto))
+            {
+                if (!File.Exists(pathProducto))
+                {
+                    List<Comida> productosVacios = new List<Comida>();
+                    return productosVacios;
+                }
+                string json = reader.ReadToEnd();
+                List<Comida> comidas = JsonConvert.DeserializeObject<List<Comida>>(json);
+                return comidas;
+            }
         }
 
         internal static void CrearActualizarComida(Comida comida)

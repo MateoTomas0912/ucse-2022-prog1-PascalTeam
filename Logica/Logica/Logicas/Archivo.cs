@@ -16,7 +16,6 @@ namespace Logica.Logicas
         public void Escritura(string path, List<Producto> objeto)
         {
             string pathEscritura = pathDirectorio + path;
-            string pathProductos = pathDirectorio + "productos.txt";
 
             if (!Directory.Exists(pathDirectorio))
             {
@@ -34,8 +33,6 @@ namespace Logica.Logicas
                     Serializar(pathEscritura, serial);
                 }
             }
-            string serialProductos = JsonConvert.SerializeObject(objeto);
-            Serializar(pathProductos, serialProductos);
         }
 
         private void Serializar(string path, string serial)
