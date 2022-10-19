@@ -12,10 +12,6 @@ namespace PantallasWinForm
 {
     public partial  class Grillas : Form
     {
-        public Grillas ()
-        {
-            Initi alizeComponent();  
-        }
 
     }
 }

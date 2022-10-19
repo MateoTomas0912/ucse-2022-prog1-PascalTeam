@@ -30,7 +30,8 @@ namespace Logica.Contratos
                         item.Cantidad = producto.Cantidad;
                         if (item.Cantidad <= item.CantidadMinima) //Lo envio a la lista del super
                         {
-                            Logicas.LogicaSuper.CargarLista(item);
+                            Logicas.LogicaSuper logicaSuper = new Logicas.LogicaSuper();
+                            logicaSuper.EscribirSuper();
                         }
                     }
                 }

@@ -34,7 +34,8 @@ namespace Logica.Contratos
                         item.Litros = producto.Litros;
                         if (item.Litros <= item.LitrosMinimos) //Lo envio a la lista del super
                         {
-                            Logicas.LogicaSuper.CargarLista(item);
+                            Logicas.LogicaSuper logicaSuper = new Logicas.LogicaSuper();
+                            logicaSuper.CargarLista(item);
                         }
                     }
                 }

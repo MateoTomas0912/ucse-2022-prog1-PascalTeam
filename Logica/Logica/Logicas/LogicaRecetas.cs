@@ -13,7 +13,7 @@ namespace Logica.Logicas
     {
         private static List<Receta> recetas = null;
 
-        internal static void CrearActualizarRecetas(Receta receta)
+        public void CrearActualizarRecetas(Receta receta)
         {
             if (string.IsNullOrEmpty(receta.Codigo)) // crear nuevo
             {
@@ -37,32 +37,22 @@ namespace Logica.Logicas
                 }
             }
 
-            string path = "recetas.txt";
-            EscrituraRecetas();
+           EscrituraRecetas();
         }
 
-        internal static void EliminarReceta(Receta receta)
+        public void EliminarReceta(Receta receta)
         {
             recetas.Remove(receta);
             EscrituraRecetas();
         }
 
-        public static void EscrituraRecetas()
+        public void EscrituraRecetas()
         {
-            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
-            string pathEscritura = pathDirectorio + "recetas.txt";
-
-            if (!Directory.Exists(pathDirectorio))
-            {
-                Directory.CreateDirectory(pathDirectorio);
-            }
+            string pathEscritura = "recetas.txt";
 
             string serialProductos = JsonConvert.SerializeObject(recetas);
 
-            using (StreamWriter writer = new StreamWriter(pathEscritura, false))
-            {
-                writer.Write(serialProductos);
-            }
+            Escritura(pathEscritura, serialProductos);
         }
 
         public static List<Receta> LecturaRecetas()

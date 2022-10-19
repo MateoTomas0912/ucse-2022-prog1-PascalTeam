@@ -1,19 +1,3 @@
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe.config
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.pdb
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Logica.dll
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Newtonsoft.Json.dll
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Logica.pdb
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Newtonsoft.Json.xml
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.AssemblyReference.cache
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.SuggestedBindingRedirects.cache
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Form1.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Properties.Resources.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.GenerateResource.cache
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.CoreCompileInputs.cache
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.CopyComplete
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.exe
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.pdb
 C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe.config
 C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe
 C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.pdb
@@ -55,3 +39,26 @@ C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalT
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductos.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.RegistrarComidas.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Supermercado.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.AssemblyReference.cache
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.AgregarReceta.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CargaIngredientes.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Despensa.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Menu.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductos.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Grillas.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Properties.Resources.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.RegistrarComidas.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Supermercado.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.GenerateResource.cache
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.CoreCompileInputs.cache
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe.config
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.exe
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\PantallasWinForm.pdb
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Logica.dll
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Logica.pdb
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.CopyComplete
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.exe
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.pdb

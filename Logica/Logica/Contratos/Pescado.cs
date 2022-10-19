@@ -30,7 +30,8 @@ namespace Logica.Contratos
                         item.Peso = producto.Peso;
                         if (item.Peso <= item.PesoMinimo) //Lo envio a la lista del super
                         {
-                            Logicas.LogicaSuper.CargarLista(item);
+                            Logicas.LogicaSuper logicaSuper = new Logicas.LogicaSuper();
+                            logicaSuper.CargarLista(item);
                         }
                     }
                 }

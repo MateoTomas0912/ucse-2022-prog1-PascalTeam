@@ -13,7 +13,7 @@ namespace Logica.Logicas
     {
         public string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
 
-        public void Escritura(string path, List<Producto> objeto)
+        public void Escritura(string path, string serial)
         {
             string pathEscritura = pathDirectorio + path;
 
@@ -21,23 +21,7 @@ namespace Logica.Logicas
             {
                 Directory.CreateDirectory(pathDirectorio);
             }
-
-            List<Panaderia> panaderia = new List<Panaderia>();
-
-            foreach (var producto in objeto)
-            {
-                if (producto is Panaderia)
-                {
-                    panaderia.Add((Panaderia)producto);
-                    string serial = JsonConvert.SerializeObject(panaderia);
-                    Serializar(pathEscritura, serial);
-                }
-            }
-        }
-
-        private void Serializar(string path, string serial)
-        {
-            using (StreamWriter writer = new StreamWriter(path, false))
+            using (StreamWriter writer = new StreamWriter(pathEscritura, false))
             {
                 writer.Write(serial);
             }
@@ -61,3 +45,5 @@ namespace Logica.Logicas
         }
     }
 }
+
+    

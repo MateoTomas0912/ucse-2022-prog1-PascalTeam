@@ -13,22 +13,13 @@ namespace Logica.Logicas
     {
         public static List<Producto> Despensa = new List<Producto>();
 
-        public static void EscrituraDespensa()
+        public void EscrituraDespensa()
         {
-            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
-            string pathEscritura = pathDirectorio + "despensa.txt";
-
-            if (!Directory.Exists(pathDirectorio))
-            {
-                Directory.CreateDirectory(pathDirectorio);
-            }
+            string pathEscritura ="despensa.txt";
 
             string serialProductos = JsonConvert.SerializeObject(Despensa);
 
-            using (StreamWriter writer = new StreamWriter(pathEscritura, false))
-            {
-                writer.Write(serialProductos);
-            }
+            Escritura(pathEscritura, serialProductos);
         }
 
         public static List<Producto> LecturaDespensa()
