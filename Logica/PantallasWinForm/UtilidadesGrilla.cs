@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Logica.Logicas
-{
-    public class UtilidadesLogicas
+namespace PantallasWinForm
+{ 
+    internal class UtilidadesGrilla
     {
-        public static void CargarCamposAcciones(DataGridView grilla)
+       public static void CargarCamposAcciones(DataGridView grilla)
         {
-            int indiceColumnaEditar = ObtenerIndice(grilla, "Editar");
-            int indiceColumnaEliminar = ObtenerIndice(grilla, "Eliminar");
+            int indiceColumnaEditar = UtilidadesGrilla.ObtenerIndice(grilla, "Editar");
+            int indiceColumnaEliminar = UtilidadesGrilla.ObtenerIndice(grilla, "Eliminar");
 
             foreach (DataGridViewRow row in grilla.Rows)
             {
@@ -33,5 +33,6 @@ namespace Logica.Logicas
 
             throw new Exception("No hay una columna con nombre solicitado en la grilla");
         }
+
     }
 }

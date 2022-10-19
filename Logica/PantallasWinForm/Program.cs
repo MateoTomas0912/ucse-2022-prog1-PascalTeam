@@ -37,7 +37,7 @@ namespace PantallasWinForm
             List<Producto> list = archivo.Lectura();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Menu());
             
         }
     }

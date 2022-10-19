@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace PantallasWinForm
 {
-    public partial class Form1 : Form
+    public partial class Supermercado : Form
     {
-        public Form1()
+        public Supermercado()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_comprar_Click(object sender, EventArgs e)
         {
 
         }

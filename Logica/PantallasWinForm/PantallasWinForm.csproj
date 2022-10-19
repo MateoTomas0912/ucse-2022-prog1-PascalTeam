@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +47,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ActualizarGrilla.cs" />
+    <Compile Include="AgregarReceta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AgregarReceta.Designer.cs">
+      <DependentUpon>AgregarReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargaIngredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaIngredientes.Designer.cs">
+      <DependentUpon>CargaIngredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Despensa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despensa.Designer.cs">
+      <DependentUpon>Despensa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrillaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrillaProductos.Designer.cs">
+      <DependentUpon>GrillaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaCarga.cs" />
+    <Compile Include="Grillas.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RegistrarComidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarComidas.Designer.cs">
+      <DependentUpon>RegistrarComidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supermercado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermercado.Designer.cs">
+      <DependentUpon>Supermercado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilidadesGrilla.cs" />
+    <EmbeddedResource Include="AgregarReceta.resx">
+      <DependentUpon>AgregarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargaIngredientes.resx">
+      <DependentUpon>CargaIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despensa.resx">
+      <DependentUpon>Despensa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrillaProductos.resx">
+      <DependentUpon>GrillaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grillas.resx">
+      <DependentUpon>Grillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +123,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrarComidas.resx">
+      <DependentUpon>RegistrarComidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermercado.resx">
+      <DependentUpon>Supermercado.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +149,18 @@
       <Project>{20e16d3b-3b27-41bd-93b8-7facb291b0d0}</Project>
       <Name>Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1272631829-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-10-12 at 4.59.46 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cocinero-chef-logotipo-o-etiqueta-concepto-de-restaurante-ilustracion-vectorial-de-dibujos-animados-mb6yt5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1272631829-612x612 %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

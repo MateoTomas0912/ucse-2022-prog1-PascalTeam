@@ -64,7 +64,6 @@
     <Compile Include="Logicas\LogicaDespensa.cs" />
     <Compile Include="Logicas\LogicaRecetas.cs" />
     <Compile Include="Logicas\LogicaSuper.cs" />
-    <Compile Include="Logicas\UtilidadesLogicas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
