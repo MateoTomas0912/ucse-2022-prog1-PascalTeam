@@ -80,7 +80,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(716, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(639, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,18 +106,18 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Image = global::PantallasWinForm.Properties.Resources.istockphoto_1272631829_612x612__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(473, 451);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 554);
+            this.ClientSize = new System.Drawing.Size(639, 558);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnComidas);
             this.Controls.Add(this.btnDespensa);
@@ -126,7 +126,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.Text = "Inicio ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

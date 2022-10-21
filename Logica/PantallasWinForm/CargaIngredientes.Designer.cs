@@ -40,13 +40,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 33);
+            this.label1.Location = new System.Drawing.Point(65, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(460, 39);
             this.label1.TabIndex = 0;
@@ -108,6 +109,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Hortalizas y verduras",
+            "Frutas",
+            "Quesos",
+            "Lacteos",
+            "Carnes",
+            "Pescados",
+            "Panaderia",
+            "Bebia (Alta en azucar)",
+            "Bebida (Normal)",
+            "Bebidas (Alcoholicas)"});
             this.comboBox1.Location = new System.Drawing.Point(213, 177);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(194, 24);
@@ -139,19 +151,29 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(435, 399);
+            this.btn_salir.Location = new System.Drawing.Point(37, 436);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(116, 39);
+            this.btn_salir.Size = new System.Drawing.Size(116, 26);
             this.btn_salir.TabIndex = 11;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(421, 436);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(120, 26);
+            this.btn_guardar.TabIndex = 12;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
             // CargaIngredientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 450);
+            this.ClientSize = new System.Drawing.Size(552, 533);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -185,5 +207,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }

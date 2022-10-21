@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PantallasWinForm
 {
-    public partial class Supermercado : Form
+    public partial class MisRecetas : Form
     {
-        public Supermercado()
+        public MisRecetas()
         {
             InitializeComponent();
-        }
-
-        private void btn_comprar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_salir_Click(object sender, EventArgs e)

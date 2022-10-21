@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActualizarGrilla.cs" />
+    <Compile Include="LoQueHeComido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoQueHeComido.Designer.cs">
+      <DependentUpon>LoQueHeComido.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarReceta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     </Compile>
     <Compile Include="CargaIngredientes.Designer.cs">
       <DependentUpon>CargaIngredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearVerRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearVerRec.Designer.cs">
+      <DependentUpon>CrearVerRec.cs</DependentUpon>
     </Compile>
     <Compile Include="Despensa.cs">
       <SubType>Form</SubType>
@@ -82,6 +94,12 @@
     <Compile Include="Grillas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MisRecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MisRecetas.Designer.cs">
+      <DependentUpon>MisRecetas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarComidas.cs">
@@ -97,11 +115,17 @@
       <DependentUpon>Supermercado.cs</DependentUpon>
     </Compile>
     <Compile Include="UtilidadesGrilla.cs" />
+    <EmbeddedResource Include="LoQueHeComido.resx">
+      <DependentUpon>LoQueHeComido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarReceta.resx">
       <DependentUpon>AgregarReceta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CargaIngredientes.resx">
       <DependentUpon>CargaIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearVerRec.resx">
+      <DependentUpon>CrearVerRec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Despensa.resx">
       <DependentUpon>Despensa.cs</DependentUpon>
@@ -114,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grillas.resx">
       <DependentUpon>Grillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MisRecetas.resx">
+      <DependentUpon>MisRecetas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -19,9 +19,9 @@ namespace PantallasWinForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-
-
+            Form super = new Supermercado();
+            super.Show();
+            this.Hide();
 
         }
         private void btnComidas_Click(object sender, EventArgs e)
@@ -34,15 +34,18 @@ namespace PantallasWinForm
 
         private void btnDespensa_Click(object sender, EventArgs e)
         {
-
+            Form ingredientes  = new  CargaIngredientes();
+            ingredientes.Show();
+            this.Hide();
 
         }
 
         private void BtnRecetas_Click(object sender, EventArgs e)
         {
-            Form agregarreceta = new AgregarReceta();
-            agregarreceta.Show();
+            Form Verocrear = new CrearVerRec();
+            Verocrear.Show();
             this.Hide();
+
         }
     }
 }
