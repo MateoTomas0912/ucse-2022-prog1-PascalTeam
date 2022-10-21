@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Logica.Logicas;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +15,8 @@ namespace Logica.Contratos
 
         public void CrearActualizarProducto(Panaderia producto)
         {
+            LeerPanaderia();
+
             if (!productosPanaderia.Contains(producto)) // crear nuevo
             {
                 //generar codigo
@@ -38,10 +41,31 @@ namespace Logica.Contratos
                     }
                 }
             }
+
+            EscrituraPanaderia();
         }
         public void EliminarProducto(Panaderia producto)
         {
             productosPanaderia.RemoveAll(x => x == producto);
+            EscrituraPanaderia();
+        }
+
+        private void LeerPanaderia()
+        {
+            Archivo archivo = new Archivo();
+            List<Producto> productos = archivo.Lectura();
+            productosPanaderia = productos.Where(x => x is Panaderia).Select(x => x as Panaderia).ToList();
+        }
+
+        private void EscrituraPanaderia()
+        {
+            Archivo archivo = new Archivo();
+
+            string pathEscritura = "panaderia.txt";
+
+            string serialProductos = JsonConvert.SerializeObject(productosPanaderia);
+
+            archivo.Escritura(pathEscritura, serialProductos);
         }
     }
 }
