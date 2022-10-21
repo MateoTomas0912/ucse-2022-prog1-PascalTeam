@@ -44,6 +44,7 @@ namespace Logica.Contratos
 
             EscrituraPanaderia();
         }
+
         public void EliminarProducto(Panaderia producto)
         {
             productosPanaderia.RemoveAll(x => x == producto);

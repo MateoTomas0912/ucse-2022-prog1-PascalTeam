@@ -17,23 +17,10 @@ namespace PantallasWinForm
         static void Main()
         {
             Archivo archivo = new Archivo();
-            /*
-             string path = "panaderia.txt";
-             List<Producto> productos = new List<Producto>();    
-             Panaderia panaderia = new Panaderia() { Codigo = 12, Nombre = "Pan", Peso = 14, PesoMinimo = 10, Precio = 100};
-             Panaderia panaderia2 = new Panaderia() { Codigo = 14, Nombre = "Facturas", Peso = 14, PesoMinimo = 10, Precio = 100 };
-             Panaderia panaderia3 = new Panaderia() { Codigo = 16, Nombre = "Alfajores negros", Peso = 14, PesoMinimo = 10, Precio = 100 };
-             Bebida bebida = new Bebida() { Codigo = 22, Nombre = "Cocaaaaa", Precio = 100, Cantidad = 10, CantidadMinima = 5};
-
-             productos.Add(panaderia);
-             productos.Add(panaderia2);
-             productos.Add(panaderia3);
-             productos.Add(bebida);
-
-             archivo.Escritura(path,productos);
-            */
             
-            string path = "C:\\Users\\mtoma\\Documents\\Mateo\\Trabajos Universidad\\2do Año\\Programacion I\\ucse-2022-prog1-PascalTeam\\Logica\\PantallasWinForm\bin\\Debug\\JSON\\panaderia";
+            
+            
+            
             List<Producto> list = archivo.Lectura();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

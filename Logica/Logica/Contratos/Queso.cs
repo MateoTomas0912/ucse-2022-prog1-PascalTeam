@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Logica.Logicas;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ namespace Logica.Contratos
 
         public void CrearActualizarProducto(Queso producto)
         {
+            LeerQueso();
             if (!productosQueso.Contains(producto)) // crear nuevo
             {
                 //generar codigo
@@ -36,10 +39,29 @@ namespace Logica.Contratos
                     }
                 }
             }
+            EscrituraQueso();
         }
         public void EliminarProducto(Queso producto)
         {
             productosQueso.RemoveAll(x => x == producto);
+        }
+
+        private void LeerQueso()
+        {
+            Archivo archivo = new Archivo();
+            List<Producto> productos = archivo.Lectura();
+            productosQueso = productos.Where(x => x is Queso).Select(x => x as Queso).ToList();
+        }
+
+        private void EscrituraQueso()
+        {
+            Archivo archivo = new Archivo();
+
+            string pathEscritura = "queso.txt";
+
+            string serialProductos = JsonConvert.SerializeObject(productosQueso);
+
+            archivo.Escritura(pathEscritura, serialProductos);
         }
     }
 }
