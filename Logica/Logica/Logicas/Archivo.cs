@@ -30,24 +30,21 @@ namespace Logica.Logicas
         public List<Producto> Lectura()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
-            string pathProducto = pathDirectorio + "productos.txt";
 
             List<Producto> productos = new List<Producto>();
 
             //Panaderia
-            List<Panaderia> panaderias = new List<Panaderia>();
-            using (StreamReader reader = new StreamReader(pathDirectorio + "panaderia.txt"))
+            if (File.Exists(pathDirectorio + "panaderia.txt"))
             {
-                if (!File.Exists(pathDirectorio + "panaderia.txt"))
+                List<Panaderia> panaderias = new List<Panaderia>();
+                using (StreamReader reader = new StreamReader(pathDirectorio + "panaderia.txt"))
                 {
-                    List<Producto> productosVacios = new List<Producto>();
-                    return productosVacios;
-                }
-                string panaderia = reader.ReadToEnd();
-                panaderias = JsonConvert.DeserializeObject<List<Panaderia>>(panaderia);
-                foreach (var producto in panaderias)
-                {
-                    productos.Add(producto);
+                    string panaderia = reader.ReadToEnd();
+                    panaderias = JsonConvert.DeserializeObject<List<Panaderia>>(panaderia);
+                    foreach (var producto in panaderias)
+                    {
+                        productos.Add(producto);
+                    }
                 }
             }
 
@@ -168,6 +165,14 @@ namespace Logica.Logicas
             }
 
             return productos;
+        }
+
+        public List<Producto> ObtenerProductosReceta(List<int> productos)
+        {
+            List<Producto> productosReceta = Lectura();
+            productosReceta = productosReceta.Where(x => productos.Contains(x.Codigo)).ToList();
+
+            return productosReceta;
         }
     }
 }

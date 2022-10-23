@@ -11,13 +11,26 @@ namespace Logica.Logicas
 {
     public class LogicaRecetas : Archivo
     {
-        private static List<Receta> recetas = null;
+
+        public List<Receta> ObtenerRecetas()
+        {
+            List<Receta> recetas = new List<Receta>();
+            List<RecetaArchivo> recetaArchivo = LecturaRecetas();
+            foreach (var receta in recetaArchivo)
+            {
+                receta.ProductosNecesarios = ObtenerProductosReceta(receta.IngredientesCodigo);
+                recetas.Add(receta);
+            }
+            return recetas;
+        }
 
         public void CrearActualizarRecetas(Receta receta)
         {
-            if (string.IsNullOrEmpty(receta.Codigo)) // crear nuevo
+            List<Receta> recetas = new List<Receta>();
+            recetas = ObtenerRecetas();
+            List<string> codigosRecetas = recetas.Select(x => x.Codigo).ToList();
+            if (!codigosRecetas.Contains(receta.Codigo)) // crear nuevo
             {
-                //generar codigo
                 recetas.Add(receta);
             }
             else
@@ -36,17 +49,24 @@ namespace Logica.Logicas
                     }
                 }
             }
-
-           EscrituraRecetas();
+            EscrituraRecetas(recetas);
         }
 
-        public void EliminarReceta(Receta receta)
+        public void EliminarReceta(string codigo)
         {
-            recetas.Remove(receta);
-            EscrituraRecetas();
+            List<Receta> recetasFiltradas = ObtenerRecetas();
+            foreach (var receta in recetasFiltradas)
+            {
+                if(receta.Codigo == codigo)
+                {
+                    recetasFiltradas.Remove(receta);
+                    EscrituraRecetas(recetasFiltradas);
+                    break;
+                }
+            }
         }
 
-        public void EscrituraRecetas()
+        public void EscrituraRecetas(List<Receta> recetas)
         {
             string pathEscritura = "recetas.txt";
 
@@ -55,21 +75,26 @@ namespace Logica.Logicas
             Escritura(pathEscritura, serialProductos);
         }
 
-        public static List<Receta> LecturaRecetas()
+        public static List<RecetaArchivo> LecturaRecetas()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
             string pathProducto = pathDirectorio + "recetas.txt";
-            using (StreamReader reader = new StreamReader(pathProducto))
+            if (File.Exists(pathProducto))
             {
-                if (!File.Exists(pathProducto))
+                using (StreamReader reader = new StreamReader(pathProducto))
                 {
-                    List<Receta> productosVacios = new List<Receta>();
-                    return productosVacios;
+
+                    string json = reader.ReadToEnd();
+                    List<RecetaArchivo> recetas = JsonConvert.DeserializeObject<List<RecetaArchivo>>(json);
+                    if(recetas == null)
+                    {
+                        return new List<RecetaArchivo>();
+                    }
+                    return recetas;
                 }
-                string json = reader.ReadToEnd();
-                List<Receta> recetas = JsonConvert.DeserializeObject<List<Receta>>(json);
-                return recetas;
             }
+
+            return new List<RecetaArchivo>();
         }
     }
 }

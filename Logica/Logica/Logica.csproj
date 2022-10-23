@@ -59,6 +59,7 @@
     <Compile Include="Contratos\Producto.cs" />
     <Compile Include="Contratos\Queso.cs" />
     <Compile Include="Contratos\Receta.cs" />
+    <Compile Include="Contratos\RecetaArchivo.cs" />
     <Compile Include="Logicas\Archivo.cs" />
     <Compile Include="Logicas\Logica.Comidas.cs" />
     <Compile Include="Logicas\LogicaDespensa.cs" />

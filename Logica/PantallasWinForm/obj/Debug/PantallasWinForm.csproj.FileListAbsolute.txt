@@ -63,3 +63,6 @@ C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources

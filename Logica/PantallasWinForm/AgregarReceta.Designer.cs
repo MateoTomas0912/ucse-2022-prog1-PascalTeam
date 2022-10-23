@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.NombreReceta = new System.Windows.Forms.TextBox();
+            this.checkSaludable = new System.Windows.Forms.CheckBox();
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listaMomento = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.MaximumSize = new System.Drawing.Size(237, 289);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 58);
+            this.label1.Size = new System.Drawing.Size(176, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "RECETAS";
             // 
@@ -64,7 +64,7 @@
             this.label2.MinimumSize = new System.Drawing.Size(3, 3);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(77, 26);
+            this.label2.Size = new System.Drawing.Size(62, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
@@ -75,7 +75,7 @@
             this.label3.Location = new System.Drawing.Point(22, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 22);
+            this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Momento";
             // 
@@ -86,7 +86,7 @@
             this.label4.Location = new System.Drawing.Point(22, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 22);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Saludable?";
             // 
@@ -97,28 +97,28 @@
             this.label5.Location = new System.Drawing.Point(22, 284);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 22);
+            this.label5.Size = new System.Drawing.Size(85, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "Ingredientes";
             // 
-            // textBox1
+            // NombreReceta
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 26);
-            this.textBox1.TabIndex = 10;
+            this.NombreReceta.Location = new System.Drawing.Point(154, 122);
+            this.NombreReceta.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.NombreReceta.Multiline = true;
+            this.NombreReceta.Name = "NombreReceta";
+            this.NombreReceta.Size = new System.Drawing.Size(156, 26);
+            this.NombreReceta.TabIndex = 10;
             // 
-            // checkBox1
+            // checkSaludable
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(154, 224);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 26);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Tilda si lo es";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkSaludable.AutoSize = true;
+            this.checkSaludable.Location = new System.Drawing.Point(154, 224);
+            this.checkSaludable.Name = "checkSaludable";
+            this.checkSaludable.Size = new System.Drawing.Size(101, 23);
+            this.checkSaludable.TabIndex = 11;
+            this.checkSaludable.Text = "Tilda si lo es";
+            this.checkSaludable.UseVisualStyleBackColor = true;
             // 
             // btn_crearReceta
             // 
@@ -128,6 +128,7 @@
             this.btn_crearReceta.TabIndex = 12;
             this.btn_crearReceta.Text = "Crear receta";
             this.btn_crearReceta.UseVisualStyleBackColor = true;
+            this.btn_crearReceta.Click += new System.EventHandler(this.btn_crearReceta_Click);
             // 
             // btn_volverInicio
             // 
@@ -149,31 +150,32 @@
             this.dataGridView1.Size = new System.Drawing.Size(327, 100);
             this.dataGridView1.TabIndex = 14;
             // 
-            // listBox1
+            // listaMomento
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Items.AddRange(new object[] {
+            this.listaMomento.FormattingEnabled = true;
+            this.listaMomento.ItemHeight = 19;
+            this.listaMomento.Items.AddRange(new object[] {
             "Desayuno",
             "Almuerzo",
             "Merienda",
             "Cena"});
-            this.listBox1.Location = new System.Drawing.Point(154, 173);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(156, 26);
-            this.listBox1.TabIndex = 15;
+            this.listaMomento.Location = new System.Drawing.Point(154, 173);
+            this.listaMomento.Name = "listaMomento";
+            this.listaMomento.Size = new System.Drawing.Size(156, 23);
+            this.listaMomento.TabIndex = 15;
+            this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
             // 
             // AgregarReceta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 557);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listaMomento);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_volverInicio);
             this.Controls.Add(this.btn_crearReceta);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkSaludable);
+            this.Controls.Add(this.NombreReceta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -197,11 +199,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox NombreReceta;
+        private System.Windows.Forms.CheckBox checkSaludable;
         private System.Windows.Forms.Button btn_crearReceta;
         private System.Windows.Forms.Button btn_volverInicio;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listaMomento;
     }
 }
