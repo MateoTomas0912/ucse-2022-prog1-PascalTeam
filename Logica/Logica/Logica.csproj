@@ -48,6 +48,7 @@
     <Compile Include="Contratos\Bebida.cs" />
     <Compile Include="Contratos\Carne.cs" />
     <Compile Include="Contratos\Comida.cs" />
+    <Compile Include="Contratos\ComidaArchivo.cs" />
     <Compile Include="Contratos\Fruta.cs" />
     <Compile Include="Contratos\HortalizaVerdura.cs" />
     <Compile Include="Contratos\Lacteo.cs" />
