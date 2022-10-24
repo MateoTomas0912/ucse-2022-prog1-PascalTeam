@@ -96,5 +96,20 @@ namespace Logica.Logicas
 
             return new List<RecetaArchivo>();
         }
+
+        public static Receta ObtenerRecetaComidas(string codigoReceta)
+        {
+            List<RecetaArchivo> recetas = LecturaRecetas();
+            foreach (var receta in recetas)
+            {
+                if (receta.Codigo == codigoReceta)
+                {
+                    Receta recetaComida = receta;
+                    return recetaComida;
+                }
+            }
+
+            return new Receta();
+        }
     }
 }

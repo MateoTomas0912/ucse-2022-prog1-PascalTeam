@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Logica.Contratos;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +20,19 @@ namespace Logica.Logicas
             Escritura(pathEscritura, serialProductos);
         }
 
-        public List<Comida> LecturaComidas()
+        public List<Comida> ObtenerComidas()
+        {
+            List<Comida> comidas = new List<Comida>();
+            List<ComidaArchivo> comidaArchivo = LecturaComidas();
+            foreach (var comida in comidaArchivo)
+            {
+                comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comidas.Add(comida);
+            }
+            return comidas;
+        }
+
+        public List<ComidaArchivo> LecturaComidas()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
             string pathProducto = pathDirectorio + "comidas.txt";
@@ -27,33 +40,30 @@ namespace Logica.Logicas
             {
                 if (!File.Exists(pathProducto))
                 {
-                    List<Comida> productosVacios = new List<Comida>();
+                    List<ComidaArchivo> productosVacios = new List<ComidaArchivo>();
                     return productosVacios;
                 }
                 string json = reader.ReadToEnd();
-                List<Comida> comidas = JsonConvert.DeserializeObject<List<Comida>>(json);
+                List<ComidaArchivo> comidas = JsonConvert.DeserializeObject<List<ComidaArchivo>>(json);
                 return comidas;
             }
         }
 
         public void CrearActualizarComida(Comida comida)
         {
-            List<Comida> comidas = LecturaComidas();
+            List<Comida> comidas = ObtenerComidas();
             List<string> codigosComidas = comidas.Select(x => x.Codigo).ToList();
-            if (!codigosComidas.Contains(comida.Codigo)) // crear nuevo
+            if (!codigosComidas.Contains(comida.Codigo)) 
             {
-                //generar codigo
                 comidas.Add(comida);
             }
             else
             {
-                //edito el usuario que tenga el codigo
                 foreach (var u in comidas)
                 {
-                    if (u.Codigo == comida.Codigo) //este quiero editar!
+                    if (u.Codigo == comida.Codigo) 
                     {
-                        //Edicion reemplazando los datos
-                        u.RecetaElegida = comida.RecetaElegida;
+                        u.Receta = comida.Receta;
                         u.RegistroDeComida = comida.RegistroDeComida;
                     }
                 }
@@ -62,7 +72,7 @@ namespace Logica.Logicas
 
         public void EliminarComida(string codigo)
         {
-            List<Comida> comidas = LecturaComidas();
+            List<Comida> comidas = ObtenerComidas();
             foreach (var comida in comidas)
             {
                 if (comida.Codigo == codigo)
