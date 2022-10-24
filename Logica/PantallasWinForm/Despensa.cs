@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica.Logicas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,20 @@ namespace PantallasWinForm
             this.Hide();
 
 
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            //mostrarlos
+            grillaDespensa.AutoGenerateColumns = true;
+
+            ActualizarGrilla();
+        }
+
+        private void ActualizarGrilla()
+        {
+            LogicaDespensa logicaDespensa = new LogicaDespensa();
+            grillaDespensa.DataSource = logicaDespensa.Lectura();
         }
     }
 }

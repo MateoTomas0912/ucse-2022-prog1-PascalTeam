@@ -30,15 +30,16 @@
         {
             this.btn_cargaringrediente = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grillaDespensa = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaDespensa)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_cargaringrediente
             // 
             this.btn_cargaringrediente.Location = new System.Drawing.Point(0, 2);
+            this.btn_cargaringrediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cargaringrediente.Name = "btn_cargaringrediente";
-            this.btn_cargaringrediente.Size = new System.Drawing.Size(172, 40);
+            this.btn_cargaringrediente.Size = new System.Drawing.Size(129, 32);
             this.btn_cargaringrediente.TabIndex = 0;
             this.btn_cargaringrediente.Text = "Cargar un ingrediente";
             this.btn_cargaringrediente.UseVisualStyleBackColor = true;
@@ -46,35 +47,39 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(419, 305);
+            this.btn_salir.Location = new System.Drawing.Point(314, 248);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(162, 40);
+            this.btn_salir.Size = new System.Drawing.Size(122, 32);
             this.btn_salir.TabIndex = 1;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
-            // dataGridView1
+            // grillaDespensa
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 251);
-            this.dataGridView1.TabIndex = 2;
+            this.grillaDespensa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaDespensa.Location = new System.Drawing.Point(0, 39);
+            this.grillaDespensa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grillaDespensa.Name = "grillaDespensa";
+            this.grillaDespensa.RowHeadersWidth = 51;
+            this.grillaDespensa.RowTemplate.Height = 24;
+            this.grillaDespensa.Size = new System.Drawing.Size(436, 204);
+            this.grillaDespensa.TabIndex = 2;
+            this.Load += new System.EventHandler(this.Principal_Load);
             // 
             // Despensa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 516);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(432, 419);
+            this.Controls.Add(this.grillaDespensa);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_cargaringrediente);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Despensa";
             this.Text = "Despensa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaDespensa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +88,8 @@
 
         private System.Windows.Forms.Button btn_cargaringrediente;
         private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grillaDespensa;
+
+
     }
 }

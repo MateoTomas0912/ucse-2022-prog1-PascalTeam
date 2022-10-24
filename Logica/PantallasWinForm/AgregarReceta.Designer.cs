@@ -37,9 +37,10 @@
             this.checkSaludable = new System.Windows.Forms.CheckBox();
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grillaProductos = new System.Windows.Forms.DataGridView();
+            this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.listaMomento = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,15 +141,23 @@
             this.btn_volverInicio.UseVisualStyleBackColor = true;
             this.btn_volverInicio.Click += new System.EventHandler(this.btn_volverInicio_Click);
             // 
-            // dataGridView1
+            // grillaProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(154, 268);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(327, 100);
-            this.dataGridView1.TabIndex = 14;
+            this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AgregarProducto});
+            this.grillaProductos.Location = new System.Drawing.Point(154, 268);
+            this.grillaProductos.Name = "grillaProductos";
+            this.grillaProductos.RowHeadersWidth = 51;
+            this.grillaProductos.RowTemplate.Height = 24;
+            this.grillaProductos.Size = new System.Drawing.Size(327, 100);
+            this.grillaProductos.TabIndex = 14;
+            this.Load += new System.EventHandler(this.Principal_Load);
+            // 
+            // AgregarProducto
+            // 
+            this.AgregarProducto.HeaderText = "Agregar Producto";
+            this.AgregarProducto.Name = "AgregarProducto";
             // 
             // listaMomento
             // 
@@ -171,7 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 557);
             this.Controls.Add(this.listaMomento);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grillaProductos);
             this.Controls.Add(this.btn_volverInicio);
             this.Controls.Add(this.btn_crearReceta);
             this.Controls.Add(this.checkSaludable);
@@ -186,7 +195,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarReceta";
             this.Text = "AgregarReceta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +212,8 @@
         private System.Windows.Forms.CheckBox checkSaludable;
         private System.Windows.Forms.Button btn_crearReceta;
         private System.Windows.Forms.Button btn_volverInicio;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grillaProductos;
         private System.Windows.Forms.ListBox listaMomento;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AgregarProducto;
     }
 }

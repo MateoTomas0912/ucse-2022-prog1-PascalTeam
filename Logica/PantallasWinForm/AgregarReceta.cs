@@ -1,4 +1,5 @@
 ﻿using Logica.Contratos;
+using Logica.Logicas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,6 +78,22 @@ namespace PantallasWinForm
         private void listaMomento_SelectedIndexChanged(object sender, EventArgs e)
         {
             listaMomento.Text = listaMomento.SelectedItem.ToString();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            //mostrarlos
+            grillaProductos.AutoGenerateColumns = true;
+
+            ActualizarGrilla();
+        }
+
+
+        private void ActualizarGrilla()
+        {
+            grillaProductos.DataSource = null;
+            Archivo archivo = new Archivo();
+            grillaProductos.DataSource = archivo.Lectura();
         }
     }
 }

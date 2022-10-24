@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Logica.Contratos;
+using Logica.Logicas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +24,11 @@ namespace PantallasWinForm
             Form salir = new Menu();
             salir.Show();
             this.Hide();
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

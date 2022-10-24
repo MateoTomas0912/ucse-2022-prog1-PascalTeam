@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.grillaRecetas = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_salir = new System.Windows.Forms.Button();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +49,18 @@
             this.grillaRecetas.RowTemplate.Height = 24;
             this.grillaRecetas.Size = new System.Drawing.Size(505, 157);
             this.grillaRecetas.TabIndex = 0;
-            this.grillaRecetas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grillaRecetas_DataBindingComplete);
             this.grillaRecetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellClick);
-
+            this.grillaRecetas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grillaRecetas_DataBindingComplete);
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar Receta";
+            this.Editar.Name = "Editar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar Receta";
+            this.Eliminar.Name = "Eliminar";
             // 
             // label1
             // 
@@ -75,16 +84,6 @@
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar Receta";
-            this.Editar.Name = "Editar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar Receta";
-            this.Eliminar.Name = "Eliminar";
             // 
             // MisRecetas
             // 
