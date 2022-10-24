@@ -55,9 +55,9 @@ namespace PantallasWinForm
                         receta.Momento = MomentosDelDia.Cena;
                         break;
                 }
-
+                
                 //Guardar
-                Logica.Logicas.LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
+                LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
                 logicaRecetas.CrearActualizarRecetas(receta);
             }
 

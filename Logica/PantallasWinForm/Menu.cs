@@ -26,7 +26,7 @@ namespace PantallasWinForm
         }
         private void btnComidas_Click(object sender, EventArgs e)
         {
-            Form comida = new GrillaProductos();
+            Form comida = new LoQueHeComido();
             comida.Show();
             this.Hide();
 

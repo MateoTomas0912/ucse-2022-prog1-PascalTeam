@@ -36,24 +36,25 @@ namespace Logica.Logicas
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
             string pathProducto = pathDirectorio + "comidas.txt";
-            using (StreamReader reader = new StreamReader(pathProducto))
+            if (File.Exists(pathProducto))
             {
-                if (!File.Exists(pathProducto))
+                using (StreamReader reader = new StreamReader(pathProducto))
                 {
-                    List<ComidaArchivo> productosVacios = new List<ComidaArchivo>();
-                    return productosVacios;
+
+                    string json = reader.ReadToEnd();
+                    List<ComidaArchivo> comidas = JsonConvert.DeserializeObject<List<ComidaArchivo>>(json);
+                    return comidas;
                 }
-                string json = reader.ReadToEnd();
-                List<ComidaArchivo> comidas = JsonConvert.DeserializeObject<List<ComidaArchivo>>(json);
-                return comidas;
             }
+
+            return new List<ComidaArchivo> { };
         }
 
         public void CrearActualizarComida(Comida comida)
         {
             List<Comida> comidas = ObtenerComidas();
             List<string> codigosComidas = comidas.Select(x => x.Codigo).ToList();
-            if (!codigosComidas.Contains(comida.Codigo)) 
+            if (!codigosComidas.Contains(comida.Codigo))
             {
                 comidas.Add(comida);
             }
@@ -61,7 +62,7 @@ namespace Logica.Logicas
             {
                 foreach (var u in comidas)
                 {
-                    if (u.Codigo == comida.Codigo) 
+                    if (u.Codigo == comida.Codigo)
                     {
                         u.Receta = comida.Receta;
                         u.RegistroDeComida = comida.RegistroDeComida;

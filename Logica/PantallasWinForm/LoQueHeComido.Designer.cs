@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
             this.grillaComidas = new System.Windows.Forms.DataGridView();
-            this.Editar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaComidas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +106,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.DataGridView grillaComidas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Editar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

@@ -29,12 +29,14 @@ namespace PantallasWinForm
         private void ActualizarGrilla()
         {
             LogicaComidas logicaComidas = new LogicaComidas();
-            grillaComidas.DataSource = logicaComidas.Lectura();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas();
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-
+            Form menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
