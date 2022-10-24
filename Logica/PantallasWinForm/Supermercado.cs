@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica.Logicas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace PantallasWinForm
 
         private void btn_comprar_Click(object sender, EventArgs e)
         {
-
+            LogicaSuper logicaSupermercado = new LogicaSuper();
+            logicaSupermercado.VaciarLista();
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -28,5 +30,20 @@ namespace PantallasWinForm
             salir.Show();
             this.Hide();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            //mostrarlos
+            grillaSupermercado.AutoGenerateColumns = true;
+
+            ActualizarGrilla();
+        }
+
+        private void ActualizarGrilla()
+        {
+            LogicaSuper logicaSupermercado = new LogicaSuper();
+            grillaSupermercado.DataSource = logicaSupermercado.Lectura();
+        }
+
     }
 }

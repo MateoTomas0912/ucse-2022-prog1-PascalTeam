@@ -10,9 +10,7 @@ namespace Logica.Logicas
 {
     public class LogicaComidas : Archivo
     {
-        private static List<Comida> comidas = new List<Comida>();
-
-        public void EscrituraComidas()
+        public void EscrituraComidas(List<Comida> comidas)
         {
             string pathEscritura = "comidas.txt";
 
@@ -21,7 +19,7 @@ namespace Logica.Logicas
             Escritura(pathEscritura, serialProductos);
         }
 
-        public static List<Comida> LecturaComidas()
+        public List<Comida> LecturaComidas()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
             string pathProducto = pathDirectorio + "comidas.txt";
@@ -38,9 +36,11 @@ namespace Logica.Logicas
             }
         }
 
-        internal static void CrearActualizarComida(Comida comida)
+        public void CrearActualizarComida(Comida comida)
         {
-            if (string.IsNullOrEmpty(comida.Codigo)) // crear nuevo
+            List<Comida> comidas = LecturaComidas();
+            List<string> codigosComidas = comidas.Select(x => x.Codigo).ToList();
+            if (!codigosComidas.Contains(comida.Codigo)) // crear nuevo
             {
                 //generar codigo
                 comidas.Add(comida);
@@ -60,9 +60,18 @@ namespace Logica.Logicas
             }
         }
 
-        internal static void EliminarComida(Comida comida)
+        public void EliminarComida(string codigo)
         {
-            comidas.Remove(comida);
+            List<Comida> comidas = LecturaComidas();
+            foreach (var comida in comidas)
+            {
+                if (comida.Codigo == codigo)
+                {
+                    comidas.Remove(comida);
+                    EscrituraComidas(comidas);
+                    break;
+                }
+            }
         }
     }
 }

@@ -34,8 +34,8 @@ namespace PantallasWinForm
 
         private void btnDespensa_Click(object sender, EventArgs e)
         {
-            Form ingredientes  = new  CargaIngredientes();
-            ingredientes.Show();
+            Form despensa  = new  Despensa();
+            despensa.Show();
             this.Hide();
 
         }

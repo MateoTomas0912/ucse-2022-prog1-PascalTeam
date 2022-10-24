@@ -37,14 +37,20 @@ C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalT
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductos.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.RegistrarComidas.resources
 C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Supermercado.resources
+C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
+C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
+C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.AssemblyReference.cache
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.AgregarReceta.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CargaIngredientes.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Despensa.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Menu.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductos.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Grillas.resources
+C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Properties.Resources.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.RegistrarComidas.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Supermercado.resources
@@ -60,9 +66,3 @@ C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.csproj.CopyComplete
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.exe
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.pdb
-C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
-C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
-C:\Users\willi\OneDrive\Documentos\2do año\PROGRAMACION\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.LoQueHeComido.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources

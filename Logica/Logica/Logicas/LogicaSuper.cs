@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,32 +11,48 @@ namespace Logica.Logicas
 {
     public class LogicaSuper : Archivo
     {
-        private List<Producto> Supermercado { get; set; }
-
-        public List<Producto> LecturaSuper()
+        public static List<Producto> LecturaSuper()
         {
-            //Lista supermercado se iguala al resultado de la lectura del JSON
-            Archivo archivo = new Archivo();
-            Supermercado = archivo.Lectura();
-            return Supermercado;
+            string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
+            string pathProducto = pathDirectorio + "super.txt";
+            if (File.Exists(pathProducto))
+            {
+                using (StreamReader reader = new StreamReader(pathProducto))
+                {
+
+                    string json = reader.ReadToEnd();
+                    List<Producto> super = JsonConvert.DeserializeObject<List<Producto>>(json);
+                    if (super == null)
+                    {
+                        return new List<Producto>();
+                    }
+                    return super;
+                }
+            }
+
+            return new List<Producto>();
         }
-        public void EscribirSuper()
+        internal void EscribirSuper(List<Producto> listaSuper)
         {
-            string pathDespensa = "super.txt";
+            string pathSuper = "super.txt";
 
-            string serialProductos = JsonConvert.SerializeObject(Supermercado);
+            string serialProductos = JsonConvert.SerializeObject(listaSuper);
 
-            Escritura(pathDespensa, serialProductos);
+            Escritura(pathSuper, serialProductos);
         }
         public void CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
         {
+            List<Producto> Supermercado = LecturaSuper();
+
             Supermercado.Add(producto);
-            EscribirSuper();
+            EscribirSuper(Supermercado);
         }
         public void VaciarLista() //Método para vaciar la lista del super
         {
+            List<Producto> Supermercado = LecturaSuper();
+
             Supermercado.Clear(); //Vacio la lista
-            EscribirSuper();
+            EscribirSuper(Supermercado);
         }
     }
 }
