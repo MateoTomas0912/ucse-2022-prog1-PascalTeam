@@ -33,6 +33,7 @@
             this.grillaComidas = new System.Windows.Forms.DataGridView();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AgregarComida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaComidas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +84,22 @@
             this.Eliminar.HeaderText = "Eliminar Comida";
             this.Eliminar.Name = "Eliminar";
             // 
+            // AgregarComida
+            // 
+            this.AgregarComida.Location = new System.Drawing.Point(58, 280);
+            this.AgregarComida.Name = "AgregarComida";
+            this.AgregarComida.Size = new System.Drawing.Size(113, 37);
+            this.AgregarComida.TabIndex = 3;
+            this.AgregarComida.Text = "Agregar Comida";
+            this.AgregarComida.UseVisualStyleBackColor = true;
+            this.AgregarComida.Click += new System.EventHandler(this.AgregarComida_Click);
+            // 
             // LoQueHeComido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.AgregarComida);
             this.Controls.Add(this.grillaComidas);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.label1);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.DataGridView grillaComidas;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.Button AgregarComida;
     }
 }

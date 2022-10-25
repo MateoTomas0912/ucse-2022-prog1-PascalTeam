@@ -38,5 +38,12 @@ namespace PantallasWinForm
             menu.Show();
             this.Hide();
         }
+
+        private void AgregarComida_Click(object sender, EventArgs e)
+        {
+            Form registrarComida = new RegistrarComidas();
+            registrarComida.Show();
+            this.Hide();
+        }
     }
 }
