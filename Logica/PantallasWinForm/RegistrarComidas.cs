@@ -1,4 +1,5 @@
 ﻿using Logica;
+using Logica.Contratos;
 using Logica.Logicas;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using CheckBox = System.Web.UI.WebControls.CheckBox;
 
 namespace PantallasWinForm
 {
@@ -28,9 +31,42 @@ namespace PantallasWinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Comida comida = new Comida();
+            ComidaArchivo comida = new ComidaArchivo();
             comida.Codigo = RandomString(10);
-            comida.RegistroDeComida = fechaComida.Value; 
+            comida.RegistroDeComida = fechaComida.Value;
+
+            foreach (DataGridViewRow row in grillaRecetas.Rows)
+            {
+                if(row.Cells[0].Value != null)
+                {
+                    Receta receta = new Receta();
+                    receta.Codigo = row.Cells[1].Value.ToString();
+                    receta.Nombre = row.Cells[2].Value.ToString();
+                    receta.Saludable = Convert.ToBoolean(row.Cells[3].Value);
+
+                    switch (row.Cells[4].Value)
+                    {
+                        case "Desayuno":
+                            receta.Momento = MomentosDelDia.Desayuno;
+                            break;
+                        case "Almuerzo":
+                            receta.Momento = MomentosDelDia.Almuerzo;
+                            break;
+                        case "Merienda":
+                            receta.Momento = MomentosDelDia.Merienda;
+                            break;
+                        case "Cena":
+                            receta.Momento = MomentosDelDia.Cena;
+                            break;
+                    }
+
+                    comida.Receta = receta;
+                    comida.CodigoReceta = row.Cells[1].Value.ToString();
+                }
+            }
+            
+            LogicaComidas logicaComidas  = new LogicaComidas();
+            logicaComidas.CrearActualizarComida(comida);
         }
 
         private static string RandomString(int length)

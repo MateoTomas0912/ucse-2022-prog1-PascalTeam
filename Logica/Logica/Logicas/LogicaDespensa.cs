@@ -11,13 +11,12 @@ namespace Logica.Logicas
 {
     public class LogicaDespensa : Archivo 
     {
-        public static List<Producto> Despensa = new List<Producto>();
 
-        public void EscrituraDespensa()
+        public void EscrituraDespensa(List<Producto> despensa)
         {
             string pathEscritura ="despensa.txt";
 
-            string serialProductos = JsonConvert.SerializeObject(Despensa);
+            string serialProductos = JsonConvert.SerializeObject(despensa);
 
             Escritura(pathEscritura, serialProductos);
         }
@@ -41,19 +40,22 @@ namespace Logica.Logicas
 
         public void EliminarProducto(Producto producto)
         {
-            Despensa.Remove(producto);
+            List<Producto> despensa = LecturaDespensa();
+            despensa.Remove(producto);
         }
 
         public void CrearActualizarDespensa(Producto producto)
         {
-            if (!Despensa.Contains(producto)) // crear nuevo
+            List<Producto> despensa = LecturaDespensa();
+
+            if (!despensa.Contains(producto)) // crear nuevo
             {
-                Despensa.Add(producto);
+                despensa.Add(producto);
             }
             else
             {
                 //edito la panaderia que tenga el codigo
-                foreach (var item in Despensa)
+                foreach (var item in despensa)
                 {
                     if (item.Codigo == producto.Codigo) //este quiero editar!
                     {
@@ -63,6 +65,8 @@ namespace Logica.Logicas
                     }
                 }
             }
+
+            EscrituraDespensa(despensa);
         }
     }
 }

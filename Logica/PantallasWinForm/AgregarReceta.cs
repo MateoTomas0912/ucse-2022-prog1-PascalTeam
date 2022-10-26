@@ -36,7 +36,8 @@ namespace PantallasWinForm
             else
             {
                 //Generar el objeto
-                Receta receta = new Receta();
+
+                RecetaArchivo receta = new RecetaArchivo();
                 receta.Codigo = RandomString(10);
                 receta.Saludable = checkSaludable.Checked;
                 receta.Nombre = NombreReceta.Text;
@@ -55,8 +56,25 @@ namespace PantallasWinForm
                         receta.Momento = MomentosDelDia.Cena;
                         break;
                 }
-                
-                //Guardar
+
+                receta.ProductosNecesarios = new List<Producto>();
+                receta.IngredientesCodigo = new List<string>();
+
+                foreach (DataGridViewRow row in grillaProductos.Rows)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        Producto producto = new Producto();
+                        producto.Codigo = Convert.ToString(row.Cells[1].Value);
+                        producto.Nombre = row.Cells[2].Value.ToString();
+                        producto.Precio = Convert.ToDouble(row.Cells[3].Value);
+
+                        receta.ProductosNecesarios.Add(producto);
+                        receta.IngredientesCodigo.Add(producto.Codigo);
+                    }
+                }
+
+                        //Guardar
                 LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
                 logicaRecetas.CrearActualizarRecetas(receta);
             }

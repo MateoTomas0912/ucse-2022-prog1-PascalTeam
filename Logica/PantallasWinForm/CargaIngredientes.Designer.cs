@@ -34,11 +34,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.categoriaBox = new System.Windows.Forms.ComboBox();
+            this.cantidad = new System.Windows.Forms.TextBox();
+            this.precio = new System.Windows.Forms.TextBox();
+            this.stockMinimo = new System.Windows.Forms.TextBox();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -104,19 +104,19 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Stock minimo";
             // 
-            // textBox1
+            // nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 88);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 6;
+            this.nombre.Location = new System.Drawing.Point(160, 88);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre.Multiline = true;
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(146, 20);
+            this.nombre.TabIndex = 6;
             // 
-            // comboBox1
+            // categoriaBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.categoriaBox.FormattingEnabled = true;
+            this.categoriaBox.Items.AddRange(new object[] {
             "Hortalizas y verduras",
             "Frutas",
             "Quesos",
@@ -124,46 +124,46 @@
             "Carnes",
             "Pescados",
             "Panaderia",
-            "Bebia (Alta en azucar)",
+            "Bebida (Alta en azucar)",
             "Bebida (Normal)",
-            "Bebidas (Alcoholicas)"});
-            this.comboBox1.Location = new System.Drawing.Point(160, 144);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
-            this.comboBox1.TabIndex = 7;
+            "Bebida (Alcoholicas)"});
+            this.categoriaBox.Location = new System.Drawing.Point(160, 144);
+            this.categoriaBox.Margin = new System.Windows.Forms.Padding(2);
+            this.categoriaBox.Name = "categoriaBox";
+            this.categoriaBox.Size = new System.Drawing.Size(146, 21);
+            this.categoriaBox.TabIndex = 7;
             // 
-            // textBox2
+            // cantidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 191);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
-            this.textBox2.TabIndex = 8;
+            this.cantidad.Location = new System.Drawing.Point(160, 191);
+            this.cantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.cantidad.Multiline = true;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(146, 20);
+            this.cantidad.TabIndex = 8;
             // 
-            // textBox3
+            // precio
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 240);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 20);
-            this.textBox3.TabIndex = 9;
+            this.precio.Location = new System.Drawing.Point(160, 240);
+            this.precio.Margin = new System.Windows.Forms.Padding(2);
+            this.precio.Multiline = true;
+            this.precio.Name = "precio";
+            this.precio.Size = new System.Drawing.Size(146, 20);
+            this.precio.TabIndex = 9;
             // 
-            // textBox4
+            // stockMinimo
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 288);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(146, 20);
-            this.textBox4.TabIndex = 10;
+            this.stockMinimo.Location = new System.Drawing.Point(160, 288);
+            this.stockMinimo.Margin = new System.Windows.Forms.Padding(2);
+            this.stockMinimo.Multiline = true;
+            this.stockMinimo.Name = "stockMinimo";
+            this.stockMinimo.Size = new System.Drawing.Size(146, 20);
+            this.stockMinimo.TabIndex = 10;
             // 
             // btn_salir
             // 
             this.btn_salir.Location = new System.Drawing.Point(28, 354);
-            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(87, 21);
             this.btn_salir.TabIndex = 11;
@@ -174,7 +174,7 @@
             // btn_guardar
             // 
             this.btn_guardar.Location = new System.Drawing.Point(316, 354);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 21);
             this.btn_guardar.TabIndex = 12;
@@ -189,18 +189,18 @@
             this.ClientSize = new System.Drawing.Size(414, 433);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.stockMinimo);
+            this.Controls.Add(this.precio);
+            this.Controls.Add(this.cantidad);
+            this.Controls.Add(this.categoriaBox);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CargaIngredientes";
             this.Text = "CargaIngredientes";
             this.ResumeLayout(false);
@@ -216,11 +216,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.ComboBox categoriaBox;
+        private System.Windows.Forms.TextBox cantidad;
+        private System.Windows.Forms.TextBox precio;
+        private System.Windows.Forms.TextBox stockMinimo;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_guardar;
     }

@@ -41,7 +41,6 @@ namespace Logica.Logicas
                     if (r.Codigo == receta.Codigo) //este quiero editar!
                     {
                         //Edicion reemplazando los datos
-                        r.Codigo = receta.Codigo;
                         r.Nombre = receta.Nombre;
                         r.Saludable = receta.Saludable;
                         r.ProductosNecesarios = receta.ProductosNecesarios;

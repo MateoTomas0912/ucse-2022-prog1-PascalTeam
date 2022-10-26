@@ -73,6 +73,8 @@
             this.grillaComidas.RowTemplate.Height = 24;
             this.grillaComidas.Size = new System.Drawing.Size(472, 161);
             this.grillaComidas.TabIndex = 2;
+            this.grillaComidas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaComidas_CellClick);
+
             // 
             // Editar
             // 

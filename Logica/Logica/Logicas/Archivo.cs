@@ -167,7 +167,7 @@ namespace Logica.Logicas
             return productos;
         }
 
-        public List<Producto> ObtenerProductosReceta(List<int> productos)
+        public List<Producto> ObtenerProductosReceta(List<string> productos)
         {
             List<Producto> productosReceta = Lectura();
             productosReceta = productosReceta.Where(x => productos.Contains(x.Codigo)).ToList();

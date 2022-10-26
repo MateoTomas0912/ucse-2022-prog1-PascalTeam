@@ -50,7 +50,7 @@ namespace Logica.Logicas
             return new List<ComidaArchivo> { };
         }
 
-        public void CrearActualizarComida(Comida comida)
+        public void CrearActualizarComida(ComidaArchivo comida)
         {
             List<Comida> comidas = ObtenerComidas();
             List<string> codigosComidas = comidas.Select(x => x.Codigo).ToList();
@@ -69,6 +69,8 @@ namespace Logica.Logicas
                     }
                 }
             }
+
+            EscrituraComidas(comidas);
         }
 
         public void EliminarComida(string codigo)

@@ -45,5 +45,39 @@ namespace PantallasWinForm
             registrarComida.Show();
             this.Hide();
         }
+
+        private void grillaComidas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indiceEditar = UtilidadesGrilla.ObtenerIndice(grillaComidas, "Editar");
+            int indiceEliminar = UtilidadesGrilla.ObtenerIndice(grillaComidas, "Eliminar");
+
+            if (indiceEditar == e.ColumnIndex)
+            {
+                //Hizo clic en editar
+                var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaComidas, "Codigo");
+                var codigoUsuario = grillaComidas.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
+
+                RegistrarComidas registar = new RegistrarComidas();
+
+                registar.ShowDialog(this);
+            }
+
+            if (indiceEliminar == e.ColumnIndex)
+            {
+                //Hizo clic en eliminar
+                DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar el registro?", "Eliminar registro", MessageBoxButtons.OKCancel);
+
+                if (resultado == DialogResult.OK)
+                {
+                    //Invocar a la logica para eliminar registro.
+                    LogicaComidas logicaComida = new LogicaComidas();
+                    var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaComidas, "Codigo");
+                    var codigoComida = grillaComidas.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
+
+                    logicaComida.EliminarComida(codigoComida);
+                    ActualizarGrilla();
+                }
+            }
+        }
     }
 }

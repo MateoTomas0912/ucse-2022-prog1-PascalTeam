@@ -8,6 +8,6 @@ namespace Logica.Contratos
 {
     public class RecetaArchivo : Receta
     {
-        public List<int> IngredientesCodigo = new List<int>();
+        public List<string> IngredientesCodigo = new List<string>();
     }
 }
