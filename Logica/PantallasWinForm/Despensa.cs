@@ -45,7 +45,7 @@ namespace PantallasWinForm
         private void ActualizarGrilla()
         {
             LogicaDespensa logicaDespensa = new LogicaDespensa();
-            grillaDespensa.DataSource = logicaDespensa.Lectura();
+            grillaDespensa.DataSource = logicaDespensa.LecturaDespensa();
         }
     }
 }

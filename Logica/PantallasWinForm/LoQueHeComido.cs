@@ -22,7 +22,6 @@ namespace PantallasWinForm
         {
             //mostrarlos
             grillaComidas.AutoGenerateColumns = true;
-
             ActualizarGrilla();
         }
 

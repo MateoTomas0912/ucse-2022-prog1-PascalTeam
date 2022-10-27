@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    public class Fruta : PorCantidad
+    public class Fruta : Producto
     {
         List<Fruta> productosFruta = new List<Fruta>();
 

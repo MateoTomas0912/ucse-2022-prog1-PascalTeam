@@ -24,6 +24,36 @@ namespace Logica.Logicas
             return recetas;
         }
 
+        public List<Receta> ObtenerRecetas(string filtro)
+        {
+            List<Receta> recetas = new List<Receta>();
+            List<RecetaArchivo> recetaArchivo = LecturaRecetas();
+            foreach (var receta in recetaArchivo)
+            {
+                receta.ProductosNecesarios = ObtenerProductosReceta(receta.IngredientesCodigo);
+                recetas.Add(receta);
+            }
+
+            switch (filtro)
+            {
+                case "Desayuno":
+                    recetas = recetas.FindAll(x => x.Momento == MomentosDelDia.Desayuno);
+                    break;
+                case "Almuerzo":
+                    recetas = recetas.FindAll(x => x.Momento == MomentosDelDia.Almuerzo);
+                    break;
+                case "Merienda":
+                    recetas = recetas.FindAll(x => x.Momento == MomentosDelDia.Merienda);
+                    break;
+                case "Cena":
+                    recetas = recetas.FindAll(x => x.Momento == MomentosDelDia.Cena);
+                    break;
+
+            }
+
+            return recetas;
+        }
+
         public void CrearActualizarRecetas(Receta receta)
         {
             List<Receta> recetas = new List<Receta>();
@@ -44,6 +74,7 @@ namespace Logica.Logicas
                         r.Nombre = receta.Nombre;
                         r.Saludable = receta.Saludable;
                         r.ProductosNecesarios = receta.ProductosNecesarios;
+                        r.CantidadPorProducto = receta.CantidadPorProducto;
                         r.Momento = receta.Momento;
                     }
                 }
@@ -56,7 +87,7 @@ namespace Logica.Logicas
             List<Receta> recetasFiltradas = ObtenerRecetas();
             foreach (var receta in recetasFiltradas)
             {
-                if(receta.Codigo == codigo)
+                if (receta.Codigo == codigo)
                 {
                     recetasFiltradas.Remove(receta);
                     EscrituraRecetas(recetasFiltradas);
@@ -85,7 +116,7 @@ namespace Logica.Logicas
 
                     string json = reader.ReadToEnd();
                     List<RecetaArchivo> recetas = JsonConvert.DeserializeObject<List<RecetaArchivo>>(json);
-                    if(recetas == null)
+                    if (recetas == null)
                     {
                         return new List<RecetaArchivo>();
                     }

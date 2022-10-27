@@ -65,16 +65,17 @@ namespace PantallasWinForm
                     if (row.Cells[0].Value != null)
                     {
                         Producto producto = new Producto();
-                        producto.Codigo = Convert.ToString(row.Cells[1].Value);
-                        producto.Nombre = row.Cells[2].Value.ToString();
-                        producto.Precio = Convert.ToDouble(row.Cells[3].Value);
+                        producto.Codigo = Convert.ToString(row.Cells[2].Value);
+                        producto.Nombre = row.Cells[3].Value.ToString();
+                        producto.Precio = Convert.ToDouble(row.Cells[4].Value);
 
                         receta.ProductosNecesarios.Add(producto);
+                        receta.CantidadPorProducto.Add(Convert.ToInt32(row.Cells[1].Value));
                         receta.IngredientesCodigo.Add(producto.Codigo);
                     }
                 }
 
-                        //Guardar
+                //Guardar
                 LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
                 logicaRecetas.CrearActualizarRecetas(receta);
             }

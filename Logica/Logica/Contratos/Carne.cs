@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Logica.Contratos
 {
-    public class Carne : PorPeso
+    public class Carne : Producto
     {
         List<Carne> productosCarne = new List<Carne>();
 
@@ -30,9 +30,9 @@ namespace Logica.Contratos
                     {
                         item.Nombre = producto.Nombre;
                         item.Precio = producto.Precio;
-                        item.PesoMinimo = producto.PesoMinimo;
-                        item.Peso = producto.Peso;
-                        if (item.Peso <= item.PesoMinimo) //Lo envio a la lista del super
+                        item.CantidadMinima = producto.CantidadMinima;
+                        item.Cantidad = producto.Cantidad;
+                        if (item.Cantidad <= item.CantidadMinima) //Lo envio a la lista del super
                         {
                             Logicas.LogicaSuper logicaSuper = new Logicas.LogicaSuper();
                             logicaSuper.CargarLista(item);

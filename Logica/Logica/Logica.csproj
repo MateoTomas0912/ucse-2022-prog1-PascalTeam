@@ -54,8 +54,6 @@
     <Compile Include="Contratos\Lacteo.cs" />
     <Compile Include="Contratos\Panaderia.cs" />
     <Compile Include="Contratos\Pescado.cs" />
-    <Compile Include="Contratos\PorCantidad.cs" />
-    <Compile Include="Contratos\PorPeso.cs" />
     <Compile Include="Contratos\PropiedadesAlimentosCtes.cs" />
     <Compile Include="Contratos\Producto.cs" />
     <Compile Include="Contratos\Queso.cs" />

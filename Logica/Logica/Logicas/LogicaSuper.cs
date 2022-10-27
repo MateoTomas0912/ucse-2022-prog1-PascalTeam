@@ -11,7 +11,7 @@ namespace Logica.Logicas
 {
     public class LogicaSuper : Archivo
     {
-        public static List<Producto> LecturaSuper()
+        public List<Producto> LecturaSuper()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";
             string pathProducto = pathDirectorio + "super.txt";
@@ -43,16 +43,52 @@ namespace Logica.Logicas
         public void CargarLista(Producto producto) //Este metodo va a recibir los productos que se vayan agotando en despensa
         {
             List<Producto> Supermercado = LecturaSuper();
+            List<string> codigosProductos = Supermercado.Select(x => x.Codigo).ToList();
+            if (codigosProductos.Contains(producto.Codigo))
+            {
+                int indice = Supermercado.FindIndex(x => x.Codigo == producto.Codigo);
+                Supermercado[indice].Cantidad = producto.Cantidad;
+                Supermercado[indice].Codigo = producto.Codigo;
+                Supermercado[indice].Nombre = producto.Nombre;
+                Supermercado[indice].CantidadMinima = producto.CantidadMinima;
+                Supermercado[indice].Precio = producto.Precio;
+            }
+            else
+            {
+                Supermercado.Add(producto);
+            }
 
-            Supermercado.Add(producto);
             EscribirSuper(Supermercado);
         }
         public void VaciarLista() //Método para vaciar la lista del super
         {
             List<Producto> Supermercado = LecturaSuper();
 
-            Supermercado.Clear(); //Vacio la lista
+            //Agregar Productos a despensa
+            foreach (var prod in Supermercado)
+            {
+                prod.Cantidad = 10;
+                LogicaDespensa logicaDespensa = new LogicaDespensa();
+                logicaDespensa.CrearActualizarDespensa(prod);
+            }
+
+            //Vacio la lista
+            Supermercado.Clear(); 
             EscribirSuper(Supermercado);
+        }
+
+        public List<Producto> FiltrarSuper(string ingrediente)
+        {
+            List<Producto> productos = LecturaSuper();
+
+            switch (ingrediente)
+            {
+                case ("Bebidas Normales"):
+                    return productos.Where(x => x is Bebida).Select(x => x).ToList();
+            }
+
+
+            return productos;
         }
     }
 }

@@ -32,7 +32,8 @@ namespace PantallasWinForm
             producto.Nombre = nombre.Text;
             producto.Codigo = RandomString(10);
             producto.Precio = Convert.ToInt32(precio.Text);
-
+            producto.Cantidad = Convert.ToInt32(cantidad.Text);
+            producto.CantidadMinima = Convert.ToInt32(stockMinimo.Text);
             switch (categoriaBox.SelectedItem)
             {
                 case "Hortalizas y verduras":
@@ -40,8 +41,8 @@ namespace PantallasWinForm
                     hortalizaVerdura.Codigo = producto.Codigo;
                     hortalizaVerdura.Nombre = producto.Nombre;
                     hortalizaVerdura.Precio = producto.Precio;
-                    hortalizaVerdura.CantidadMinima = 5;
-                    hortalizaVerdura.Cantidad = int.Parse(cantidad.Text);
+                    hortalizaVerdura.CantidadMinima = producto.CantidadMinima;
+                    hortalizaVerdura.Cantidad = producto.Cantidad;
                     hortalizaVerdura.CrearActualizarProducto(hortalizaVerdura);
                 break;
                 case "Frutas":
@@ -49,8 +50,8 @@ namespace PantallasWinForm
                     fruta.Codigo = producto.Codigo;
                     fruta.Nombre = producto.Nombre;
                     fruta.Precio = producto.Precio;
-                    fruta.CantidadMinima = 5;
-                    fruta.Cantidad = int.Parse(cantidad.Text);
+                    fruta.CantidadMinima = producto.CantidadMinima;
+                    fruta.Cantidad = producto.Cantidad;
                     fruta.CrearActualizarProducto(fruta);
                 break;
                 case "Lacteos":
@@ -58,8 +59,8 @@ namespace PantallasWinForm
                     lacteo.Codigo = producto.Codigo;
                     lacteo.Nombre = producto.Nombre;
                     lacteo.Precio = producto.Precio;
-                    lacteo.LitrosMinimos = 2;
-                    lacteo.Litros = int.Parse(cantidad.Text);
+                    lacteo.LitrosMinimos = producto.CantidadMinima;
+                    lacteo.Litros = producto.Cantidad;
                     lacteo.CrearActualizarProducto(lacteo);
                     break;
                 case "Quesos":
@@ -67,8 +68,8 @@ namespace PantallasWinForm
                     queso.Codigo = producto.Codigo;
                     queso.Nombre = producto.Nombre;
                     queso.Precio = producto.Precio;
-                    queso.PesoMinimo = 5;
-                    queso.Peso = int.Parse(cantidad.Text);
+                    queso.CantidadMinima = producto.CantidadMinima;
+                    queso.Cantidad = producto.Cantidad;
                     queso.CrearActualizarProducto(queso);
                     break;
                 case "Carnes":
@@ -76,8 +77,8 @@ namespace PantallasWinForm
                     carne.Codigo = producto.Codigo;
                     carne.Nombre = producto.Nombre;
                     carne.Precio = producto.Precio;
-                    carne.PesoMinimo = 5;
-                    carne.Peso = int.Parse(cantidad.Text);
+                    carne.CantidadMinima = producto.CantidadMinima;
+                    carne.Cantidad = producto.Cantidad;
                     carne.CrearActualizarProducto(carne);
                     break;
                 case "Panaderia":
@@ -85,8 +86,8 @@ namespace PantallasWinForm
                     panaderia.Codigo = producto.Codigo;
                     panaderia.Nombre = producto.Nombre;
                     panaderia.Precio = producto.Precio;
-                    panaderia.PesoMinimo = 5;
-                    panaderia.Peso = int.Parse(cantidad.Text);
+                    panaderia.CantidadMinima = producto.CantidadMinima;
+                    panaderia.Cantidad = producto.Cantidad;
                     panaderia.CrearActualizarProducto(panaderia);
                     break;
                 case "Pescados":
@@ -94,8 +95,8 @@ namespace PantallasWinForm
                     pescado.Codigo = producto.Codigo;
                     pescado.Nombre = producto.Nombre;
                     pescado.Precio = producto.Precio;
-                    pescado.PesoMinimo = 5;
-                    pescado.Peso = int.Parse(cantidad.Text);
+                    pescado.CantidadMinima = producto.CantidadMinima;
+                    pescado.Cantidad = producto.Cantidad;
                     pescado.CrearActualizarProducto(pescado);
                     break;
                 case "Bebida(Normal)":
@@ -103,6 +104,8 @@ namespace PantallasWinForm
                     bebida.Codigo = producto.Codigo;
                     bebida.Nombre = producto.Nombre;
                     bebida.Precio = producto.Precio;
+                    bebida.CantidadMinima = producto.CantidadMinima;
+                    bebida.Cantidad = producto.Cantidad;
                     bebida.TipoBebida = TipoBebida.Normales;
                     bebida.CrearActualizarProducto(bebida);
                     break;
@@ -111,6 +114,8 @@ namespace PantallasWinForm
                     bebida2.Codigo = producto.Codigo;
                     bebida2.Nombre = producto.Nombre;
                     bebida2.Precio = producto.Precio;
+                    bebida2.CantidadMinima = producto.CantidadMinima;
+                    bebida2.Cantidad = producto.Cantidad;
                     bebida2.TipoBebida = TipoBebida.AltaEnAzucar;
                     bebida2.CrearActualizarProducto(bebida2);
                     break;
@@ -120,12 +125,18 @@ namespace PantallasWinForm
                     bebida3.Nombre = producto.Nombre;
                     bebida3.Precio = producto.Precio;
                     bebida3.TipoBebida = TipoBebida.Alcoholicas;
+                    bebida3.CantidadMinima = producto.CantidadMinima;
+                    bebida3.Cantidad = producto.Cantidad;
                     bebida3.CrearActualizarProducto(bebida3);
                     break;
             }
 
             LogicaDespensa logicaDespensa = new LogicaDespensa();
             logicaDespensa.CrearActualizarDespensa(producto);
+
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
 
         private static string RandomString(int length)

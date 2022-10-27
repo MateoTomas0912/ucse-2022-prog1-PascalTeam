@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    public class Bebida : PorCantidad
+    public class Bebida : Producto
     {
         public TipoBebida TipoBebida { get; set; }
 
@@ -53,7 +53,7 @@ namespace Logica.Contratos
         {
             Archivo archivo = new Archivo();
             List<Producto> productos = archivo.Lectura();
-            productosBebida = productos.Where(x => x is Bebida).Select(x => x as Bebida).ToList();
+            productosBebida = productos.Where(x => x is Bebida && x.Cantidad >= 0).Select(x => x as Bebida).ToList();
         }
 
         private void EscrituraBebida()

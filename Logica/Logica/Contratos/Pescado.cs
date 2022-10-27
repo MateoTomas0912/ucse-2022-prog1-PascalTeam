@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Logica.Contratos
 {
-    public class Pescado : PorPeso
+    public class Pescado : Producto
     {
         List<Pescado> productosPescado = new List<Pescado>();
 
@@ -29,9 +29,9 @@ namespace Logica.Contratos
                     {
                         item.Nombre = producto.Nombre;
                         item.Precio = producto.Precio;
-                        item.PesoMinimo = producto.PesoMinimo;
-                        item.Peso = producto.Peso;
-                        if (item.Peso <= item.PesoMinimo) //Lo envio a la lista del super
+                        item.CantidadMinima = producto.CantidadMinima;
+                        item.Cantidad = producto.Cantidad;
+                        if (item.Cantidad <= item.CantidadMinima) //Lo envio a la lista del super
                         {
                             Logicas.LogicaSuper logicaSuper = new Logicas.LogicaSuper();
                             logicaSuper.CargarLista(item);

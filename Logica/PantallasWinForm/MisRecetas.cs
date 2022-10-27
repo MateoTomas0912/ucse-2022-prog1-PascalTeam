@@ -78,5 +78,18 @@ namespace PantallasWinForm
                 }
             }
         }
+
+        private void filtroBuscar_Click(object sender, EventArgs e)
+        {
+            string momentoReceta = listaMomentos.Text;
+            LogicaRecetas logicaRecetas = new LogicaRecetas();
+            grillaRecetas.DataSource = null;
+            grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas(momentoReceta);
+        }
+
+        private void eliminarFiltro_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
     }
 }

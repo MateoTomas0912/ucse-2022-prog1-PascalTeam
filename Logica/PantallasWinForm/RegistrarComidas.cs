@@ -62,11 +62,25 @@ namespace PantallasWinForm
 
                     comida.Receta = receta;
                     comida.CodigoReceta = row.Cells[1].Value.ToString();
+
+                    //Actualizar Despensa
+                    LogicaDespensa logicaDespensa = new LogicaDespensa();
+                    bool hayProductos = logicaDespensa.DescontarProductos(receta.Codigo);
+                    if (!hayProductos)
+                    {
+                        MessageBox.Show("No tiene la suficiente cantidad de productos");
+                    }
+                    else
+                    {
+                        //Generar comida
+                        LogicaComidas logicaComidas = new LogicaComidas();
+                        logicaComidas.CrearActualizarComida(comida);
+                    }
                 }
             }
-            
-            LogicaComidas logicaComidas  = new LogicaComidas();
-            logicaComidas.CrearActualizarComida(comida);
+            Form loQueHeComido = new LoQueHeComido();
+            loQueHeComido.Show();
+            this.Hide();
         }
 
         private static string RandomString(int length)
@@ -90,6 +104,19 @@ namespace PantallasWinForm
             grillaRecetas.DataSource = null;
             LogicaRecetas logicaRecetas = new LogicaRecetas();
             grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas();
+        }
+
+        private void eliminarFiltro_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void filtroBuscar_Click_1(object sender, EventArgs e)
+        {
+            string momentoReceta = listaMomentos.Text;
+            LogicaRecetas logicaRecetas = new LogicaRecetas();
+            grillaRecetas.DataSource = null;
+            grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas(momentoReceta);
         }
     }
 }

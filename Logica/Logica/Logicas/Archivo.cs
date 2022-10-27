@@ -172,7 +172,19 @@ namespace Logica.Logicas
             List<Producto> productosReceta = Lectura();
             productosReceta = productosReceta.Where(x => productos.Contains(x.Codigo)).ToList();
 
-            return productosReceta;
+            List<Producto> productosConCantidad = new List<Producto>();
+            foreach (var producto in productosReceta)
+            {
+                Producto productoReceta = new Producto();
+                productoReceta.Codigo = producto.Codigo;
+                productoReceta.Nombre = producto.Nombre;
+                productoReceta.Precio = producto.Precio;
+                productoReceta.Cantidad = producto.Cantidad;
+                productoReceta.CantidadMinima = producto.CantidadMinima;
+                productosConCantidad.Add(productoReceta);
+            }
+
+            return productosConCantidad;
         }
     }
 }

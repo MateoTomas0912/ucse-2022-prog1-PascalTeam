@@ -33,6 +33,10 @@
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listaMomentos = new System.Windows.Forms.ListBox();
+            this.filtroBuscar = new System.Windows.Forms.Button();
+            this.eliminarFiltro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +89,57 @@
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 306);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Busque por momento";
+            // 
+            // listaMomentos
+            // 
+            this.listaMomentos.FormattingEnabled = true;
+            this.listaMomentos.Items.AddRange(new object[] {
+            "Desayuno",
+            "Merienda",
+            "Almuerzo",
+            "Cena"});
+            this.listaMomentos.Location = new System.Drawing.Point(69, 335);
+            this.listaMomentos.Name = "listaMomentos";
+            this.listaMomentos.Size = new System.Drawing.Size(120, 17);
+            this.listaMomentos.TabIndex = 4;
+            // 
+            // filtroBuscar
+            // 
+            this.filtroBuscar.Location = new System.Drawing.Point(218, 306);
+            this.filtroBuscar.Name = "filtroBuscar";
+            this.filtroBuscar.Size = new System.Drawing.Size(75, 23);
+            this.filtroBuscar.TabIndex = 5;
+            this.filtroBuscar.Text = "Buscar";
+            this.filtroBuscar.UseVisualStyleBackColor = true;
+            this.filtroBuscar.Click += new System.EventHandler(this.filtroBuscar_Click);
+            // 
+            // eliminarFiltro
+            // 
+            this.eliminarFiltro.Location = new System.Drawing.Point(218, 335);
+            this.eliminarFiltro.Name = "eliminarFiltro";
+            this.eliminarFiltro.Size = new System.Drawing.Size(75, 23);
+            this.eliminarFiltro.TabIndex = 6;
+            this.eliminarFiltro.Text = "Quitar Filtro";
+            this.eliminarFiltro.UseVisualStyleBackColor = true;
+            this.eliminarFiltro.Click += new System.EventHandler(this.eliminarFiltro_Click);
+            // 
             // MisRecetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.eliminarFiltro);
+            this.Controls.Add(this.filtroBuscar);
+            this.Controls.Add(this.listaMomentos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grillaRecetas);
@@ -110,5 +160,9 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listaMomentos;
+        private System.Windows.Forms.Button filtroBuscar;
+        private System.Windows.Forms.Button eliminarFiltro;
     }
 }

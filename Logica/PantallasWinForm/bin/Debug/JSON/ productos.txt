@@ -1,1 +1,0 @@
-[{"Peso":14,"PesoMinimo":10,"Codigo":12,"Nombre":"Pan","Precio":100.0},{"Peso":14,"PesoMinimo":10,"Codigo":14,"Nombre":"Facturas","Precio":100.0},{"Peso":14,"PesoMinimo":10,"Codigo":16,"Nombre":"Alfajores negros","Precio":100.0},{"TipoBebida":0,"Cantidad":10,"CantidadMinima":5,"Codigo":22,"Nombre":"Cocaaaaa","Precio":100.0}]
