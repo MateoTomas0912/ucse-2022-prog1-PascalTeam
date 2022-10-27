@@ -47,5 +47,39 @@ namespace PantallasWinForm
             LogicaDespensa logicaDespensa = new LogicaDespensa();
             grillaDespensa.DataSource = logicaDespensa.LecturaDespensa();
         }
+
+        private void grillaDespensa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indiceEditar = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Editar");
+            int indiceEliminar = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Eliminar");
+
+            if (indiceEditar == e.ColumnIndex)
+            {
+                //Hizo clic en editar
+                var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Codigo");
+                var codigoUsuario = grillaDespensa.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
+
+                CargaIngredientes cargaIngredientes = new CargaIngredientes();
+                cargaIngredientes.ShowDialog(this);
+            }
+
+            if (indiceEliminar == e.ColumnIndex)
+            {
+                //Hizo clic en eliminar
+                DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar el registro?", "Eliminar registro", MessageBoxButtons.OKCancel);
+
+                if (resultado == DialogResult.OK)
+                {
+                    //Invocar a la logica para eliminar registro.
+                    LogicaDespensa logicaDespensa = new LogicaDespensa();
+                    var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Codigo");
+                    var codigoProducto = grillaDespensa.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
+
+                    logicaDespensa.EliminarProducto(codigoProducto);
+                    ActualizarGrilla();
+                }
+            }
+        }
+
     }
 }

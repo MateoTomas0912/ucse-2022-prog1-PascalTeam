@@ -73,7 +73,7 @@ namespace Logica.Logicas
             }
 
             //Vacio la lista
-            Supermercado.Clear(); 
+            Supermercado.Clear();
             EscribirSuper(Supermercado);
         }
 
@@ -83,10 +83,23 @@ namespace Logica.Logicas
 
             switch (ingrediente)
             {
-                case ("Bebidas Normales"):
+                case ("Bebidas"):
                     return productos.Where(x => x is Bebida).Select(x => x).ToList();
+                case ("Panaderia"):
+                    return productos.Where(x => x is Panaderia).Select(x => x).ToList();
+                case ("Carnes"):
+                    return productos.Where(x => x is Carne).Select(x => x).ToList();
+                case ("Frutas"):
+                    return productos.Where(x => x is Fruta).Select(x => x).ToList();
+                case ("Hortalizas y Verduras"):
+                    return productos.Where(x => x is HortalizaVerdura).Select(x => x).ToList();
+                case ("Lacteos"):
+                    return productos.Where(x => x is Lacteo).Select(x => x).ToList();
+                case ("Pescados"):
+                    return productos.Where(x => x is Pescado).Select(x => x).ToList();
+                case ("Quesos"):
+                    return productos.Where(x => x is Queso).Select(x => x).ToList();
             }
-
 
             return productos;
         }

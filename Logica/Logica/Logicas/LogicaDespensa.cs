@@ -44,10 +44,18 @@ namespace Logica.Logicas
             return new List<Producto>();
         }
 
-        public void EliminarProducto(Producto producto)
+        public void EliminarProducto(string codigo)
         {
-            List<Producto> despensa = LecturaDespensa();
-            despensa.Remove(producto);
+            List<Producto> productosEnDespensa = LecturaDespensa();
+            foreach (var prod in productosEnDespensa)
+            {
+                if (prod.Codigo == codigo)
+                {
+                    productosEnDespensa.Remove(prod);
+                    EscrituraDespensa(productosEnDespensa);
+                    break;
+                }
+            }
         }
 
         public void CrearActualizarDespensa(Producto producto)

@@ -117,9 +117,7 @@
             "Carnes",
             "Pescados",
             "Panadería",
-            "Bebidas Normales",
-            "Bebidas azucaradas",
-            "Bebidas alcoholicas"});
+            "Bebidas "});
             this.listaIngredientes.Location = new System.Drawing.Point(278, 61);
             this.listaIngredientes.Name = "listaIngredientes";
             this.listaIngredientes.Size = new System.Drawing.Size(130, 17);

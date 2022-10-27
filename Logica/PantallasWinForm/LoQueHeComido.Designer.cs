@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
             this.grillaComidas = new System.Windows.Forms.DataGridView();
+            this.AgregarComida = new System.Windows.Forms.Button();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.AgregarComida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaComidas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,17 +74,6 @@
             this.grillaComidas.Size = new System.Drawing.Size(472, 161);
             this.grillaComidas.TabIndex = 2;
             this.grillaComidas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaComidas_CellClick);
-
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar Comida";
-            this.Editar.Name = "Editar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar Comida";
-            this.Eliminar.Name = "Eliminar";
             // 
             // AgregarComida
             // 
@@ -95,6 +84,18 @@
             this.AgregarComida.Text = "Agregar Comida";
             this.AgregarComida.UseVisualStyleBackColor = true;
             this.AgregarComida.Click += new System.EventHandler(this.AgregarComida_Click);
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar Comida";
+            this.Editar.Name = "Editar";
+            this.Editar.Text = "Editar ";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar Comida";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Eliminar";
             // 
             // LoQueHeComido
             // 
@@ -120,8 +121,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.DataGridView grillaComidas;
+        private System.Windows.Forms.Button AgregarComida;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.Button AgregarComida;
     }
 }
