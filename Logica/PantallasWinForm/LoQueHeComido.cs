@@ -40,7 +40,7 @@ namespace PantallasWinForm
 
         private void AgregarComida_Click(object sender, EventArgs e)
         {
-            Form registrarComida = new RegistrarComidas();
+            Form registrarComida = new RegistrarComidas(null);
             registrarComida.Show();
             this.Hide();
         }
@@ -56,7 +56,7 @@ namespace PantallasWinForm
                 var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaComidas, "Codigo");
                 var codigoUsuario = grillaComidas.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
 
-                RegistrarComidas registar = new RegistrarComidas();
+                RegistrarComidas registar = new RegistrarComidas(codigoUsuario);
 
                 registar.ShowDialog(this);
             }

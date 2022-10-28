@@ -14,9 +14,12 @@ namespace PantallasWinForm
 {
     public partial class AgregarReceta : Form
     {
-        public AgregarReceta()
+        string CodigoReceta = string.Empty;
+
+        public AgregarReceta(string codigoReceta)
         {
             InitializeComponent();
+            CodigoReceta = codigoReceta;
         }
 
         private void btn_volverInicio_Click(object sender, EventArgs e)
@@ -38,7 +41,14 @@ namespace PantallasWinForm
                 //Generar el objeto
 
                 RecetaArchivo receta = new RecetaArchivo();
-                receta.Codigo = RandomString(10);
+                if(CodigoReceta == null)
+                {
+                    receta.Codigo = RandomString(10);
+                }
+                else
+                {
+                    receta.Codigo = CodigoReceta;
+                }
                 receta.Saludable = checkSaludable.Checked;
                 receta.Nombre = NombreReceta.Text;
                 switch (listaMomento.Text)

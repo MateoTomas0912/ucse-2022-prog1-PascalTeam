@@ -20,7 +20,7 @@ namespace PantallasWinForm
 
         private void btn_cargaringrediente_Click(object sender, EventArgs e)
         {
-            Form cargar = new CargaIngredientes();
+            Form cargar = new CargaIngredientes(null);
             cargar.Show();
             this.Hide();
         }
@@ -59,7 +59,7 @@ namespace PantallasWinForm
                 var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Codigo");
                 var codigoUsuario = grillaDespensa.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
 
-                CargaIngredientes cargaIngredientes = new CargaIngredientes();
+                CargaIngredientes cargaIngredientes = new CargaIngredientes(codigoUsuario);
                 cargaIngredientes.ShowDialog(this);
             }
 

@@ -91,7 +91,6 @@
     <Compile Include="GrillaProductos.Designer.cs">
       <DependentUpon>GrillaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormaCarga.cs" />
     <Compile Include="Grillas.cs">
       <SubType>Form</SubType>
     </Compile>

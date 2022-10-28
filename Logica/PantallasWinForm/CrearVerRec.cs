@@ -19,7 +19,7 @@ namespace PantallasWinForm
 
         private void btn_Aggreceta_Click(object sender, EventArgs e)
         {
-            Form agg = new AgregarReceta();
+            Form agg = new AgregarReceta(null);
             agg.Show();
             this.Hide();
         }

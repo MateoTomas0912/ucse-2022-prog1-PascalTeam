@@ -17,9 +17,11 @@ namespace PantallasWinForm
 {
     public partial class RegistrarComidas : Form
     {
-        public RegistrarComidas()
+        string CodigoComida = string.Empty;
+        public RegistrarComidas(string codigoComida)
         {
             InitializeComponent();
+            CodigoComida = codigoComida;
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -32,7 +34,14 @@ namespace PantallasWinForm
         private void button1_Click(object sender, EventArgs e)
         {
             ComidaArchivo comida = new ComidaArchivo();
-            comida.Codigo = RandomString(10);
+            if(CodigoComida == null)
+            {
+                comida.Codigo = RandomString(10);
+            }
+            else
+            {
+                comida.Codigo = CodigoComida;
+            }
             comida.RegistroDeComida = fechaComida.Value;
 
             foreach (DataGridViewRow row in grillaRecetas.Rows)

@@ -56,7 +56,7 @@ namespace PantallasWinForm
                 var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaRecetas, "Codigo");
                 var codigoUsuario = grillaRecetas.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
 
-                AgregarReceta agregarReceta = new AgregarReceta();
+                AgregarReceta agregarReceta = new AgregarReceta(codigoUsuario);
 
                 agregarReceta.ShowDialog(this);
             }

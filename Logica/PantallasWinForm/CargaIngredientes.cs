@@ -14,9 +14,11 @@ namespace PantallasWinForm
 {
     public partial class CargaIngredientes : Form
     {
-        public CargaIngredientes()
+        string CodigoProducto = String.Empty;
+        public CargaIngredientes(string codigoProducto)
         {
             InitializeComponent();
+            CodigoProducto = codigoProducto;
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -30,7 +32,15 @@ namespace PantallasWinForm
         {
             Producto producto = new Producto();
             producto.Nombre = nombre.Text;
-            producto.Codigo = RandomString(10);
+            if(CodigoProducto == null)
+            {
+                producto.Codigo = RandomString(10);
+            }
+            else
+            {
+                producto.Codigo = CodigoProducto;
+            }
+            
             producto.Precio = Convert.ToInt32(precio.Text);
             producto.Cantidad = Convert.ToInt32(cantidad.Text);
             producto.CantidadMinima = Convert.ToInt32(stockMinimo.Text);
@@ -134,8 +144,6 @@ namespace PantallasWinForm
             LogicaDespensa logicaDespensa = new LogicaDespensa();
             logicaDespensa.CrearActualizarDespensa(producto);
 
-            Menu menu = new Menu();
-            menu.Show();
             this.Hide();
         }
 
