@@ -1,1 +1,0 @@
-[{"Codigo":"3CK5TAP5VB","Nombre":"Pollo","Precio":1000.0,"Cantidad":2,"CantidadMinima":1},{"Codigo":"BT8C29QDHQ","Nombre":"Pollo","Precio":100.0,"Cantidad":2,"CantidadMinima":1}]
