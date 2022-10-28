@@ -36,6 +36,8 @@
             this.filtroBuscar = new System.Windows.Forms.Button();
             this.listaIngredientes = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.costoTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaSupermercado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,13 +61,13 @@
             this.grillaSupermercado.Name = "grillaSupermercado";
             this.grillaSupermercado.RowHeadersWidth = 51;
             this.grillaSupermercado.RowTemplate.Height = 24;
-            this.grillaSupermercado.Size = new System.Drawing.Size(458, 167);
+            this.grillaSupermercado.Size = new System.Drawing.Size(499, 167);
             this.grillaSupermercado.TabIndex = 1;
             // 
             // btn_comprar
             // 
             this.btn_comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_comprar.Location = new System.Drawing.Point(426, 281);
+            this.btn_comprar.Location = new System.Drawing.Point(467, 296);
             this.btn_comprar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_comprar.Name = "btn_comprar";
             this.btn_comprar.Size = new System.Drawing.Size(76, 33);
@@ -77,7 +79,7 @@
             // btn_salir
             // 
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Location = new System.Drawing.Point(44, 281);
+            this.btn_salir.Location = new System.Drawing.Point(44, 296);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(77, 33);
@@ -88,7 +90,7 @@
             // 
             // eliminarFiltro
             // 
-            this.eliminarFiltro.Location = new System.Drawing.Point(427, 55);
+            this.eliminarFiltro.Location = new System.Drawing.Point(467, 55);
             this.eliminarFiltro.Name = "eliminarFiltro";
             this.eliminarFiltro.Size = new System.Drawing.Size(75, 23);
             this.eliminarFiltro.TabIndex = 14;
@@ -98,7 +100,7 @@
             // 
             // filtroBuscar
             // 
-            this.filtroBuscar.Location = new System.Drawing.Point(427, 26);
+            this.filtroBuscar.Location = new System.Drawing.Point(467, 21);
             this.filtroBuscar.Name = "filtroBuscar";
             this.filtroBuscar.Size = new System.Drawing.Size(75, 23);
             this.filtroBuscar.TabIndex = 13;
@@ -126,17 +128,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(275, 31);
+            this.label3.Location = new System.Drawing.Point(275, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Busque por ingrediente";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(274, 264);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "El costo de su compra es: ";
+            // 
+            // costoTotal
+            // 
+            this.costoTotal.AutoSize = true;
+            this.costoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costoTotal.Location = new System.Drawing.Point(475, 264);
+            this.costoTotal.Name = "costoTotal";
+            this.costoTotal.Size = new System.Drawing.Size(18, 20);
+            this.costoTotal.TabIndex = 16;
+            this.costoTotal.Text = "0";
             // 
             // Supermercado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.costoTotal);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.eliminarFiltro);
             this.Controls.Add(this.filtroBuscar);
             this.Controls.Add(this.listaIngredientes);
@@ -165,5 +189,7 @@
         private System.Windows.Forms.Button filtroBuscar;
         private System.Windows.Forms.ListBox listaIngredientes;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label costoTotal;
     }
 }

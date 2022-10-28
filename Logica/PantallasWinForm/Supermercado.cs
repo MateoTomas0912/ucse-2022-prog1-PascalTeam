@@ -64,6 +64,11 @@ namespace PantallasWinForm
         {
             LogicaSuper logicaSupermercado = new LogicaSuper();
             grillaSupermercado.DataSource = logicaSupermercado.LecturaSuper();
+
+            foreach (DataGridViewRow row in grillaSupermercado.Rows)
+            {
+                costoTotal.Text = "$" + (int.Parse(costoTotal.Text) + int.Parse(row.Cells[2].Value.ToString())).ToString();
+            }
         }
 
         private void filtroBuscar_Click(object sender, EventArgs e)
