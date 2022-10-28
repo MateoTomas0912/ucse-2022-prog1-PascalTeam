@@ -15,7 +15,8 @@ namespace Logica.Contratos
         public void CrearActualizarProducto(Pescado producto)
         {
             LeerPescado();
-            if (!productosPescado.Contains(producto)) // crear nuevo
+            List<string> codigos = productosPescado.Select(x => x.Codigo).ToList();
+            if (!codigos.Contains(producto.Codigo)) // crear nuevo
             {
                 //generar codigo
                 productosPescado.Add(producto);

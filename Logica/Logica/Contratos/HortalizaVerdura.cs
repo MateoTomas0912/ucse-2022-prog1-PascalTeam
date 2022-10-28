@@ -15,7 +15,8 @@ namespace Logica.Contratos
         public void CrearActualizarProducto(HortalizaVerdura producto)
         {
             LeerHortalizaVerdura();
-            if (!productosHortalizaVerdura.Contains(producto)) // crear nuevo
+            List<string> codigos = productosHortalizaVerdura.Select(x => x.Codigo).ToList();
+            if (!codigos.Contains(producto.Codigo)) // crear nuevo
             {
                 //generar codigo
                 productosHortalizaVerdura.Add(producto);

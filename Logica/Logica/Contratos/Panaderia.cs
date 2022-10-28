@@ -16,8 +16,8 @@ namespace Logica.Contratos
         public void CrearActualizarProducto(Panaderia producto)
         {
             LeerPanaderia();
-
-            if (!productosPanaderia.Contains(producto)) // crear nuevo
+            List<string> codigos = productosPanaderia.Select(x => x.Codigo).ToList();
+            if (!codigos.Contains(producto.Codigo)) // crear nuevo
             {
                 //generar codigo
                 productosPanaderia.Add(producto);
