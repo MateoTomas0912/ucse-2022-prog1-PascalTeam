@@ -21,7 +21,7 @@ namespace PantallasWinForm
         private void Principal_Load(object sender, EventArgs e)
         {
             //mostrarlos
-            grillaComidas.AutoGenerateColumns = true;
+            grillaComidas.AutoGenerateColumns = false;
             ActualizarGrilla();
         }
 

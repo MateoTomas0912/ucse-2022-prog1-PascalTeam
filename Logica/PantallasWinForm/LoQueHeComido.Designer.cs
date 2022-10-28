@@ -34,6 +34,9 @@
             this.AgregarComida = new System.Windows.Forms.Button();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreReceta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegistroDeComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaComidas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +68,10 @@
             this.grillaComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaComidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar,
-            this.Eliminar});
+            this.Eliminar,
+            this.Codigo,
+            this.NombreReceta,
+            this.RegistroDeComida});
             this.grillaComidas.Location = new System.Drawing.Point(58, 94);
             this.grillaComidas.Margin = new System.Windows.Forms.Padding(2);
             this.grillaComidas.Name = "grillaComidas";
@@ -97,6 +103,24 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Text = "Eliminar";
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo Comida";
+            this.Codigo.Name = "Codigo";
+            // 
+            // NombreReceta
+            // 
+            this.NombreReceta.DataPropertyName = "NombreReceta";
+            this.NombreReceta.HeaderText = "Receta";
+            this.NombreReceta.Name = "NombreReceta";
+            // 
+            // RegistroDeComida
+            // 
+            this.RegistroDeComida.DataPropertyName = "RegistroDeComida";
+            this.RegistroDeComida.HeaderText = "Fecha";
+            this.RegistroDeComida.Name = "RegistroDeComida";
+            // 
             // LoQueHeComido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,5 +148,8 @@
         private System.Windows.Forms.Button AgregarComida;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreReceta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RegistroDeComida;
     }
 }

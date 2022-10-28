@@ -13,6 +13,8 @@ namespace Logica
         public string Codigo { get; set; }
         [JsonIgnore]
         public Receta Receta { get; set; }
+        [JsonIgnore]
+        public string NombreReceta { get; set; }
         public DateTime RegistroDeComida { get; set; }
     }
 }

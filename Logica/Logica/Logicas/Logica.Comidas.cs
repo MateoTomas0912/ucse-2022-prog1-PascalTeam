@@ -27,6 +27,7 @@ namespace Logica.Logicas
             foreach (var comida in comidaArchivo)
             {
                 comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comida.NombreReceta = comida.Receta.Nombre;
                 comidas.Add(comida);
             }
             return comidas;
