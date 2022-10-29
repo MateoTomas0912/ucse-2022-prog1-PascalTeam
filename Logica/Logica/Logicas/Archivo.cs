@@ -166,26 +166,6 @@ namespace Logica.Logicas
 
             return productos;
         }
-
-        public List<Producto> ObtenerProductosReceta(List<string> productos)
-        {
-            List<Producto> productosReceta = Lectura();
-            productosReceta = productosReceta.Where(x => productos.Contains(x.Codigo)).ToList();
-
-            List<Producto> productosConCantidad = new List<Producto>();
-            foreach (var producto in productosReceta)
-            {
-                Producto productoReceta = new Producto();
-                productoReceta.Codigo = producto.Codigo;
-                productoReceta.Nombre = producto.Nombre;
-                productoReceta.Precio = producto.Precio;
-                productoReceta.Cantidad = producto.Cantidad;
-                productoReceta.CantidadMinima = producto.CantidadMinima;
-                productosConCantidad.Add(productoReceta);
-            }
-
-            return productosConCantidad;
-        }
     }
 }
 

@@ -48,39 +48,21 @@ namespace PantallasWinForm
             {
                 if(row.Cells[0].Value != null)
                 {
-                    Receta receta = new Receta();
-                    receta.Codigo = row.Cells[1].Value.ToString();
-                    receta.Nombre = row.Cells[2].Value.ToString();
-                    receta.Saludable = Convert.ToBoolean(row.Cells[3].Value);
-
-                    switch (row.Cells[4].Value)
-                    {
-                        case "Desayuno":
-                            receta.Momento = MomentosDelDia.Desayuno;
-                            break;
-                        case "Almuerzo":
-                            receta.Momento = MomentosDelDia.Almuerzo;
-                            break;
-                        case "Merienda":
-                            receta.Momento = MomentosDelDia.Merienda;
-                            break;
-                        case "Cena":
-                            receta.Momento = MomentosDelDia.Cena;
-                            break;
-                    }
-
-                    comida.Receta = receta;
+                    comida.Receta = LogicaRecetas.ObtenerRecetaComidas(row.Cells[1].Value.ToString());
                     comida.CodigoReceta = row.Cells[1].Value.ToString();
 
                     //Actualizar Despensa
                     LogicaDespensa logicaDespensa = new LogicaDespensa();
-                    bool hayProductos = logicaDespensa.DescontarProductos(receta.Codigo);
-                    if (!hayProductos)
+                    bool hayProductos = logicaDespensa.DescontarProductos(row.Cells[1].Value.ToString());
+                    if (comida.Receta == null)
+                    {
+                        MessageBox.Show("Debe selecionar una receta");
+                    } else if (!hayProductos)
                     {
                         MessageBox.Show("No tiene la suficiente cantidad de productos");
                     }
-                    else
-                    {
+                    else 
+                    { 
                         //Generar comida
                         LogicaComidas logicaComidas = new LogicaComidas();
                         logicaComidas.CrearActualizarComida(comida);
@@ -103,7 +85,7 @@ namespace PantallasWinForm
         private void Principal_Load(object sender, EventArgs e)
         {
             //mostrarlos
-            grillaRecetas.AutoGenerateColumns = true;
+            grillaRecetas.AutoGenerateColumns = false;
 
             ActualizarGrilla();
         }

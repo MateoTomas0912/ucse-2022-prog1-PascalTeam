@@ -18,7 +18,8 @@ namespace Logica.Logicas
             List<RecetaArchivo> recetaArchivo = LecturaRecetas();
             foreach (var receta in recetaArchivo)
             {
-                receta.ProductosNecesarios = ObtenerProductosReceta(receta.IngredientesCodigo);
+                LogicaDespensa logicaDespensa = new LogicaDespensa();
+                receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
                 recetas.Add(receta);
             }
             return recetas;
@@ -30,7 +31,8 @@ namespace Logica.Logicas
             List<RecetaArchivo> recetaArchivo = LecturaRecetas();
             foreach (var receta in recetaArchivo)
             {
-                receta.ProductosNecesarios = ObtenerProductosReceta(receta.IngredientesCodigo);
+                LogicaDespensa logicaDespensa = new LogicaDespensa();
+                receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
                 recetas.Add(receta);
             }
 

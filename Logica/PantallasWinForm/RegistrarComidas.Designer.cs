@@ -32,13 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fechaComida = new System.Windows.Forms.DateTimePicker();
             this.grillaRecetas = new System.Windows.Forms.DataGridView();
-            this.CheckReceta = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btn_salir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.eliminarFiltro = new System.Windows.Forms.Button();
             this.filtroBuscar = new System.Windows.Forms.Button();
             this.listaMomentos = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.CheckReceta = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,9 @@
             // 
             this.grillaRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaRecetas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CheckReceta});
+            this.CheckReceta,
+            this.Codigo,
+            this.Nombre});
             this.grillaRecetas.Location = new System.Drawing.Point(184, 104);
             this.grillaRecetas.Margin = new System.Windows.Forms.Padding(2);
             this.grillaRecetas.MultiSelect = false;
@@ -83,11 +87,6 @@
             this.grillaRecetas.RowTemplate.Height = 24;
             this.grillaRecetas.Size = new System.Drawing.Size(283, 155);
             this.grillaRecetas.TabIndex = 3;
-            // 
-            // CheckReceta
-            // 
-            this.CheckReceta.HeaderText = "Seleccionar";
-            this.CheckReceta.Name = "CheckReceta";
             // 
             // btn_salir
             // 
@@ -155,6 +154,23 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Busque por tipo de comida";
             // 
+            // CheckReceta
+            // 
+            this.CheckReceta.HeaderText = "Seleccionar";
+            this.CheckReceta.Name = "CheckReceta";
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo Receta";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre Receta";
+            this.Nombre.Name = "Nombre";
+            // 
             // RegistrarComidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,10 +204,12 @@
         private System.Windows.Forms.DataGridView grillaRecetas;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn CheckReceta;
         private System.Windows.Forms.Button eliminarFiltro;
         private System.Windows.Forms.Button filtroBuscar;
         private System.Windows.Forms.ListBox listaMomentos;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn CheckReceta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

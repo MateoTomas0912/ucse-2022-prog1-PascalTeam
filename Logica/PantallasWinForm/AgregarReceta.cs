@@ -72,8 +72,8 @@ namespace PantallasWinForm
 
                 foreach (DataGridViewRow row in grillaProductos.Rows)
                 {
-                    if (row.Cells[0].Value != null)
-                    {
+                    if (row.Cells[0].Value != null && int.Parse(row.Cells[1].Value.ToString()) > 0 )
+                    { 
                         Producto producto = new Producto();
                         producto.Codigo = Convert.ToString(row.Cells[2].Value);
                         producto.Nombre = row.Cells[3].Value.ToString();
@@ -85,9 +85,16 @@ namespace PantallasWinForm
                     }
                 }
 
-                //Guardar
-                LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
-                logicaRecetas.CrearActualizarRecetas(receta);
+                if(receta.IngredientesCodigo.Count > 0 && receta.ProductosNecesarios.Count > 0 && receta.IngredientesCodigo.Count == receta.ProductosNecesarios.Count)
+                {
+                    //Guardar
+                    LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
+                    logicaRecetas.CrearActualizarRecetas(receta);
+                }
+                else
+                {
+                    MessageBox.Show("Error al cargar los productos");
+                }
             }
 
             Form volver = new CrearVerRec();
