@@ -111,7 +111,7 @@ namespace PantallasWinForm
         private void Principal_Load(object sender, EventArgs e)
         {
             //mostrarlos
-            grillaProductos.AutoGenerateColumns = true;
+            grillaProductos.AutoGenerateColumns = false;
 
             ActualizarGrilla();
         }

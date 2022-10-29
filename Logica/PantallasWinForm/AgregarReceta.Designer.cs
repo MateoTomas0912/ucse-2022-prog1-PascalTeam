@@ -38,9 +38,10 @@
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
-            this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.listaMomento = new System.Windows.Forms.ListBox();
+            this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,18 +148,14 @@
             this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AgregarProducto,
-            this.cantidad});
+            this.cantidad,
+            this.Nombre});
             this.grillaProductos.Location = new System.Drawing.Point(154, 268);
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 51;
             this.grillaProductos.RowTemplate.Height = 24;
             this.grillaProductos.Size = new System.Drawing.Size(327, 100);
             this.grillaProductos.TabIndex = 14;
-            // 
-            // AgregarProducto
-            // 
-            this.AgregarProducto.HeaderText = "Agregar Producto";
-            this.AgregarProducto.Name = "AgregarProducto";
             // 
             // listaMomento
             // 
@@ -175,10 +172,21 @@
             this.listaMomento.TabIndex = 15;
             this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
             // 
+            // AgregarProducto
+            // 
+            this.AgregarProducto.HeaderText = "Agregar Producto";
+            this.AgregarProducto.Name = "AgregarProducto";
+            // 
             // cantidad
             // 
             this.cantidad.HeaderText = "Cantidad Producto";
             this.cantidad.Name = "cantidad";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // AgregarReceta
             // 
@@ -223,5 +231,6 @@
         private System.Windows.Forms.ListBox listaMomento;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AgregarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }
