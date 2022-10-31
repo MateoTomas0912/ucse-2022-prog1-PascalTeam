@@ -34,7 +34,7 @@ namespace PantallasWinForm
             if(String.IsNullOrEmpty(nombre.Text) || String.IsNullOrEmpty(cantidad.Text) || String.IsNullOrEmpty(stockMinimo.Text) || String.IsNullOrEmpty(precio.Text))
             {
                 MessageBox.Show("Faltan ingresar datos");
-            } else if (int.Parse(nombre.Text) < 0 || int.Parse(cantidad.Text) < 0 || int.Parse(stockMinimo.Text) < 0 || int.Parse(precio.Text) < 0)
+            } else if ((nombre.Text) == null || int.Parse(cantidad.Text) < 0 || int.Parse(stockMinimo.Text) < 0 || int.Parse(precio.Text) < 0)
             {
                 MessageBox.Show("Los valores no pueden ser negativos");
             }
@@ -155,6 +155,8 @@ namespace PantallasWinForm
                 LogicaDespensa logicaDespensa = new LogicaDespensa();
                 logicaDespensa.CrearActualizarDespensa(producto);
 
+                Form volver = new Menu();
+                volver.Show();
                 this.Hide();
             }     
         }
