@@ -30,5 +30,12 @@ namespace PantallasWinForm
             verrecetas.Show();
             this.Hide();
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            Form volver = new Menu();
+            volver.Show();
+            this.Hide();
+        }
     }
 }

@@ -130,5 +130,12 @@ namespace PantallasWinForm
             Archivo archivo = new Archivo();
             grillaProductos.DataSource = archivo.Lectura();
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            Form volver = new CrearVerRec();
+            volver.Show();
+            this.Hide();
+        }
     }
 }

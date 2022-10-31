@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.BtnRecetas = new System.Windows.Forms.Button();
             this.btn_Supermercado = new System.Windows.Forms.Button();
             this.btnDespensa = new System.Windows.Forms.Button();
@@ -35,14 +36,12 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnComidas = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnRecetas
             // 
-            this.BtnRecetas.Location = new System.Drawing.Point(181, 30);
+            this.BtnRecetas.Location = new System.Drawing.Point(111, 163);
             this.BtnRecetas.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRecetas.Name = "BtnRecetas";
             this.BtnRecetas.Size = new System.Drawing.Size(140, 48);
@@ -53,7 +52,7 @@
             // 
             // btn_Supermercado
             // 
-            this.btn_Supermercado.Location = new System.Drawing.Point(329, 31);
+            this.btn_Supermercado.Location = new System.Drawing.Point(705, 163);
             this.btn_Supermercado.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Supermercado.Name = "btn_Supermercado";
             this.btn_Supermercado.Size = new System.Drawing.Size(140, 46);
@@ -64,7 +63,7 @@
             // 
             // btnDespensa
             // 
-            this.btnDespensa.Location = new System.Drawing.Point(477, 30);
+            this.btnDespensa.Location = new System.Drawing.Point(705, 328);
             this.btnDespensa.Margin = new System.Windows.Forms.Padding(4);
             this.btnDespensa.Name = "btnDespensa";
             this.btnDespensa.Size = new System.Drawing.Size(139, 47);
@@ -80,7 +79,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(639, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1025, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,7 +93,7 @@
             // 
             // btnComidas
             // 
-            this.btnComidas.Location = new System.Drawing.Point(34, 30);
+            this.btnComidas.Location = new System.Drawing.Point(111, 329);
             this.btnComidas.Name = "btnComidas";
             this.btnComidas.Size = new System.Drawing.Size(140, 46);
             this.btnComidas.TabIndex = 5;
@@ -102,23 +101,12 @@
             this.btnComidas.UseVisualStyleBackColor = true;
             this.btnComidas.Click += new System.EventHandler(this.btnComidas_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Image = global::PantallasWinForm.Properties.Resources.istockphoto_1272631829_612x612__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(89, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(473, 451);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 558);
-            this.Controls.Add(this.pictureBox1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1025, 522);
             this.Controls.Add(this.btnComidas);
             this.Controls.Add(this.btnDespensa);
             this.Controls.Add(this.btn_Supermercado);
@@ -130,7 +118,6 @@
             this.Text = "Inicio ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.Button btnComidas;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

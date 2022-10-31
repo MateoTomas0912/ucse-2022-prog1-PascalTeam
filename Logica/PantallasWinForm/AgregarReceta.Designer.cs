@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarReceta));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,28 +39,31 @@
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
-            this.listaMomento = new System.Windows.Forms.ListBox();
             this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listaMomento = new System.Windows.Forms.ListBox();
+            this.btn_volver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.MaximumSize = new System.Drawing.Size(237, 289);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 46);
+            this.label1.Size = new System.Drawing.Size(218, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "RECETAS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -67,45 +71,49 @@
             this.label2.MinimumSize = new System.Drawing.Size(3, 3);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.Size = new System.Drawing.Size(77, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
             this.label3.Location = new System.Drawing.Point(22, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.Size = new System.Drawing.Size(85, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Momento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(22, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Saludable?";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(22, 284);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 19);
+            this.label5.Size = new System.Drawing.Size(105, 22);
             this.label5.TabIndex = 6;
             this.label5.Text = "Ingredientes";
             // 
             // NombreReceta
             // 
+            this.NombreReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.NombreReceta.Location = new System.Drawing.Point(154, 122);
             this.NombreReceta.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.NombreReceta.Multiline = true;
@@ -116,31 +124,34 @@
             // checkSaludable
             // 
             this.checkSaludable.AutoSize = true;
+            this.checkSaludable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.checkSaludable.Location = new System.Drawing.Point(154, 224);
             this.checkSaludable.Name = "checkSaludable";
-            this.checkSaludable.Size = new System.Drawing.Size(101, 23);
+            this.checkSaludable.Size = new System.Drawing.Size(124, 26);
             this.checkSaludable.TabIndex = 11;
             this.checkSaludable.Text = "Tilda si lo es";
-            this.checkSaludable.UseVisualStyleBackColor = true;
+            this.checkSaludable.UseVisualStyleBackColor = false;
             // 
             // btn_crearReceta
             // 
-            this.btn_crearReceta.Location = new System.Drawing.Point(42, 414);
+            this.btn_crearReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_crearReceta.Location = new System.Drawing.Point(173, 414);
             this.btn_crearReceta.Name = "btn_crearReceta";
             this.btn_crearReceta.Size = new System.Drawing.Size(161, 46);
             this.btn_crearReceta.TabIndex = 12;
             this.btn_crearReceta.Text = "Crear receta";
-            this.btn_crearReceta.UseVisualStyleBackColor = true;
+            this.btn_crearReceta.UseVisualStyleBackColor = false;
             this.btn_crearReceta.Click += new System.EventHandler(this.btn_crearReceta_Click);
             // 
             // btn_volverInicio
             // 
-            this.btn_volverInicio.Location = new System.Drawing.Point(308, 414);
+            this.btn_volverInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_volverInicio.Location = new System.Drawing.Point(1100, 489);
             this.btn_volverInicio.Name = "btn_volverInicio";
             this.btn_volverInicio.Size = new System.Drawing.Size(163, 47);
             this.btn_volverInicio.TabIndex = 13;
-            this.btn_volverInicio.Text = "Volver";
-            this.btn_volverInicio.UseVisualStyleBackColor = true;
+            this.btn_volverInicio.Text = "Salir";
+            this.btn_volverInicio.UseVisualStyleBackColor = false;
             this.btn_volverInicio.Click += new System.EventHandler(this.btn_volverInicio_Click);
             // 
             // grillaProductos
@@ -154,13 +165,36 @@
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 51;
             this.grillaProductos.RowTemplate.Height = 24;
-            this.grillaProductos.Size = new System.Drawing.Size(327, 100);
+            this.grillaProductos.Size = new System.Drawing.Size(1109, 100);
             this.grillaProductos.TabIndex = 14;
+            // 
+            // AgregarProducto
+            // 
+            this.AgregarProducto.HeaderText = "Agregar Producto";
+            this.AgregarProducto.MinimumWidth = 6;
+            this.AgregarProducto.Name = "AgregarProducto";
+            this.AgregarProducto.Width = 125;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad Producto";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
             // 
             // listaMomento
             // 
+            this.listaMomento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.listaMomento.FormattingEnabled = true;
-            this.listaMomento.ItemHeight = 19;
+            this.listaMomento.ItemHeight = 22;
             this.listaMomento.Items.AddRange(new object[] {
             "Desayuno",
             "Almuerzo",
@@ -168,31 +202,28 @@
             "Cena"});
             this.listaMomento.Location = new System.Drawing.Point(154, 173);
             this.listaMomento.Name = "listaMomento";
-            this.listaMomento.Size = new System.Drawing.Size(156, 23);
+            this.listaMomento.Size = new System.Drawing.Size(156, 4);
             this.listaMomento.TabIndex = 15;
             this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
             // 
-            // AgregarProducto
+            // btn_volver
             // 
-            this.AgregarProducto.HeaderText = "Agregar Producto";
-            this.AgregarProducto.Name = "AgregarProducto";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad Producto";
-            this.cantidad.Name = "cantidad";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_volver.Location = new System.Drawing.Point(460, 418);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(168, 42);
+            this.btn_volver.TabIndex = 16;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // AgregarReceta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 557);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1296, 557);
+            this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.listaMomento);
             this.Controls.Add(this.grillaProductos);
             this.Controls.Add(this.btn_volverInicio);
@@ -232,5 +263,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn AgregarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.Button btn_volver;
     }
 }

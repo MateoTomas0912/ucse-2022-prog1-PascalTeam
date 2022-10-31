@@ -166,5 +166,13 @@ namespace PantallasWinForm
             return new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            Form volver = new Despensa();
+            volver.Show();
+            this.Hide();
+
+        }
     }
 }

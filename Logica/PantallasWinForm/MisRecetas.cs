@@ -91,5 +91,12 @@ namespace PantallasWinForm
         {
             ActualizarGrilla();
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            Form volver = new CrearVerRec();
+            volver.Show();
+            this.Hide();
+        }
     }
 }
