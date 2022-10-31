@@ -166,6 +166,12 @@ namespace Logica.Logicas
 
             return productos;
         }
+
+        public Producto ObtenerProducto(string codigoProducto)
+        {
+            List<Producto> productos = Lectura();
+            return productos.Find(x => x.Codigo == codigoProducto);
+        }
     }
 }
 

@@ -73,11 +73,10 @@ namespace PantallasWinForm
                 foreach (DataGridViewRow row in grillaProductos.Rows)
                 {
                     if (row.Cells[0].Value != null && int.Parse(row.Cells[1].Value.ToString()) > 0 )
-                    { 
-                        Producto producto = new Producto();
-                        producto.Codigo = Convert.ToString(row.Cells[2].Value);
-                        producto.Nombre = row.Cells[3].Value.ToString();
-                        producto.Precio = Convert.ToDouble(row.Cells[4].Value);
+                    {
+                        //Buscar el producto con el codigo
+                        Archivo archivo = new Archivo();
+                        Producto producto = archivo.ObtenerProducto(row.Cells[2].Value.ToString());
 
                         receta.ProductosNecesarios.Add(producto);
                         receta.CantidadPorProducto.Add(Convert.ToInt32(row.Cells[1].Value));
