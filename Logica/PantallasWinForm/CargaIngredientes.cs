@@ -37,6 +37,9 @@ namespace PantallasWinForm
             } else if ((nombre.Text) == null || int.Parse(cantidad.Text) < 0 || int.Parse(stockMinimo.Text) < 0 || int.Parse(precio.Text) < 0)
             {
                 MessageBox.Show("Los valores no pueden ser negativos");
+            } else if(int.Parse(cantidad.Text) <= int.Parse(stockMinimo.Text))
+            {
+                MessageBox.Show("La cantidad no puede ser menor a la cantidad minima");
             }
             else
             {

@@ -28,6 +28,10 @@ namespace Logica.Logicas
             {
                 comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
                 comida.NombreReceta = comida.Receta.Nombre;
+                if(comida.NombreReceta == null)
+                {
+                    comida.NombreReceta = "Receta eliminada";
+                }
                 comidas.Add(comida);
             }
             return comidas;
@@ -72,20 +76,6 @@ namespace Logica.Logicas
             }
 
             EscrituraComidas(comidas);
-        }
-
-        public void EliminarComida(string codigo)
-        {
-            List<Comida> comidas = ObtenerComidas();
-            foreach (var comida in comidas)
-            {
-                if (comida.Codigo == codigo)
-                {
-                    comidas.Remove(comida);
-                    EscrituraComidas(comidas);
-                    break;
-                }
-            }
         }
     }
 }

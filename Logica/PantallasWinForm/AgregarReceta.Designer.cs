@@ -39,12 +39,12 @@
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
-            this.listaMomento = new System.Windows.Forms.ListBox();
-            this.btn_volver = new System.Windows.Forms.Button();
             this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listaMomento = new System.Windows.Forms.ListBox();
+            this.btn_volver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,9 +147,9 @@
             // btn_volverInicio
             // 
             this.btn_volverInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_volverInicio.Location = new System.Drawing.Point(1100, 489);
+            this.btn_volverInicio.Location = new System.Drawing.Point(460, 498);
             this.btn_volverInicio.Name = "btn_volverInicio";
-            this.btn_volverInicio.Size = new System.Drawing.Size(163, 47);
+            this.btn_volverInicio.Size = new System.Drawing.Size(168, 47);
             this.btn_volverInicio.TabIndex = 13;
             this.btn_volverInicio.Text = "Salir";
             this.btn_volverInicio.UseVisualStyleBackColor = false;
@@ -167,35 +167,8 @@
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 51;
             this.grillaProductos.RowTemplate.Height = 24;
-            this.grillaProductos.Size = new System.Drawing.Size(1109, 100);
+            this.grillaProductos.Size = new System.Drawing.Size(541, 100);
             this.grillaProductos.TabIndex = 14;
-            // 
-            // listaMomento
-            // 
-            this.listaMomento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.listaMomento.FormattingEnabled = true;
-            this.listaMomento.ItemHeight = 19;
-            this.listaMomento.Items.AddRange(new object[] {
-            "Desayuno",
-            "Almuerzo",
-            "Merienda",
-            "Cena"});
-            this.listaMomento.Location = new System.Drawing.Point(154, 173);
-            this.listaMomento.Name = "listaMomento";
-            this.listaMomento.Size = new System.Drawing.Size(156, 23);
-            this.listaMomento.TabIndex = 15;
-            this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
-            // 
-            // btn_volver
-            // 
-            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_volver.Location = new System.Drawing.Point(460, 418);
-            this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(168, 42);
-            this.btn_volver.TabIndex = 16;
-            this.btn_volver.Text = "Volver";
-            this.btn_volver.UseVisualStyleBackColor = true;
-            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // AgregarProducto
             // 
@@ -225,12 +198,39 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 125;
             // 
+            // listaMomento
+            // 
+            this.listaMomento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.listaMomento.FormattingEnabled = true;
+            this.listaMomento.ItemHeight = 19;
+            this.listaMomento.Items.AddRange(new object[] {
+            "Desayuno",
+            "Almuerzo",
+            "Merienda",
+            "Cena"});
+            this.listaMomento.Location = new System.Drawing.Point(154, 173);
+            this.listaMomento.Name = "listaMomento";
+            this.listaMomento.Size = new System.Drawing.Size(156, 23);
+            this.listaMomento.TabIndex = 15;
+            this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
+            // 
+            // btn_volver
+            // 
+            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_volver.Location = new System.Drawing.Point(460, 418);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(168, 42);
+            this.btn_volver.TabIndex = 16;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
+            // 
             // AgregarReceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1296, 557);
+            this.ClientSize = new System.Drawing.Size(725, 557);
             this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.listaMomento);
             this.Controls.Add(this.grillaProductos);

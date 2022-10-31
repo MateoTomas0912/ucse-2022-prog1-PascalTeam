@@ -28,12 +28,10 @@ namespace PantallasWinForm
 
             foreach (DataGridViewRow row in grillaSupermercado.Rows)
             {
-                Producto producto = new Producto();
-                producto.Codigo = Convert.ToString(row.Cells[0].Value);
-                producto.Nombre = row.Cells[1].Value.ToString();
-                producto.Precio = Convert.ToDouble(row.Cells[2].Value);
+                Archivo archivo = new Archivo();
+
+                Producto producto = archivo.ObtenerProducto(row.Cells[0].Value.ToString());
                 producto.Cantidad = 10;
-                producto.CantidadMinima = Convert.ToInt32(row.Cells[4].Value);
 
                 productos.Add(producto);
             }
@@ -55,7 +53,7 @@ namespace PantallasWinForm
         private void Principal_Load(object sender, EventArgs e)
         {
             //mostrarlos
-            grillaSupermercado.AutoGenerateColumns = true;
+            grillaSupermercado.AutoGenerateColumns = false;
 
             ActualizarGrilla();
         }
