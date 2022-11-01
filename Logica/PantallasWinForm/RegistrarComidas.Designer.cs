@@ -38,13 +38,10 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_salir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listaMomentos = new System.Windows.Forms.ComboBox();
             this.eliminarFiltro = new System.Windows.Forms.Button();
             this.filtroBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.listaMomentos = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buscarSaludable = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,41 +138,6 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // eliminarFiltro
-            // 
-            this.eliminarFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.eliminarFiltro.Location = new System.Drawing.Point(191, 315);
-            this.eliminarFiltro.Name = "eliminarFiltro";
-            this.eliminarFiltro.Size = new System.Drawing.Size(75, 23);
-            this.eliminarFiltro.TabIndex = 10;
-            this.eliminarFiltro.Text = "Quitar Filtro";
-            this.eliminarFiltro.UseVisualStyleBackColor = false;
-            this.eliminarFiltro.Click += new System.EventHandler(this.eliminarFiltro_Click);
-            // 
-            // filtroBuscar
-            // 
-            this.filtroBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.filtroBuscar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.filtroBuscar.Location = new System.Drawing.Point(191, 286);
-            this.filtroBuscar.Name = "filtroBuscar";
-            this.filtroBuscar.Size = new System.Drawing.Size(75, 23);
-            this.filtroBuscar.TabIndex = 9;
-            this.filtroBuscar.Text = "Buscar";
-            this.filtroBuscar.UseVisualStyleBackColor = false;
-            this.filtroBuscar.Click += new System.EventHandler(this.filtroBuscar_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(39, 291);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Busque por tipo de comida";
             // 
             // listaMomentos
             // 
@@ -185,44 +147,42 @@
             "Almuerzo",
             "Merienda",
             "Cena"});
-            this.listaMomentos.Location = new System.Drawing.Point(36, 317);
+            this.listaMomentos.Location = new System.Drawing.Point(43, 309);
             this.listaMomentos.Name = "listaMomentos";
             this.listaMomentos.Size = new System.Drawing.Size(136, 21);
-            this.listaMomentos.TabIndex = 11;
+            this.listaMomentos.TabIndex = 30;
             // 
-            // button2
+            // eliminarFiltro
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(461, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Quitar Filtro";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.eliminarFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.eliminarFiltro.Location = new System.Drawing.Point(198, 307);
+            this.eliminarFiltro.Name = "eliminarFiltro";
+            this.eliminarFiltro.Size = new System.Drawing.Size(75, 23);
+            this.eliminarFiltro.TabIndex = 29;
+            this.eliminarFiltro.Text = "Quitar Filtro";
+            this.eliminarFiltro.UseVisualStyleBackColor = false;
             // 
-            // buscarSaludable
+            // filtroBuscar
             // 
-            this.buscarSaludable.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buscarSaludable.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buscarSaludable.Location = new System.Drawing.Point(461, 286);
-            this.buscarSaludable.Name = "buscarSaludable";
-            this.buscarSaludable.Size = new System.Drawing.Size(75, 23);
-            this.buscarSaludable.TabIndex = 13;
-            this.buscarSaludable.Text = "Buscar";
-            this.buscarSaludable.UseVisualStyleBackColor = false;
-            this.buscarSaludable.Click += new System.EventHandler(this.buscarSaludable_Click);
+            this.filtroBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.filtroBuscar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.filtroBuscar.Location = new System.Drawing.Point(198, 278);
+            this.filtroBuscar.Name = "filtroBuscar";
+            this.filtroBuscar.Size = new System.Drawing.Size(75, 23);
+            this.filtroBuscar.TabIndex = 28;
+            this.filtroBuscar.Text = "Buscar";
+            this.filtroBuscar.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(309, 291);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Busque si es saludable";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(46, 283);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Busque por tipo de comida";
             // 
             // RegistrarComidas
             // 
@@ -230,9 +190,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(932, 426);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buscarSaludable);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.listaMomentos);
             this.Controls.Add(this.eliminarFiltro);
             this.Controls.Add(this.filtroBuscar);
@@ -261,15 +218,12 @@
         private System.Windows.Forms.DataGridView grillaRecetas;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button eliminarFiltro;
-        private System.Windows.Forms.Button filtroBuscar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CheckReceta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.ComboBox listaMomentos;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buscarSaludable;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button eliminarFiltro;
+        private System.Windows.Forms.Button filtroBuscar;
+        private System.Windows.Forms.Label label3;
     }
 }

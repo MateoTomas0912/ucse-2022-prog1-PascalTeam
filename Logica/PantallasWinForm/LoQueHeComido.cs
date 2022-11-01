@@ -55,5 +55,12 @@ namespace PantallasWinForm
             LogicaComidas logicaComidas = new LogicaComidas();
             grillaComidas.DataSource = logicaComidas.ObtenerComidas(dateTimeComidas.Text);
         }
+
+        private void buscarSaludable_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            bool esFiltro = true;
+            grillaComidas.DataSource = logicaComidas.ObtenerComidasSaludables(esFiltro);
+        }
     }
 }

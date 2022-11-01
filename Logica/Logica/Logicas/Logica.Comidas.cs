@@ -37,6 +37,26 @@ namespace Logica.Logicas
             return comidas;
         }
 
+        public List<Comida> ObtenerComidasSaludables(bool esFiltro)
+        {
+            List<Comida> comidas = new List<Comida>();
+            List<ComidaArchivo> comidaArchivo = LecturaComidas();
+            foreach (var comida in comidaArchivo)
+            {
+                comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comida.NombreReceta = comida.Receta.Nombre;
+                if (comida.NombreReceta == null)
+                {
+                    comida.NombreReceta = "Receta eliminada";
+                }
+                if(comida.Receta.Saludable == true)
+                {
+                    comidas.Add(comida);
+                }
+            }
+            return comidas;
+        }
+
         public List<Comida> ObtenerComidas(string dateTime)
         {
             List<Comida> comidas = new List<Comida>();

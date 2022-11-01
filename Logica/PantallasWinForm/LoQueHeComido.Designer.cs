@@ -40,6 +40,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.buscarPorFecha = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buscarSaludable = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaComidas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,12 +162,48 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Busque por fecha";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(210, 394);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Quitar Filtro";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // buscarSaludable
+            // 
+            this.buscarSaludable.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buscarSaludable.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buscarSaludable.Location = new System.Drawing.Point(210, 365);
+            this.buscarSaludable.Name = "buscarSaludable";
+            this.buscarSaludable.Size = new System.Drawing.Size(75, 23);
+            this.buscarSaludable.TabIndex = 28;
+            this.buscarSaludable.Text = "Buscar";
+            this.buscarSaludable.UseVisualStyleBackColor = false;
+            this.buscarSaludable.Click += new System.EventHandler(this.buscarSaludable_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(58, 370);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Busque si es saludable";
+            // 
             // LoQueHeComido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(879, 458);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buscarSaludable);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimeComidas);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buscarPorFecha);
@@ -196,5 +235,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buscarPorFecha;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buscarSaludable;
+        private System.Windows.Forms.Label label4;
     }
 }

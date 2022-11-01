@@ -36,114 +36,31 @@ namespace PantallasWinForm
 
         private void btn_crearReceta_Click(object sender, EventArgs e)
         {
-            bool cargaCorrecta = true;
+            LogicaRecetas logicaRecetas1 = new LogicaRecetas();
+            string resultado = logicaRecetas1.BtnCrearReceta(NombreReceta.Text, CodigoReceta, checkSaludable.Checked, listaMomento.Text,grillaProductos);
 
             //Validar los datos 
-            if (string.IsNullOrEmpty(NombreReceta.Text))
+            switch (resultado)
             {
-                MessageBox.Show("Cargale nombre");
-            }
-            else
-            {
-                //Generar el objeto
-
-                RecetaArchivo receta = new RecetaArchivo();
-                if(CodigoReceta == null)
-                {
-                    receta.Codigo = RandomString(10);
-                }
-                else
-                {
-                    receta.Codigo = CodigoReceta;
-                }
-                receta.Saludable = checkSaludable.Checked;
-                receta.Nombre = NombreReceta.Text;
-                switch (listaMomento.Text)
-                {
-                    case "Desayuno":
-                        receta.Momento = MomentosDelDia.Desayuno;
-                        break;
-                    case "Almuerzo":
-                        receta.Momento = MomentosDelDia.Almuerzo;
-                        break;
-                    case "Merienda":
-                        receta.Momento = MomentosDelDia.Merienda;
-                        break;
-                    case "Cena":
-                        receta.Momento = MomentosDelDia.Cena;
-                        break;
-                    case null:
-                        MessageBox.Show("Falta cargar el momento del dia");
-                        break;
-                }
-
-                receta.ProductosNecesarios = new List<Producto>();
-                receta.IngredientesCodigo = new List<string>();
-
-                foreach (DataGridViewRow row in grillaProductos.Rows)
-                {
-                    if (row.Cells[0].Value != null && row.Cells[1].Value != null)
-                    {
-                        if(int.Parse(row.Cells[1].Value.ToString()) > 0)
-                        {
-                            //Buscar el producto con el codigo
-                            Archivo archivo = new Archivo();
-                            Producto producto = archivo.ObtenerProducto(row.Cells[2].Value.ToString());
-
-                            receta.ProductosNecesarios.Add(producto);
-                            receta.CantidadPorProducto.Add(Convert.ToInt32(row.Cells[1].Value));
-                            receta.IngredientesCodigo.Add(producto.Codigo);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La cantidad no puede ser menor a 0");
-                            cargaCorrecta = false;
-                            this.Hide();
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        cargaCorrecta = false;
-                    }
-                }
-
-                if(receta.IngredientesCodigo.Count > 0 && receta.ProductosNecesarios.Count > 0 && receta.IngredientesCodigo.Count == receta.ProductosNecesarios.Count && cargaCorrecta != false)
-                {
-                    //Guardar
-                    LogicaRecetas logicaRecetas = new Logica.Logicas.LogicaRecetas();
-                    logicaRecetas.CrearActualizarRecetas(receta);
-                    ActualizarGrilla();
-                }
-                else
-                {
+                case "Error, nombre mal cargado":
+                    MessageBox.Show("Cargale nombre");
+                    break;
+                case "La cantidad no puede ser menor a 0":
+                    MessageBox.Show("La cantidad no puede ser menor a 0");
+                    break;
+                case "Error al cargar los productos":
                     MessageBox.Show("Error al cargar los productos");
-                    Form error = new AgregarReceta();
-                    error.Show();
+                    break;
+                case "Carga correcta":
+                    Form volver = new CrearVerRec();
+                    volver.Show();
                     this.Hide();
-                    cargaCorrecta = false;
-                }
+                    MessageBox.Show("Carga correcta");
+                    break;
+                case "Error en la carga":
+                    MessageBox.Show("Error en carga");
+                    break;
             }
-
-            if(cargaCorrecta == true)
-            {
-                Form volver = new CrearVerRec();
-                volver.Show();
-                this.Hide();
-            } 
-        }
-
-        private static string RandomString(int length)
-        {
-            Random random = new Random();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, length)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-
-        private void listaMomento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listaMomento.Text = listaMomento.SelectedItem.ToString();
         }
 
         private void Principal_Load(object sender, EventArgs e)

@@ -31,48 +31,6 @@ namespace PantallasWinForm
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ComidaArchivo comida = new ComidaArchivo();
-            if(CodigoComida == null)
-            {
-                comida.Codigo = RandomString(10);
-            }
-            else
-            {
-                comida.Codigo = CodigoComida;
-            }
-            comida.RegistroDeComida = fechaComida.Value;
-
-            foreach (DataGridViewRow row in grillaRecetas.Rows)
-            {
-                if(row.Cells[0].Value != null)
-                {
-                    comida.Receta = LogicaRecetas.ObtenerRecetaComidas(row.Cells[1].Value.ToString());
-                    comida.CodigoReceta = row.Cells[1].Value.ToString();
-
-                    //Actualizar Despensa
-                    LogicaDespensa logicaDespensa = new LogicaDespensa();
-                    bool hayProductos = logicaDespensa.DescontarProductos(row.Cells[1].Value.ToString());
-                    if (comida.Receta == null)
-                    {
-                        MessageBox.Show("Debe selecionar una receta");
-                    } else if (!hayProductos)
-                    {
-                        MessageBox.Show("No tiene la suficiente cantidad de productos");
-                    }
-                    else 
-                    { 
-                        //Generar comida
-                        LogicaComidas logicaComidas = new LogicaComidas();
-                        logicaComidas.CrearActualizarComida(comida);
-                    }
-                }
-            }
-            Form loQueHeComido = new LoQueHeComido();
-            loQueHeComido.Show();
-            this.Hide();
-        }
 
         private static string RandomString(int length)
         {
@@ -113,12 +71,6 @@ namespace PantallasWinForm
         private void button2_Click(object sender, EventArgs e)
         {
             ActualizarGrilla();
-        }
-
-        private void buscarSaludable_Click(object sender, EventArgs e)
-        {
-            LogicaRecetas logicaRecetas = new LogicaRecetas();
-            grillaRecetas.DataSource = logicaRecetas.ObtenerRecetasFiltroSaludable();
         }
     }
 }
