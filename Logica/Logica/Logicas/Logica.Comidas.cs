@@ -93,7 +93,7 @@ namespace Logica.Logicas
             return new List<ComidaArchivo> { };
         }
 
-        public void CrearActualizarComida(DataGridView grillaProductos, DateTime fecha)
+        public string CrearActualizarComida(DataGridView grillaProductos, DateTime fecha)
         {
             List<Comida> comidas = ObtenerComidas();
             foreach (DataGridViewRow row in grillaProductos.Rows)
@@ -107,10 +107,18 @@ namespace Logica.Logicas
                     comida.CodigoReceta = comida.Receta.Codigo;
                     comida.RegistroDeComida = fecha;
                     comidas.Add(comida);
+
+                    LogicaDespensa logicaDespensa = new LogicaDespensa();
+                    bool hayProductos = logicaDespensa.DescontarProductos(comida.CodigoReceta);
+                    if (!hayProductos)
+                    {
+                        return "No hay productos suficientes";
+                    }
                 }
             }
 
             EscrituraComidas(comidas);
+            return "Carga correcta";
         }
 
         private static string RandomString(int length)
