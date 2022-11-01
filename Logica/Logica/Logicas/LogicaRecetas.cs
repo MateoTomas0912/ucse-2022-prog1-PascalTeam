@@ -233,6 +233,5 @@ namespace Logica.Logicas
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        
     }
 }
