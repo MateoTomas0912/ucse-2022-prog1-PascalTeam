@@ -1,1 +1,1 @@
-[{"IngredientesCodigo":["OD3C678ZYY"],"CantidadPorProducto":[2],"Codigo":"SBC116XRIA","Nombre":"Receta prueba\r\nReceta prueba","Saludable":true,"Momento":0}]
+[{"IngredientesCodigo":["OD3C678ZYY"],"CantidadPorProducto":[2],"Codigo":"SBC116XRIA","Nombre":"Receta prueba\r\nReceta prueba","Saludable":true,"Momento":0},{"IngredientesCodigo":["OD3C678ZYY"],"CantidadPorProducto":[2],"Codigo":"JFMDNG4SVE","Nombre":"Prueba momento","Saludable":false,"Momento":1}]

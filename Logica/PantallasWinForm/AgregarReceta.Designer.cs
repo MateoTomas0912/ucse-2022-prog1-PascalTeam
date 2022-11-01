@@ -39,12 +39,12 @@
             this.btn_crearReceta = new System.Windows.Forms.Button();
             this.btn_volverInicio = new System.Windows.Forms.Button();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
+            this.btn_volver = new System.Windows.Forms.Button();
             this.AgregarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listaMomento = new System.Windows.Forms.ListBox();
-            this.btn_volver = new System.Windows.Forms.Button();
+            this.listaMomento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +136,7 @@
             // btn_crearReceta
             // 
             this.btn_crearReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_crearReceta.Location = new System.Drawing.Point(173, 414);
+            this.btn_crearReceta.Location = new System.Drawing.Point(256, 559);
             this.btn_crearReceta.Name = "btn_crearReceta";
             this.btn_crearReceta.Size = new System.Drawing.Size(161, 46);
             this.btn_crearReceta.TabIndex = 12;
@@ -147,9 +147,9 @@
             // btn_volverInicio
             // 
             this.btn_volverInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_volverInicio.Location = new System.Drawing.Point(460, 498);
+            this.btn_volverInicio.Location = new System.Drawing.Point(0, 558);
             this.btn_volverInicio.Name = "btn_volverInicio";
-            this.btn_volverInicio.Size = new System.Drawing.Size(168, 47);
+            this.btn_volverInicio.Size = new System.Drawing.Size(107, 47);
             this.btn_volverInicio.TabIndex = 13;
             this.btn_volverInicio.Text = "Salir";
             this.btn_volverInicio.UseVisualStyleBackColor = false;
@@ -167,8 +167,19 @@
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 51;
             this.grillaProductos.RowTemplate.Height = 24;
-            this.grillaProductos.Size = new System.Drawing.Size(541, 100);
+            this.grillaProductos.Size = new System.Drawing.Size(541, 265);
             this.grillaProductos.TabIndex = 14;
+            // 
+            // btn_volver
+            // 
+            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_volver.Location = new System.Drawing.Point(527, 559);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(168, 46);
+            this.btn_volver.TabIndex = 16;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // AgregarProducto
             // 
@@ -189,6 +200,7 @@
             this.Codigo.DataPropertyName = "Codigo";
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             // 
             // Nombre
             // 
@@ -196,13 +208,12 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 125;
             // 
             // listaMomento
             // 
-            this.listaMomento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.listaMomento.FormattingEnabled = true;
-            this.listaMomento.ItemHeight = 19;
             this.listaMomento.Items.AddRange(new object[] {
             "Desayuno",
             "Almuerzo",
@@ -210,29 +221,17 @@
             "Cena"});
             this.listaMomento.Location = new System.Drawing.Point(154, 173);
             this.listaMomento.Name = "listaMomento";
-            this.listaMomento.Size = new System.Drawing.Size(156, 23);
-            this.listaMomento.TabIndex = 15;
-            this.listaMomento.SelectedIndexChanged += new System.EventHandler(this.listaMomento_SelectedIndexChanged);
-            // 
-            // btn_volver
-            // 
-            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_volver.Location = new System.Drawing.Point(460, 418);
-            this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(168, 42);
-            this.btn_volver.TabIndex = 16;
-            this.btn_volver.Text = "Volver";
-            this.btn_volver.UseVisualStyleBackColor = true;
-            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
+            this.listaMomento.Size = new System.Drawing.Size(156, 27);
+            this.listaMomento.TabIndex = 17;
             // 
             // AgregarReceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(725, 557);
-            this.Controls.Add(this.btn_volver);
+            this.ClientSize = new System.Drawing.Size(725, 649);
             this.Controls.Add(this.listaMomento);
+            this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.grillaProductos);
             this.Controls.Add(this.btn_volverInicio);
             this.Controls.Add(this.btn_crearReceta);
@@ -267,11 +266,11 @@
         private System.Windows.Forms.Button btn_crearReceta;
         private System.Windows.Forms.Button btn_volverInicio;
         private System.Windows.Forms.DataGridView grillaProductos;
-        private System.Windows.Forms.ListBox listaMomento;
         private System.Windows.Forms.Button btn_volver;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AgregarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.ComboBox listaMomento;
     }
 }
