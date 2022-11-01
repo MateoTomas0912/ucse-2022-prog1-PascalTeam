@@ -109,5 +109,16 @@ namespace PantallasWinForm
             grillaRecetas.DataSource = null;
             grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas(momentoReceta);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void buscarSaludable_Click(object sender, EventArgs e)
+        {
+            LogicaRecetas logicaRecetas = new LogicaRecetas();
+            grillaRecetas.DataSource = logicaRecetas.ObtenerRecetasFiltroSaludable();
+        }
     }
 }

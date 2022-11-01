@@ -44,5 +44,16 @@ namespace PantallasWinForm
             registrarComida.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void buscarPorFecha_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas(dateTimeComidas.Text);
+        }
     }
 }

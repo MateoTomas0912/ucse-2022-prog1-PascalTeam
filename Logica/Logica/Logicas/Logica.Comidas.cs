@@ -37,6 +37,23 @@ namespace Logica.Logicas
             return comidas;
         }
 
+        public List<Comida> ObtenerComidas(string dateTime)
+        {
+            List<Comida> comidas = new List<Comida>();
+            List<ComidaArchivo> comidaArchivo = LecturaComidas();
+            foreach (var comida in comidaArchivo)
+            {
+                comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comida.NombreReceta = comida.Receta.Nombre;
+                if (comida.NombreReceta == null)
+                {
+                    comida.NombreReceta = "Receta eliminada";
+                }
+                comidas.Add(comida);
+            }
+            return comidas.FindAll(x => x.RegistroDeComida.ToString() == dateTime).ToList();
+        }
+
         public List<ComidaArchivo> LecturaComidas()
         {
             string pathDirectorio = AppDomain.CurrentDomain.BaseDirectory + "JSON\\ ";

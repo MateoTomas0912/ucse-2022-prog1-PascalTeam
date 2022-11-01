@@ -72,10 +72,32 @@ namespace PantallasWinForm
         private void filtroBuscar_Click(object sender, EventArgs e)
         {
             LogicaSuper logicaSuper = new LogicaSuper();
-            grillaSupermercado.DataSource = logicaSuper.FiltrarSuper(listaIngredientes.Text);
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperIngredientes(listaIngredientes.Text);
         }
 
         private void eliminarFiltro_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void buscarPrecio_Click(object sender, EventArgs e)
+        {
+            LogicaSuper logicaSuper = new LogicaSuper();
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperPrecio(precioText.Text);
+        }
+
+        private void quitarPrecio_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void cantidadButton_Click(object sender, EventArgs e)
+        {
+            LogicaSuper logicaSuper = new LogicaSuper();
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperPrecio(cantidadButton.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             ActualizarGrilla();
         }

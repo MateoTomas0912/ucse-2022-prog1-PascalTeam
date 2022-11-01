@@ -25,6 +25,20 @@ namespace Logica.Logicas
             return recetas;
         }
 
+        public List<Receta> ObtenerRecetasFiltroSaludable()
+        {
+            List<Receta> recetas = new List<Receta>();
+            List<RecetaArchivo> recetaArchivo = LecturaRecetas();
+            foreach (var receta in recetaArchivo)
+            {
+                LogicaDespensa logicaDespensa = new LogicaDespensa();
+                receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
+                recetas.Add(receta);
+            }
+
+            return recetas.FindAll(x => x.Saludable == true);
+        }
+
         public List<Receta> ObtenerRecetas(string filtro)
         {
             List<Receta> recetas = new List<Receta>();

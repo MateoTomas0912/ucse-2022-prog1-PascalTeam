@@ -77,7 +77,7 @@ namespace Logica.Logicas
             EscribirSuper(Supermercado);
         }
 
-        public List<Producto> FiltrarSuper(string ingrediente)
+        public List<Producto> FiltrarSuperIngredientes(string ingrediente)
         {
             List<Producto> productos = LecturaSuper();
 
@@ -102,6 +102,20 @@ namespace Logica.Logicas
             }
 
             return productos;
+        }
+
+        public List<Producto> FiltrarSuperPrecio(string precio)
+        {
+            List<Producto> productos = LecturaSuper();
+
+            return productos.Where(x => x.Precio >= Convert.ToDouble(precio)).ToList();
+        }
+
+        public List<Producto> FiltrarSuperCantidad(string cantidad)
+        {
+            List<Producto> productos = LecturaSuper();
+
+            return productos.Where(x => x.Cantidad >= Convert.ToDouble(cantidad)).ToList();
         }
     }
 }

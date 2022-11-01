@@ -48,7 +48,6 @@ C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.CrearVerRec.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Despensa.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Menu.resources
-C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductos.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Grillas.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.MisRecetas.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Properties.Resources.resources

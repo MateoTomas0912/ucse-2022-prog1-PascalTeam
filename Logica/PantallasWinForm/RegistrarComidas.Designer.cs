@@ -42,6 +42,9 @@
             this.filtroBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.listaMomentos = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buscarSaludable = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@
             // fechaComida
             // 
             this.fechaComida.Location = new System.Drawing.Point(184, 48);
-            this.fechaComida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaComida.Margin = new System.Windows.Forms.Padding(2);
             this.fechaComida.Name = "fechaComida";
             this.fechaComida.Size = new System.Drawing.Size(204, 20);
             this.fechaComida.TabIndex = 2;
@@ -83,7 +86,7 @@
             this.Codigo,
             this.Nombre});
             this.grillaRecetas.Location = new System.Drawing.Point(159, 103);
-            this.grillaRecetas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grillaRecetas.Margin = new System.Windows.Forms.Padding(2);
             this.grillaRecetas.MultiSelect = false;
             this.grillaRecetas.Name = "grillaRecetas";
             this.grillaRecetas.RowHeadersWidth = 51;
@@ -119,7 +122,7 @@
             this.btn_salir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Location = new System.Drawing.Point(49, 367);
-            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(91, 30);
             this.btn_salir.TabIndex = 5;
@@ -131,8 +134,8 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(487, 367);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(461, 369);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 28);
             this.button1.TabIndex = 6;
@@ -187,12 +190,49 @@
             this.listaMomentos.Size = new System.Drawing.Size(136, 21);
             this.listaMomentos.TabIndex = 11;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(461, 315);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Quitar Filtro";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buscarSaludable
+            // 
+            this.buscarSaludable.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buscarSaludable.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buscarSaludable.Location = new System.Drawing.Point(461, 286);
+            this.buscarSaludable.Name = "buscarSaludable";
+            this.buscarSaludable.Size = new System.Drawing.Size(75, 23);
+            this.buscarSaludable.TabIndex = 13;
+            this.buscarSaludable.Text = "Buscar";
+            this.buscarSaludable.UseVisualStyleBackColor = false;
+            this.buscarSaludable.Click += new System.EventHandler(this.buscarSaludable_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(309, 291);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Busque si es saludable";
+            // 
             // RegistrarComidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(932, 426);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buscarSaludable);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.listaMomentos);
             this.Controls.Add(this.eliminarFiltro);
             this.Controls.Add(this.filtroBuscar);
@@ -203,7 +243,7 @@
             this.Controls.Add(this.fechaComida);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistrarComidas";
             this.Text = "RegistrarComidas";
             this.Load += new System.EventHandler(this.Principal_Load);
@@ -228,5 +268,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.ComboBox listaMomentos;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buscarSaludable;
+        private System.Windows.Forms.Label label4;
     }
 }
