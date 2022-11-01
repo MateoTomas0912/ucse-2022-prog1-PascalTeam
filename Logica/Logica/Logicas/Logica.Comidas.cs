@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Logica.Logicas
 {
@@ -28,7 +29,7 @@ namespace Logica.Logicas
             {
                 comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
                 comida.NombreReceta = comida.Receta.Nombre;
-                if(comida.NombreReceta == null)
+                if (comida.NombreReceta == null)
                 {
                     comida.NombreReceta = "Receta eliminada";
                 }
@@ -49,7 +50,7 @@ namespace Logica.Logicas
                 {
                     comida.NombreReceta = "Receta eliminada";
                 }
-                if(comida.Receta.Saludable == true)
+                if (comida.Receta.Saludable == true)
                 {
                     comidas.Add(comida);
                 }
@@ -92,27 +93,32 @@ namespace Logica.Logicas
             return new List<ComidaArchivo> { };
         }
 
-        public void CrearActualizarComida(ComidaArchivo comida)
+        public void CrearActualizarComida(DataGridView grillaProductos, DateTime fecha)
         {
             List<Comida> comidas = ObtenerComidas();
-            List<string> codigosComidas = comidas.Select(x => x.Codigo).ToList();
-            if (!codigosComidas.Contains(comida.Codigo))
+            foreach (DataGridViewRow row in grillaProductos.Rows)
             {
-                comidas.Add(comida);
-            }
-            else
-            {
-                foreach (var u in comidas)
+                if (row.Cells[0].Value != null)
                 {
-                    if (u.Codigo == comida.Codigo)
-                    {
-                        u.Receta = comida.Receta;
-                        u.RegistroDeComida = comida.RegistroDeComida;
-                    }
+                    Comida comida = new Comida();
+                    comida.Codigo = RandomString(10);
+                    LogicaRecetas logicaRecetas = new LogicaRecetas();
+                    comida.Receta = logicaRecetas.ObtenerReceta(row.Cells[1].Value.ToString());
+                    comida.CodigoReceta = comida.Receta.Codigo;
+                    comida.RegistroDeComida = fecha;
+                    comidas.Add(comida);
                 }
             }
 
             EscrituraComidas(comidas);
+        }
+
+        private static string RandomString(int length)
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }

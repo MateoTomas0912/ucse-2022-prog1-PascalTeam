@@ -11,6 +11,7 @@ namespace Logica
     public class Comida
     {
         public string Codigo { get; set; }
+        public string CodigoReceta { get; set; }
         [JsonIgnore]
         public Receta Receta { get; set; }
         [JsonIgnore]

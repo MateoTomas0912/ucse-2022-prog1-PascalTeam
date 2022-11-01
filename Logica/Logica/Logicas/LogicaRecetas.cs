@@ -26,7 +26,19 @@ namespace Logica.Logicas
             return recetas;
         }
 
-      
+        public Receta ObtenerReceta(string codigo)
+        {
+            List<Receta> recetas = new List<Receta>();
+            List<RecetaArchivo> recetaArchivo = LecturaRecetas();
+            foreach (var receta in recetaArchivo)
+            {
+                LogicaDespensa logicaDespensa = new LogicaDespensa();
+                receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
+                recetas.Add(receta);
+            }
+            return recetas.Find(x => x.Codigo == codigo);
+        }
+
         public List<Receta> ObtenerRecetas(string filtro)
         {
             List<Receta> recetas = new List<Receta>();
