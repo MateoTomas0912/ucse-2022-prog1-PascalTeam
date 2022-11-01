@@ -72,7 +72,7 @@ namespace PantallasWinForm
 
                 foreach (DataGridViewRow row in grillaProductos.Rows)
                 {
-                    if (row.Cells[0].Value != null && int.Parse(row.Cells[1].Value.ToString()) > 0 )
+                    if (row.Cells[0].Value != null && int.Parse(row.Cells[1].Value.ToString()) > 0 && row.Cells[1].Value!= null)
                     {
                         //Buscar el producto con el codigo
                         Archivo archivo = new Archivo();
@@ -81,6 +81,10 @@ namespace PantallasWinForm
                         receta.ProductosNecesarios.Add(producto);
                         receta.CantidadPorProducto.Add(Convert.ToInt32(row.Cells[1].Value));
                         receta.IngredientesCodigo.Add(producto.Codigo);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, faltan datos");
                     }
                 }
 
