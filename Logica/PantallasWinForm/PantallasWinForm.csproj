@@ -85,12 +85,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GrillaProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GrillaProductos.Designer.cs">
-      <DependentUpon>GrillaProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Grillas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GrillaProductos.resx">
-      <DependentUpon>GrillaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grillas.resx">
       <DependentUpon>Grillas.cs</DependentUpon>
