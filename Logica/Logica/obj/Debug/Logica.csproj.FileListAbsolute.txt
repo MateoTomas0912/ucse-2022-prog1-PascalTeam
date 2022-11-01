@@ -25,3 +25,12 @@ C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CopyComplete
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.dll
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.pdb
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Logica.dll
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Logica.pdb
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.dll
+C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.pdb
