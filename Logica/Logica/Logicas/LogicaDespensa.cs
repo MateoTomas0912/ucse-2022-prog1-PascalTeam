@@ -80,7 +80,7 @@ namespace Logica.Logicas
                         item.Cantidad = producto.Cantidad;
                         item.CantidadMinima = producto.CantidadMinima;
 
-                        if(item.Cantidad < item.CantidadMinima)
+                        if(item.Cantidad <= item.CantidadMinima)
                         {
                             LogicaSuper logicaSuper = new LogicaSuper();
                             logicaSuper.CargarLista(item);
