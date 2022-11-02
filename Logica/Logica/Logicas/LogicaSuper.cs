@@ -126,5 +126,12 @@ namespace Logica.Logicas
 
             return productos.Where(x => x.Cantidad >= Convert.ToDouble(cantidad)).ToList();
         }
+
+        public List<Producto> FiltrarSuperNombre(string nombre)
+        {
+            List<Producto> productos = LecturaSuper();
+
+            return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
+        }
     }
 }

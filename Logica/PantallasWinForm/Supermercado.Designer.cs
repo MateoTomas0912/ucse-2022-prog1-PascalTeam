@@ -50,6 +50,10 @@
             this.cantidadText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.listaIngredientes = new System.Windows.Forms.ComboBox();
+            this.QuitarFiltroNombre = new System.Windows.Forms.Button();
+            this.BuscarPorNombre = new System.Windows.Forms.Button();
+            this.buscarProducto = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaSupermercado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +129,7 @@
             // 
             this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Location = new System.Drawing.Point(910, 308);
+            this.btn_salir.Location = new System.Drawing.Point(877, 305);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(77, 33);
@@ -283,12 +287,55 @@
             this.listaIngredientes.Size = new System.Drawing.Size(121, 21);
             this.listaIngredientes.TabIndex = 26;
             // 
+            // QuitarFiltroNombre
+            // 
+            this.QuitarFiltroNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.QuitarFiltroNombre.Location = new System.Drawing.Point(746, 182);
+            this.QuitarFiltroNombre.Name = "QuitarFiltroNombre";
+            this.QuitarFiltroNombre.Size = new System.Drawing.Size(75, 23);
+            this.QuitarFiltroNombre.TabIndex = 30;
+            this.QuitarFiltroNombre.Text = "Quitar Filtro";
+            this.QuitarFiltroNombre.UseVisualStyleBackColor = false;
+            this.QuitarFiltroNombre.Click += new System.EventHandler(this.QuitarFiltroNombre_Click);
+            // 
+            // BuscarPorNombre
+            // 
+            this.BuscarPorNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BuscarPorNombre.Location = new System.Drawing.Point(746, 150);
+            this.BuscarPorNombre.Name = "BuscarPorNombre";
+            this.BuscarPorNombre.Size = new System.Drawing.Size(75, 23);
+            this.BuscarPorNombre.TabIndex = 29;
+            this.BuscarPorNombre.Text = "Buscar";
+            this.BuscarPorNombre.UseVisualStyleBackColor = false;
+            this.BuscarPorNombre.Click += new System.EventHandler(this.BuscarPorNombre_Click);
+            // 
+            // buscarProducto
+            // 
+            this.buscarProducto.Location = new System.Drawing.Point(582, 184);
+            this.buscarProducto.Name = "buscarProducto";
+            this.buscarProducto.Size = new System.Drawing.Size(113, 20);
+            this.buscarProducto.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(579, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Busque por nombre";
+            // 
             // Supermercado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(983, 366);
+            this.Controls.Add(this.QuitarFiltroNombre);
+            this.Controls.Add(this.BuscarPorNombre);
+            this.Controls.Add(this.buscarProducto);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.listaIngredientes);
             this.Controls.Add(this.quitarCantidad);
             this.Controls.Add(this.cantidadButton);
@@ -340,5 +387,9 @@
         private System.Windows.Forms.TextBox cantidadText;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox listaIngredientes;
+        private System.Windows.Forms.Button QuitarFiltroNombre;
+        private System.Windows.Forms.Button BuscarPorNombre;
+        private System.Windows.Forms.TextBox buscarProducto;
+        private System.Windows.Forms.Label label6;
     }
 }

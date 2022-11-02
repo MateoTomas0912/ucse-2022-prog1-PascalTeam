@@ -106,5 +106,16 @@ namespace PantallasWinForm
         {
             ActualizarGrilla();
         }
+
+        private void BuscarPorNombre_Click(object sender, EventArgs e)
+        {
+            LogicaSuper logicaSuper = new LogicaSuper();
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperNombre(buscarProducto.Text);
+        }
+
+        private void QuitarFiltroNombre_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
     }
 }
