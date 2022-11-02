@@ -38,7 +38,42 @@ namespace Logica.Logicas
             return comidas;
         }
 
-        public List<Comida> ObtenerComidasSaludables(bool esFiltro)
+        public List<Comida> ObtenerComidas(char letra)
+        {
+            List<Comida> comidas = new List<Comida>();
+            List<ComidaArchivo> comidaArchivo = LecturaComidas();
+            foreach (var comida in comidaArchivo)
+            {
+                comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comida.NombreReceta = comida.Receta.Nombre;
+                if (comida.NombreReceta == null)
+                {
+                    comida.NombreReceta = "Receta eliminada";
+                }
+                comidas.Add(comida);
+            }
+            return comidas.FindAll(x => x.Codigo[0] == letra);
+        }
+
+        public List<Comida> ObtenerComidasPorNombre(string palabra)
+        {
+            List<Comida> comidas = new List<Comida>();
+            List<ComidaArchivo> comidaArchivo = LecturaComidas();
+            foreach (var comida in comidaArchivo)
+            {
+                comida.Receta = LogicaRecetas.ObtenerRecetaComidas(comida.CodigoReceta);
+                comida.NombreReceta = comida.Receta.Nombre;
+                if (comida.NombreReceta == null)
+                {
+                    comida.NombreReceta = "Receta eliminada";
+                }
+                comidas.Add(comida);
+            }
+            return comidas.FindAll(x => x.NombreReceta.StartsWith(palabra));
+        }
+
+
+        public List<Comida> ObtenerComidasSaludables()
         {
             List<Comida> comidas = new List<Comida>();
             List<ComidaArchivo> comidaArchivo = LecturaComidas();
@@ -58,8 +93,9 @@ namespace Logica.Logicas
             return comidas;
         }
 
-        public List<Comida> ObtenerComidas(string dateTime)
+        public List<Comida> ObtenerComidas(DateTime dateTime)
         {
+            DateTime fecha = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day);
             List<Comida> comidas = new List<Comida>();
             List<ComidaArchivo> comidaArchivo = LecturaComidas();
             foreach (var comida in comidaArchivo)
@@ -72,7 +108,9 @@ namespace Logica.Logicas
                 }
                 comidas.Add(comida);
             }
-            return comidas.FindAll(x => x.RegistroDeComida.ToString() == dateTime).ToList();
+            return comidas.FindAll(x => x.RegistroDeComida.Year == dateTime.Year &&
+            x.RegistroDeComida.Month == dateTime.Month &&
+            x.RegistroDeComida.Day == dateTime.Day).ToList();
         }
 
         public List<ComidaArchivo> LecturaComidas()

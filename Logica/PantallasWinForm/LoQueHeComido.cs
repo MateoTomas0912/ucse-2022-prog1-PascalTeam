@@ -53,17 +53,41 @@ namespace PantallasWinForm
         private void buscarPorFecha_Click(object sender, EventArgs e)
         {
             LogicaComidas logicaComidas = new LogicaComidas();
-            grillaComidas.DataSource = logicaComidas.ObtenerComidas(ComidasTime.ToString());
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas(ComidasTime.Value);
         }
 
         private void buscarSaludable_Click(object sender, EventArgs e)
         {
             LogicaComidas logicaComidas = new LogicaComidas();
-            bool esFiltro = true;
-            grillaComidas.DataSource = logicaComidas.ObtenerComidasSaludables(esFiltro);
+            grillaComidas.DataSource = logicaComidas.ObtenerComidasSaludables();
         }
 
         private void btn_quitalfiltro_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas();
+        }
+
+        private void buscarCodigo_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas(boxLetras.Text[0]);
+
+        }
+
+        private void quitarCodigo_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidasPorNombre(nombreRecetaFiltrar.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             LogicaComidas logicaComidas = new LogicaComidas();
             grillaComidas.DataSource = logicaComidas.ObtenerComidas();

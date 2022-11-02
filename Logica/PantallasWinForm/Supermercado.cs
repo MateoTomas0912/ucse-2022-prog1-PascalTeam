@@ -77,7 +77,7 @@ namespace PantallasWinForm
         private void filtroBuscar_Click(object sender, EventArgs e)
         {
             LogicaSuper logicaSuper = new LogicaSuper();
-            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperIngredientes(boxIngredientes.Text);
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperIngredientes(listaIngredientes.Text);
         }
 
         private void eliminarFiltro_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace PantallasWinForm
         private void cantidadButton_Click(object sender, EventArgs e)
         {
             LogicaSuper logicaSuper = new LogicaSuper();
-            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperPrecio(cantidadButton.Text);
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperCantidad(cantidadText.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
