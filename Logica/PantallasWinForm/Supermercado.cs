@@ -23,19 +23,7 @@ namespace PantallasWinForm
         private void btn_comprar_Click(object sender, EventArgs e)
         {
             LogicaSuper logicaSupermercado = new LogicaSuper();
-            logicaSupermercado.VaciarLista();
-
-            List<Producto> productos = new List<Producto>();
-
-            foreach (DataGridViewRow row in grillaSupermercado.Rows)
-            {
-                Archivo archivo = new Archivo();
-
-                Producto producto = archivo.ObtenerProducto(row.Cells[0].Value.ToString());
-                producto.Cantidad = 10;
-
-                productos.Add(producto);
-            }
+            logicaSupermercado.VaciarLista(grillaSupermercado);
 
             ActualizarGrilla();
 

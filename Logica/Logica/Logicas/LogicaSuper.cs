@@ -62,20 +62,23 @@ namespace Logica.Logicas
 
             EscribirSuper(Supermercado);
         }
-        public void VaciarLista() //Método para vaciar la lista del super
+        public void VaciarLista(DataGridView grillaProductos) //Método para vaciar la lista del super
         {
             List<Producto> Supermercado = LecturaSuper();
 
-            //Agregar Productos a despensa
-            foreach (var prod in Supermercado)
+            foreach (DataGridViewRow row in grillaProductos.Rows)
             {
-                prod.Cantidad = 10;
-                LogicaDespensa logicaDespensa = new LogicaDespensa();
-                logicaDespensa.CrearActualizarDespensa(prod);
+                if(row.Cells[3].Value != null) //Esta chequeado
+                {
+                    LogicaDespensa logicaDespensa = new LogicaDespensa();
+                    Producto prod = logicaDespensa.ObtenerProducto(row.Cells[0].Value.ToString());
+                    prod.Cantidad = prod.Cantidad + (prod.CantidadMinima * 2);
+                    logicaDespensa.CrearActualizarDespensa(prod);
+                    Supermercado.RemoveAll(x => x.Codigo == prod.Codigo);
+                }
             }
 
             //Vacio la lista
-            Supermercado.Clear();
             EscribirSuper(Supermercado);
         }
 
