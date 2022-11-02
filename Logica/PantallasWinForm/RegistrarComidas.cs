@@ -60,13 +60,13 @@ namespace PantallasWinForm
             ActualizarGrilla();
         }
 
-        private void filtroBuscar_Click_1(object sender, EventArgs e)
+       /* private void filtroBuscar_Click_1(object sender, EventArgs e)
         {
             string momentoReceta = listaMomentos.Text;
             LogicaRecetas logicaRecetas = new LogicaRecetas();
             grillaRecetas.DataSource = null;
             grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas(momentoReceta);
-        }
+        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -81,6 +81,22 @@ namespace PantallasWinForm
             LoQueHeComido loQueHeComido = new LoQueHeComido();
             loQueHeComido.Show();
             this.Hide();
+
+        }
+
+        private void filtroBuscar_Click(object sender, EventArgs e)
+        {
+            string momentoReceta = listaMomentos.Text;
+            LogicaRecetas logicaRecetas = new LogicaRecetas();
+            grillaRecetas.DataSource = null;
+            grillaRecetas.DataSource = logicaRecetas.ObtenerRecetas(momentoReceta);
+
+        }
+
+        private void eliminarFiltro_Click_1(object sender, EventArgs e)
+        {
+            LogicaRecetas logicarecetas = new LogicaRecetas();
+            grillaRecetas.DataSource = logicarecetas.ObtenerRecetas();
 
         }
     }
