@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Logica.Logicas
 {
@@ -131,5 +132,23 @@ namespace Logica.Logicas
 
             return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
         }
+
+        //public void ComprarAlgo(object sender, DataGridViewCellEventArgs e, string costoTotal, DataGridView grillaSupermercado)
+        //{
+        //    int.Parse(costoTotal);
+        //    int total = 0;
+        //    foreach (DataGridViewRow row in grillaSupermercado.Rows)
+        //    {
+        //        bool celdacheck = (bool)grillaSupermercado.Rows[e.RowIndex].Cells[3].Value;
+        //        if (celdacheck)
+        //        {
+        //            total = int.Parse(row.Cells[2].Value.ToString()) + total;
+        //        }
+
+
+
+        //    }
+        //    costoTotal = total.ToString();
+        //}
     }
 }
