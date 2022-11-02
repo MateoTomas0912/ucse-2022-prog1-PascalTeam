@@ -144,7 +144,7 @@ namespace Logica.Logicas
         public string ValidacionCargaIngredientes(string nombre, string cantidad, string stockMinimo, string precio, string CodigoProducto, ComboBox categoriaBox)
         {
             //Validaciones 
-            if (String.IsNullOrEmpty(nombre) || String.IsNullOrEmpty(cantidad) || String.IsNullOrEmpty(stockMinimo) || String.IsNullOrEmpty(precio))
+            if (String.IsNullOrEmpty(nombre) || String.IsNullOrEmpty(cantidad) || String.IsNullOrEmpty(stockMinimo) || String.IsNullOrEmpty(precio) || categoriaBox.SelectedIndex == -1)
             {
                 return "Faltan ingresar datos";
             }

@@ -84,32 +84,30 @@ namespace Logica.Logicas
 
             switch (ingrediente)
             {
-                case ("Bebidas"):
+                case "Bebidas":
                     return productos.Where(x => x is Bebida).Select(x => x).ToList();
                     
-                case ("Panaderia"):
+                case "Panaderia":
                     return productos.Where(x => x is Panaderia).Select(x => x).ToList();
                     
-                case ("Carnes"):
+                case "Carnes":
                     return productos.Where(x => x is Carne).Select(x => x).ToList();
                     
-                case ("Frutas"):
+                case "Frutas":
                     return productos.Where(x => x is Fruta).Select(x => x).ToList();
                     
-                case ("Hortalizas y Verduras"):
+                case "Hortalizas y Verduras":
                     return productos.Where(x => x is HortalizaVerdura).Select(x => x).ToList();
                     
-                case ("Lacteos"):
+                case "Lacteos":
                     return productos.Where(x => x is Lacteo).Select(x => x).ToList();
                     
-                case ("Pescados"):
+                case "Pescados":
                     return productos.Where(x => x is Pescado).Select(x => x).ToList();
                     
-                case ("Quesos"):
+                case "Quesos":
                     return productos.Where(x => x is Queso).Select(x => x).ToList();
-                    
             }
-
             return productos;
         }
 
