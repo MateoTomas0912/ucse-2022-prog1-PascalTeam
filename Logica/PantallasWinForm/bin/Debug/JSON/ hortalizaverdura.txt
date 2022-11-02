@@ -1,1 +1,1 @@
-[{"Codigo":"FB3MDKT9XW","Nombre":"avena","Precio":100.0,"Cantidad":250,"CantidadMinima":50}]
+[{"Codigo":"FB3MDKT9XW","Nombre":"avena","Precio":100.0,"Cantidad":250,"CantidadMinima":50},{"Codigo":"O8A48CXF5T","Nombre":"Lechuga","Precio":30.0,"Cantidad":10,"CantidadMinima":2}]
