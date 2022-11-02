@@ -79,6 +79,7 @@ namespace Logica.Logicas
                         item.Codigo = producto.Codigo;
                         item.Cantidad = producto.Cantidad;
                         item.CantidadMinima = producto.CantidadMinima;
+                        item.TipoAlimento = producto.TipoAlimento;
 
                         if(item.Cantidad <= item.CantidadMinima)
                         {
@@ -183,6 +184,7 @@ namespace Logica.Logicas
                         hortalizaVerdura.CantidadMinima = producto.CantidadMinima;
                         hortalizaVerdura.Cantidad = producto.Cantidad;
                         hortalizaVerdura.CrearActualizarProducto(hortalizaVerdura);
+                        producto.TipoAlimento = TipoAlimento.HortalizasVerdura;
                         break;
                     case "Frutas":
                         Fruta fruta = new Fruta();
@@ -192,6 +194,7 @@ namespace Logica.Logicas
                         fruta.CantidadMinima = producto.CantidadMinima;
                         fruta.Cantidad = producto.Cantidad;
                         fruta.CrearActualizarProducto(fruta);
+                        producto.TipoAlimento = TipoAlimento.Fruta;
                         break;
                     case "Lacteos":
                         Lacteo lacteo = new Lacteo();
@@ -201,6 +204,7 @@ namespace Logica.Logicas
                         lacteo.LitrosMinimos = producto.CantidadMinima;
                         lacteo.Litros = producto.Cantidad;
                         lacteo.CrearActualizarProducto(lacteo);
+                        producto.TipoAlimento = TipoAlimento.Lacteo;
                         break;
                     case "Quesos":
                         Queso queso = new Queso();
@@ -210,6 +214,7 @@ namespace Logica.Logicas
                         queso.CantidadMinima = producto.CantidadMinima;
                         queso.Cantidad = producto.Cantidad;
                         queso.CrearActualizarProducto(queso);
+                        producto.TipoAlimento = TipoAlimento.Queso;
                         break;
                     case "Carnes":
                         Carne carne = new Carne();
@@ -219,6 +224,7 @@ namespace Logica.Logicas
                         carne.CantidadMinima = producto.CantidadMinima;
                         carne.Cantidad = producto.Cantidad;
                         carne.CrearActualizarProducto(carne);
+                        producto.TipoAlimento = TipoAlimento.Carne;
                         break;
                     case "Panaderia":
                         Panaderia panaderia = new Panaderia();
@@ -228,6 +234,7 @@ namespace Logica.Logicas
                         panaderia.CantidadMinima = producto.CantidadMinima;
                         panaderia.Cantidad = producto.Cantidad;
                         panaderia.CrearActualizarProducto(panaderia);
+                        producto.TipoAlimento = TipoAlimento.Panaderia;
                         break;
                     case "Pescados":
                         Pescado pescado = new Pescado();
@@ -237,6 +244,7 @@ namespace Logica.Logicas
                         pescado.CantidadMinima = producto.CantidadMinima;
                         pescado.Cantidad = producto.Cantidad;
                         pescado.CrearActualizarProducto(pescado);
+                        producto.TipoAlimento = TipoAlimento.Pescado;
                         break;
                     case "Bebida(Normal)":
                         Bebida bebida = new Bebida();
@@ -247,6 +255,7 @@ namespace Logica.Logicas
                         bebida.Cantidad = producto.Cantidad;
                         bebida.TipoBebida = TipoBebida.Normales;
                         bebida.CrearActualizarProducto(bebida);
+                        producto.TipoAlimento = TipoAlimento.Bebida;
                         break;
                     case "Bebida (Alta en azucar)":
                         Bebida bebida2 = new Bebida();
@@ -257,6 +266,7 @@ namespace Logica.Logicas
                         bebida2.Cantidad = producto.Cantidad;
                         bebida2.TipoBebida = TipoBebida.AltaEnAzucar;
                         bebida2.CrearActualizarProducto(bebida2);
+                        producto.TipoAlimento = TipoAlimento.Bebida;
                         break;
                     case "Bebida (Alcoholicas)":
                         Bebida bebida3 = new Bebida();
@@ -267,6 +277,7 @@ namespace Logica.Logicas
                         bebida3.CantidadMinima = producto.CantidadMinima;
                         bebida3.Cantidad = producto.Cantidad;
                         bebida3.CrearActualizarProducto(bebida3);
+                        producto.TipoAlimento = TipoAlimento.Bebida;
                         break;
                 }
                 CrearActualizarDespensa(producto);

@@ -14,5 +14,6 @@ namespace Logica.Contratos
         public double Precio { get; set; }
         public int Cantidad { get; set; }
         public int CantidadMinima { get; set; }
+        public TipoAlimento TipoAlimento { get; set; }
     }
 }

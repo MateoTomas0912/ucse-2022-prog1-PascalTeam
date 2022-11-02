@@ -80,13 +80,13 @@
             this.Precio,
             this.VerificadorCompra});
             this.grillaSupermercado.Location = new System.Drawing.Point(44, 83);
-            this.grillaSupermercado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grillaSupermercado.Margin = new System.Windows.Forms.Padding(2);
             this.grillaSupermercado.Name = "grillaSupermercado";
             this.grillaSupermercado.RowHeadersWidth = 51;
             this.grillaSupermercado.RowTemplate.Height = 24;
             this.grillaSupermercado.Size = new System.Drawing.Size(561, 167);
             this.grillaSupermercado.TabIndex = 1;
-            this.grillaSupermercado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaSupermercado_CellContentClick);
+            this.grillaSupermercado.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaSupermercado_CellValidated);
             // 
             // Codigo
             // 
@@ -127,7 +127,7 @@
             this.btn_comprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_comprar.Location = new System.Drawing.Point(619, 40);
-            this.btn_comprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_comprar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_comprar.Name = "btn_comprar";
             this.btn_comprar.Size = new System.Drawing.Size(76, 33);
             this.btn_comprar.TabIndex = 2;
@@ -140,7 +140,7 @@
             this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Location = new System.Drawing.Point(877, 305);
-            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(77, 33);
             this.btn_salir.TabIndex = 3;
@@ -364,7 +364,7 @@
             this.Controls.Add(this.btn_comprar);
             this.Controls.Add(this.grillaSupermercado);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Supermercado";
             this.Text = "Supermercado";
             this.Load += new System.EventHandler(this.Principal_Load);

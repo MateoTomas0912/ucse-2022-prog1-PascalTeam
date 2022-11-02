@@ -51,12 +51,7 @@ namespace PantallasWinForm
         {
             LogicaSuper logicaSupermercado = new LogicaSuper();
             grillaSupermercado.DataSource = logicaSupermercado.LecturaSuper();
-            int total = 0;
-            foreach (DataGridViewRow row in grillaSupermercado.Rows)
-            {
-                    total = int.Parse(row.Cells[2].Value.ToString()) + total;
-            }
-            (costoTotal.Text) = total.ToString();
+            
         }
 
         private void filtroBuscar_Click(object sender, EventArgs e)
@@ -103,10 +98,12 @@ namespace PantallasWinForm
             ActualizarGrilla();
         }
 
-        private void grillaSupermercado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grillaSupermercado_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
-            //    LogicaSuper logicasuper = new LogicaSuper();
-            //    logicasuper.ComprarAlgo(sender, e, costoTotal.Text, grillaSupermercado);
+            LogicaSuper logicasuper = new LogicaSuper();
+            string precio = logicasuper.ObtenerCostoCompra(grillaSupermercado);
+
+            costoTotal.Text = precio;
         }
     }
 }

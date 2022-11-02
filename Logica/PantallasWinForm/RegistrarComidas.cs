@@ -76,7 +76,7 @@ namespace PantallasWinForm
         private void button1_Click(object sender, EventArgs e)
         {
             LogicaComidas logicaComidas = new LogicaComidas();
-            logicaComidas.CrearActualizarComida(grillaRecetas, fechaComida.Value);
+            MessageBox.Show(logicaComidas.CrearActualizarComida(grillaRecetas, fechaComida.Value));
 
             LoQueHeComido loQueHeComido = new LoQueHeComido();
             loQueHeComido.Show();

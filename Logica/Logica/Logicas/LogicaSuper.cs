@@ -89,28 +89,28 @@ namespace Logica.Logicas
             switch (ingrediente)
             {
                 case "Bebidas":
-                    return productos.Where(x => x is Bebida).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Bebida).ToList();
                     
                 case "Panaderia":
-                    return productos.Where(x => x is Panaderia).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Panaderia).ToList();
                     
                 case "Carnes":
-                    return productos.Where(x => x is Carne).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Carne).ToList();
                     
                 case "Frutas":
-                    return productos.Where(x => x is Fruta).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Fruta).ToList();
                     
                 case "Hortalizas y Verduras":
-                    return productos.Where(x => x is HortalizaVerdura).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.HortalizasVerdura).ToList();
                     
                 case "Lacteos":
-                    return productos.Where(x => x is Lacteo).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Lacteo).ToList();
                     
                 case "Pescados":
-                    return productos.Where(x => x is Pescado).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Pescado).ToList();
                     
                 case "Quesos":
-                    return productos.Where(x => x is Queso).Select(x => x).ToList();
+                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Queso).ToList();
             }
             return productos;
         }
@@ -136,20 +136,18 @@ namespace Logica.Logicas
             return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
         }
 
-     /*  public void ComprarAlgo( DataGridView grillaSupermercado, bool check)
-       {
-            
-            foreach (DataGridViewRow row in grillaSupermercado.Rows)
+        public string ObtenerCostoCompra(DataGridView grillaProductos)
+        {
+            int precio = 0;
+            foreach (DataGridViewRow row in grillaProductos.Rows)
             {
-
-                if (row.Cells[3].Value!= null)
+                if(Convert.ToBoolean(row.Cells[3].Value) == true && row.Cells[3].Value != null) //Sumar
                 {
-                    LogicaSuper super = new LogicaSuper();
-                    List<Producto> prodcutos = LecturaSuper();
+                    precio = Convert.ToInt32(row.Cells[2].Value.ToString()) + precio;
                 }
-                    
             }
-            
-        }*/
+
+            return precio.ToString();
+        }
     }
 }

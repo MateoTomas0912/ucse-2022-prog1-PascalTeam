@@ -1,1 +1,1 @@
-[]
+[{"Codigo":"3AED04JKIL","Nombre":"Fideos","Precio":100.0,"Cantidad":0,"CantidadMinima":3}]
