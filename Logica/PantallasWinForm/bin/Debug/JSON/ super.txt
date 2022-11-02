@@ -1,1 +1,1 @@
-[]
+[{"Codigo":"1A2VNAWAV9","Nombre":"queso crema","Precio":870.0,"Cantidad":1,"CantidadMinima":2},{"Codigo":"2FW4KD1PNB","Nombre":"queso roq","Precio":500.0,"Cantidad":2,"CantidadMinima":2},{"Codigo":"QT2ZJTL025","Nombre":"Albondigas","Precio":300.0,"Cantidad":20,"CantidadMinima":30}]

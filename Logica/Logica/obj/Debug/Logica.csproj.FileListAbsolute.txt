@@ -34,3 +34,12 @@ C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-pro
 C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CopyComplete
 C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.dll
 C:\Users\franv\OneDrive\Escritorio\FACULTAD\2 AÑO\PROGRAMACIÓN I\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.pdb
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Logica.dll
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Logica.pdb
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.dll
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\bin\Debug\Newtonsoft.Json.xml
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.dll
+C:\EJERCICIO INTEGRADOR\ucse-2022-prog1-PascalTeam\Logica\Logica\obj\Debug\Logica.pdb

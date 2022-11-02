@@ -108,7 +108,7 @@ namespace Logica.Logicas
         {
             List<Producto> productos = LecturaSuper();
 
-            return productos.Where(x => x.Precio >= Convert.ToDouble(precio)).ToList();
+            return productos.Where(x => x.Precio <= Convert.ToDouble(precio)).ToList();
         }
 
         public List<Producto> FiltrarSuperCantidad(string cantidad)

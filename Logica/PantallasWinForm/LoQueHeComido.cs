@@ -53,7 +53,7 @@ namespace PantallasWinForm
         private void buscarPorFecha_Click(object sender, EventArgs e)
         {
             LogicaComidas logicaComidas = new LogicaComidas();
-            grillaComidas.DataSource = logicaComidas.ObtenerComidas(dateTimeComidas.Text);
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas(ComidasTime.ToString());
         }
 
         private void buscarSaludable_Click(object sender, EventArgs e)
@@ -61,6 +61,12 @@ namespace PantallasWinForm
             LogicaComidas logicaComidas = new LogicaComidas();
             bool esFiltro = true;
             grillaComidas.DataSource = logicaComidas.ObtenerComidasSaludables(esFiltro);
+        }
+
+        private void btn_quitalfiltro_Click(object sender, EventArgs e)
+        {
+            LogicaComidas logicaComidas = new LogicaComidas();
+            grillaComidas.DataSource = logicaComidas.ObtenerComidas();
         }
     }
 }

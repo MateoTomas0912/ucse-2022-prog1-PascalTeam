@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace PantallasWinForm
 {
@@ -62,17 +63,21 @@ namespace PantallasWinForm
         {
             LogicaSuper logicaSupermercado = new LogicaSuper();
             grillaSupermercado.DataSource = logicaSupermercado.LecturaSuper();
-
+            int total = 0;
             foreach (DataGridViewRow row in grillaSupermercado.Rows)
             {
-                costoTotal.Text = "$" + (int.Parse(costoTotal.Text) + int.Parse(row.Cells[2].Value.ToString())).ToString();
+                total = int.Parse(row.Cells[2].Value.ToString()) + total;
+
+
+
             }
+            (costoTotal.Text) = total.ToString();
         }
 
         private void filtroBuscar_Click(object sender, EventArgs e)
         {
             LogicaSuper logicaSuper = new LogicaSuper();
-            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperIngredientes(listaIngredientes.Text);
+            grillaSupermercado.DataSource = logicaSuper.FiltrarSuperIngredientes(boxIngredientes.Text);
         }
 
         private void eliminarFiltro_Click(object sender, EventArgs e)
