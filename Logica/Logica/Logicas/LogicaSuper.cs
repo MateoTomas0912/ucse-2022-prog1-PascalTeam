@@ -82,37 +82,40 @@ namespace Logica.Logicas
             EscribirSuper(Supermercado);
         }
 
-        public List<Producto> FiltrarSuperIngredientes(string ingrediente)
+        public List<Producto> FiltrarSuperIngredientes(string ingrediente)// ahora no muestra todos cuando pones hort y verduras
         {
+            List<Producto> ingredientefiltro = new List<Producto>();
             List<Producto> productos = LecturaSuper();
 
             switch (ingrediente)
             {
                 case "Bebidas":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Bebida).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Bebida).ToString(); ;
+                    break;
                 case "Panaderia":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Panaderia).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Panaderia).ToString();
+                    break;
                 case "Carnes":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Carne).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Carne).ToString();
+                    break;
                 case "Frutas":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Fruta).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Fruta).ToString();
+                    break;
                 case "Hortalizas y Verduras":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.HortalizasVerdura).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.HortalizasVerdura).ToString();
+                    break;
                 case "Lacteos":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Lacteo).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Lacteo).ToString();
+
+                    break;
                 case "Pescados":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Pescado).ToList();
-                    
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Pescado).ToString();
+                    break;
                 case "Quesos":
-                    return productos.Where(x => x.TipoAlimento == TipoAlimento.Queso).ToList();
+                    ingrediente = productos.Where(x => x.TipoAlimento == TipoAlimento.Queso).ToString();
+                    break;
             }
-            return productos;
+            return ingredientefiltro;
         }
 
         public List<Producto> FiltrarSuperPrecio(string precio)
