@@ -59,8 +59,9 @@ namespace PantallasWinForm
                 var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaDespensa, "Codigo");
                 var codigoUsuario = grillaDespensa.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
 
-                CargaIngredientes cargaIngredientes = new CargaIngredientes(codigoUsuario);
-                cargaIngredientes.ShowDialog(this);
+                Form  cargaIngredientes = new CargaIngredientes(codigoUsuario);
+                cargaIngredientes.Show();
+                this.Hide();
             }
 
             if (indiceEliminar == e.ColumnIndex)
