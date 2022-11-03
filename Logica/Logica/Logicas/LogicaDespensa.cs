@@ -146,10 +146,31 @@ namespace Logica.Logicas
         {
             try
             {
+                int Numero;
                 //Validaciones 
-                if (String.IsNullOrEmpty(nombre) || String.IsNullOrEmpty(cantidad) || String.IsNullOrEmpty(stockMinimo) || String.IsNullOrEmpty(precio) || categoriaBox.SelectedIndex == -1)
+                if (String.IsNullOrEmpty(nombre) && String.IsNullOrEmpty(cantidad) && String.IsNullOrEmpty(stockMinimo) && String.IsNullOrEmpty(precio) && categoriaBox.SelectedIndex == -1)
                 {
-                    return "Faltan ingresar datos";
+                    return "No ingresó ningún dato";
+                }
+                else if (String.IsNullOrEmpty(nombre))
+                {
+                    return "Ingrese correctamente el nombre";
+                }
+                else if (String.IsNullOrEmpty(cantidad) || int.TryParse(cantidad, out Numero) == false)
+                {
+                    return "Ingrese correctamente la cantidad";
+                }
+                else if (String.IsNullOrEmpty(stockMinimo) || int.TryParse(stockMinimo, out Numero) == false)
+                {
+                    return "Ingrese correctamente el stock minimo";
+                }
+                else if (String.IsNullOrEmpty(precio) || int.TryParse(precio, out Numero) == false)
+                {
+                    return "Ingrese correctamente el precio";
+                }
+                else if (categoriaBox.SelectedIndex == -1)
+                {
+                    return "Debe seeleccionar al menos una categoria";
                 }
                 else if ((nombre) == null || int.Parse(cantidad) < 0 || int.Parse(stockMinimo) < 0 || int.Parse(precio) < 0)
                 {
@@ -158,10 +179,6 @@ namespace Logica.Logicas
                 else if (int.Parse(cantidad) <= int.Parse(stockMinimo))
                 {
                     return "La cantidad no puede ser menor a la cantidad minima";
-                }
-                else if(nombre.GetType() == typeof(int))
-                {
-                    return "Error, el nombre no puede ser un numero";
                 }
                 else
                 {

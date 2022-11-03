@@ -125,3 +125,4 @@ C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\P
 C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.RegistrarComidas.resources
 C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.Supermercado.resources
 C:\Users\mtoma\Documents\Mateo\Trabajos Universidad\2do Año\Programacion I\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductoReceta.resources
+C:\Users\Franco\Desktop\Facultad\Materias\2°AÑO\Anual - 2°Año\PROGRAMACION\Pascal-Team\ucse-2022-prog1-PascalTeam\Logica\PantallasWinForm\obj\Debug\PantallasWinForm.GrillaProductoReceta.resources

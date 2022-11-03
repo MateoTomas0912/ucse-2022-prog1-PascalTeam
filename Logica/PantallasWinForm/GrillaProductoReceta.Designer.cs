@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GrillaProductoReceta));
             this.grillaProductos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
@@ -35,15 +36,17 @@
             // grillaProductos
             // 
             this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaProductos.Location = new System.Drawing.Point(12, 44);
+            this.grillaProductos.Location = new System.Drawing.Point(140, 140);
             this.grillaProductos.Name = "grillaProductos";
-            this.grillaProductos.Size = new System.Drawing.Size(655, 250);
+            this.grillaProductos.Size = new System.Drawing.Size(519, 184);
             this.grillaProductos.TabIndex = 0;
             // 
             // GrillaProductoReceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.grillaProductos);
             this.Name = "GrillaProductoReceta";
