@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 []
+=======
+[{"Codigo":"3AED04JKIL","Nombre":"Fideos","Precio":100.0,"Cantidad":0,"CantidadMinima":3,"TipoAlimento":0},{"Codigo":"OD3C678ZYY","Nombre":"Pollo","Precio":100.0,"Cantidad":1,"CantidadMinima":1,"TipoAlimento":0}]
+>>>>>>> ded61a1337df0a5d2b59f3b1dda2506cbc3dbd4a
