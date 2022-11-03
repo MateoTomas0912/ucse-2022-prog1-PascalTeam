@@ -62,6 +62,10 @@ namespace PantallasWinForm
 
                 agregarReceta.ShowDialog(this);
             }
+            if (indiceVerProductos == e.ColumnIndex)
+            {
+                this.Hide();
+            }
 
             if (indiceEliminar == e.ColumnIndex)
             {

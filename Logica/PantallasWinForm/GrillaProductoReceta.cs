@@ -23,5 +23,19 @@ namespace PantallasWinForm
         {
             grillaProductos.DataSource = productos;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form volver = new MisRecetas();
+            volver.Show();
+            this.Hide();
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Form salir = new Menu();
+            salir.Show();
+            this.Hide();
+        }
     }
 }

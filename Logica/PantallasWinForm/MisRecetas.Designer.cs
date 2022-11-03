@@ -58,7 +58,7 @@
             this.grillaRecetas.Size = new System.Drawing.Size(758, 157);
             this.grillaRecetas.TabIndex = 0;
             this.grillaRecetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellClick);
-            this.grillaRecetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellContentClick);
+      
             this.grillaRecetas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grillaRecetas_DataBindingComplete);
             // 
             // Editar
