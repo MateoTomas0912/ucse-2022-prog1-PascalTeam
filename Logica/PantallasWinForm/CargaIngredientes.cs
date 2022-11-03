@@ -32,9 +32,11 @@ namespace PantallasWinForm
         {
             LogicaDespensa logicaDespensa = new LogicaDespensa();
             MessageBox.Show(logicaDespensa.ValidacionCargaIngredientes(nombre.Text, cantidad.Text, stockMinimo.Text, precio.Text, CodigoProducto, categoriaBox));
-            Form volver = new Menu();
-            volver.Show();
+            Form nuevo = new CargaIngredientes( CodigoProducto);
+            nuevo.Show();
             this.Hide();
+
+
         }
         private void btn_volver_Click(object sender, EventArgs e)
         {
