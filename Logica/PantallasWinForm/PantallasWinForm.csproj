@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActualizarGrilla.cs" />
+    <Compile Include="GrillaProductoReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrillaProductoReceta.Designer.cs">
+      <DependentUpon>GrillaProductoReceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoQueHeComido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
       <DependentUpon>Supermercado.cs</DependentUpon>
     </Compile>
     <Compile Include="UtilidadesGrilla.cs" />
+    <EmbeddedResource Include="GrillaProductoReceta.resx">
+      <DependentUpon>GrillaProductoReceta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoQueHeComido.resx">
       <DependentUpon>LoQueHeComido.cs</DependentUpon>
     </EmbeddedResource>

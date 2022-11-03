@@ -1,4 +1,5 @@
-﻿using Logica.Logicas;
+﻿using Logica.Contratos;
+using Logica.Logicas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,7 @@ namespace PantallasWinForm
         {
             int indiceEditar = UtilidadesGrilla.ObtenerIndice(grillaRecetas, "Editar");
             int indiceEliminar = UtilidadesGrilla.ObtenerIndice(grillaRecetas, "Eliminar");
+            int indiceVerProductos = UtilidadesGrilla.ObtenerIndice(grillaRecetas, "VerProductos");
 
             if (indiceEditar == e.ColumnIndex)
             {
@@ -77,6 +79,18 @@ namespace PantallasWinForm
                     ActualizarGrilla();
                 }
             }
+
+            if(indiceVerProductos == e.ColumnIndex)
+            {
+                var indiceIdentificador = UtilidadesGrilla.ObtenerIndice(grillaRecetas, "Codigo");
+                var codigoReceta = grillaRecetas.Rows[e.RowIndex].Cells[indiceIdentificador].Value.ToString();
+
+                LogicaRecetas logicaRecetas = new LogicaRecetas();
+                List<Producto> productosEnReceta = logicaRecetas.ObtenerReceta(codigoReceta).ProductosNecesarios;
+
+                GrillaProductoReceta grillaProductoReceta = new GrillaProductoReceta(productosEnReceta);
+                grillaProductoReceta.Show();
+            }
         }
 
         private void filtroBuscar_Click(object sender, EventArgs e)
@@ -97,6 +111,11 @@ namespace PantallasWinForm
             Form volver = new CrearVerRec();
             volver.Show();
             this.Hide();
+        }
+
+        private void grillaRecetas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

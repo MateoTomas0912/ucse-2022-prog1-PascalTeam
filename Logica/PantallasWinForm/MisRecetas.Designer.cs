@@ -39,6 +39,7 @@
             this.eliminarFiltro = new System.Windows.Forms.Button();
             this.btn_volver = new System.Windows.Forms.Button();
             this.listaMomentos = new System.Windows.Forms.ComboBox();
+            this.VerProductos = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,15 +48,17 @@
             this.grillaRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaRecetas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar,
-            this.Eliminar});
+            this.Eliminar,
+            this.VerProductos});
             this.grillaRecetas.Location = new System.Drawing.Point(68, 141);
-            this.grillaRecetas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grillaRecetas.Margin = new System.Windows.Forms.Padding(2);
             this.grillaRecetas.Name = "grillaRecetas";
             this.grillaRecetas.RowHeadersWidth = 51;
             this.grillaRecetas.RowTemplate.Height = 24;
             this.grillaRecetas.Size = new System.Drawing.Size(758, 157);
             this.grillaRecetas.TabIndex = 0;
             this.grillaRecetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellClick);
+            this.grillaRecetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellContentClick);
             this.grillaRecetas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grillaRecetas_DataBindingComplete);
             // 
             // Editar
@@ -87,7 +90,7 @@
             // 
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Location = new System.Drawing.Point(753, 391);
-            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(71, 33);
             this.btn_salir.TabIndex = 2;
@@ -128,7 +131,7 @@
             // 
             this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_volver.Location = new System.Drawing.Point(642, 391);
-            this.btn_volver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_volver.Margin = new System.Windows.Forms.Padding(2);
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(72, 33);
             this.btn_volver.TabIndex = 7;
@@ -149,6 +152,12 @@
             this.listaMomentos.Size = new System.Drawing.Size(121, 21);
             this.listaMomentos.TabIndex = 8;
             // 
+            // VerProductos
+            // 
+            this.VerProductos.HeaderText = "Ver Productos";
+            this.VerProductos.Name = "VerProductos";
+            this.VerProductos.ReadOnly = true;
+            // 
             // MisRecetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,7 +172,7 @@
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grillaRecetas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MisRecetas";
             this.Text = "MisRecetas";
             this.Load += new System.EventHandler(this.Principal_Load);
@@ -185,5 +194,6 @@
         private System.Windows.Forms.Button eliminarFiltro;
         private System.Windows.Forms.Button btn_volver;
         private System.Windows.Forms.ComboBox listaMomentos;
+        private System.Windows.Forms.DataGridViewButtonColumn VerProductos;
     }
 }
