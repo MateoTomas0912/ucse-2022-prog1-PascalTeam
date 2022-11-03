@@ -1,1 +1,1 @@
-[{"Codigo":"OD3C678ZYY","Nombre":"Pollo","Precio":100.0,"Cantidad":2,"CantidadMinima":1},{"Codigo":"QT2ZJTL025","Nombre":"Albondigas","Precio":300.0,"Cantidad":50,"CantidadMinima":30},{"Codigo":"VNY4W99X1N","Nombre":"Paty","Precio":200.0,"Cantidad":5,"CantidadMinima":2},{"Codigo":"S50934YB64","Nombre":"Solomillo","Precio":2500.0,"Cantidad":3,"CantidadMinima":1}]
+[{"Codigo":"35HXZRCCUB","Nombre":"Pollo","Precio":100.0,"Cantidad":3,"CantidadMinima":2,"TipoAlimento":0}]

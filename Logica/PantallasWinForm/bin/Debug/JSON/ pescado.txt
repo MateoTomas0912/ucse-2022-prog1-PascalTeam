@@ -1,1 +1,0 @@
-[{"Codigo":"1LK21NZL0U","Nombre":"gordo cremoso","Precio":70.0,"Cantidad":8,"CantidadMinima":8},{"Codigo":"6YO6H84FB4","Nombre":"Pez dorado","Precio":100.0,"Cantidad":5,"CantidadMinima":2}]

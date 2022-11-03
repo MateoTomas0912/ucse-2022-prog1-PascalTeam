@@ -100,7 +100,7 @@ namespace Logica.Logicas
                 case "Frutas":
                     return productos.Where(x => x.TipoAlimento == TipoAlimento.Fruta).ToList();
                     
-                case "Hortalizas y Verduras":
+                case "Hortalizas y verduras":
                     return productos.Where(x => x.TipoAlimento == TipoAlimento.HortalizasVerdura).ToList();
                     
                 case "Lacteos":
