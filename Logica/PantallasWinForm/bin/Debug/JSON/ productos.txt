@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"Codigo":"35HXZRCCUB","Nombre":"Pollo","Precio":100.0,"Cantidad":7,"CantidadMinima":2,"TipoAlimento":0}]
-=======
-[{"Codigo":"OD3C678ZYY","Nombre":"Pollo","Precio":100.0,"Cantidad":1,"CantidadMinima":1,"TipoAlimento":0},{"Codigo":"1A2VNAWAV9","Nombre":"queso crema","Precio":870.0,"Cantidad":10,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"UTE7U9SHQ5","Nombre":"LecheWilliner","Precio":230.0,"Cantidad":60,"CantidadMinima":20,"TipoAlimento":0},{"Codigo":"QT2ZJTL025","Nombre":"Albondigas","Precio":300.0,"Cantidad":10,"CantidadMinima":30,"TipoAlimento":0},{"Codigo":"O8A48CXF5T","Nombre":"Lechuga","Precio":30.0,"Cantidad":10,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"6YO6H84FB4","Nombre":"Pez dorado","Precio":100.0,"Cantidad":10,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"VNY4W99X1N","Nombre":"Paty","Precio":200.0,"Cantidad":10,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"S50934YB64","Nombre":"Solomillo","Precio":2500.0,"Cantidad":5,"CantidadMinima":1,"TipoAlimento":0}]
->>>>>>> ded61a1337df0a5d2b59f3b1dda2506cbc3dbd4a
+[{"Codigo":"M643TY00A5","Nombre":"Pollo","Precio":100.0,"Cantidad":1,"CantidadMinima":2,"TipoAlimento":2}]
