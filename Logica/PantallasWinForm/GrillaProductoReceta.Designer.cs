@@ -34,7 +34,6 @@
             this.btn_salir = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
@@ -45,20 +44,19 @@
             this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Cantidad,
             this.TipoAlimento});
-            this.grillaProductos.Location = new System.Drawing.Point(187, 172);
-            this.grillaProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.grillaProductos.Location = new System.Drawing.Point(140, 140);
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 51;
-            this.grillaProductos.Size = new System.Drawing.Size(692, 226);
+            this.grillaProductos.Size = new System.Drawing.Size(519, 184);
             this.grillaProductos.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(736, 421);
+            this.button1.Location = new System.Drawing.Point(552, 342);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 52);
+            this.button1.Size = new System.Drawing.Size(106, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Volver";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,9 +64,10 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(187, 420);
+            this.btn_salir.Location = new System.Drawing.Point(140, 341);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(146, 55);
+            this.btn_salir.Size = new System.Drawing.Size(110, 45);
             this.btn_salir.TabIndex = 2;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
@@ -92,15 +91,6 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 125;
             // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad que lleva la Receta";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 125;
-            // 
             // TipoAlimento
             // 
             this.TipoAlimento.DataPropertyName = "TipoAlimento";
@@ -112,15 +102,14 @@
             // 
             // GrillaProductoReceta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grillaProductos);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GrillaProductoReceta";
             this.Text = "GrillaProductoReceta";
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
@@ -135,7 +124,6 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoAlimento;
     }
 }

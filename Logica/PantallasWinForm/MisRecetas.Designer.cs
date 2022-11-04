@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MisRecetas));
             this.grillaRecetas = new System.Windows.Forms.DataGridView();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +37,8 @@
             this.eliminarFiltro = new System.Windows.Forms.Button();
             this.btn_volver = new System.Windows.Forms.Button();
             this.listaMomentos = new System.Windows.Forms.ComboBox();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.VerProductos = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaRecetas)).BeginInit();
             this.SuspendLayout();
@@ -58,22 +58,7 @@
             this.grillaRecetas.Size = new System.Drawing.Size(758, 157);
             this.grillaRecetas.TabIndex = 0;
             this.grillaRecetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaRecetas_CellClick);
-      
             this.grillaRecetas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grillaRecetas_DataBindingComplete);
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar Receta";
-            this.Editar.MinimumWidth = 6;
-            this.Editar.Name = "Editar";
-            this.Editar.Width = 125;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar Receta";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 125;
             // 
             // label1
             // 
@@ -152,11 +137,26 @@
             this.listaMomentos.Size = new System.Drawing.Size(121, 21);
             this.listaMomentos.TabIndex = 8;
             // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar Receta";
+            this.Editar.MinimumWidth = 6;
+            this.Editar.Name = "Editar";
+            this.Editar.Width = 125;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar Receta";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 125;
+            // 
             // VerProductos
             // 
             this.VerProductos.HeaderText = "Ver Productos";
             this.VerProductos.Name = "VerProductos";
             this.VerProductos.ReadOnly = true;
+            this.VerProductos.Text = "Ver Productos";
             // 
             // MisRecetas
             // 
@@ -187,13 +187,13 @@
         private System.Windows.Forms.DataGridView grillaRecetas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button filtroBuscar;
         private System.Windows.Forms.Button eliminarFiltro;
         private System.Windows.Forms.Button btn_volver;
         private System.Windows.Forms.ComboBox listaMomentos;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn VerProductos;
     }
 }

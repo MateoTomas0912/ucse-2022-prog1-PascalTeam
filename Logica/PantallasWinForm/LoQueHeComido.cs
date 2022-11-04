@@ -70,8 +70,16 @@ namespace PantallasWinForm
 
         private void buscarCodigo_Click(object sender, EventArgs e)
         {
-            LogicaComidas logicaComidas = new LogicaComidas();
-            grillaComidas.DataSource = logicaComidas.ObtenerComidas(boxLetras.Text[0]);
+            try
+            {
+                LogicaComidas logicaComidas = new LogicaComidas();
+                grillaComidas.DataSource = logicaComidas.ObtenerComidas(boxLetras.Text[0]);
+            }
+            catch
+            {
+                MessageBox.Show("No puede ser un campo vacio");
+            }
+            
 
         }
 

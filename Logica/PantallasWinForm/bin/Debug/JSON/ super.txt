@@ -1,1 +1,1 @@
-[]
+[{"Codigo":"25RELJDJOB","Nombre":"Atun","Precio":670.0,"Cantidad":1,"CantidadMinima":2,"TipoAlimento":6}]

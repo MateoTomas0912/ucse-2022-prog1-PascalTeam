@@ -19,24 +19,23 @@ namespace PantallasWinForm
             ActualizarGrilla(productos);
         }
 
-
         private void ActualizarGrilla(List<Producto> productos)
         {
             grillaProductos.AutoGenerateColumns = false;
             grillaProductos.DataSource = productos;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_salir_Click(object sender, EventArgs e)
         {
-            Form volver = new MisRecetas();
-            volver.Show();
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
 
-        private void btn_salir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form salir = new Menu();
-            salir.Show();
+            MisRecetas misRecetas = new MisRecetas();
+            misRecetas.Show();
             this.Hide();
         }
     }
