@@ -37,30 +37,10 @@ namespace PantallasWinForm
         private void btn_crearReceta_Click(object sender, EventArgs e)
         {
             LogicaRecetas logicaRecetas1 = new LogicaRecetas();
-            string resultado = logicaRecetas1.BtnCrearReceta(NombreReceta.Text, CodigoReceta, checkSaludable.Checked, listaMomento.Text,grillaProductos);
-
-            //Validar los datos 
-            switch (resultado)
-            {
-                case "Error, nombre mal cargado":
-                    MessageBox.Show("Cargale nombre");
-                    break;
-                case "La cantidad no puede ser menor a 0":
-                    MessageBox.Show("La cantidad no puede ser menor a 0");
-                    break;
-                case "Error al cargar los productos":
-                    MessageBox.Show("Error al cargar los productos");
-                    break;
-                case "Carga correcta":
-                    Form volver = new CrearVerRec();
-                    volver.Show();
-                    this.Hide();
-                    MessageBox.Show("Carga correcta");
-                    break;
-                case "Error en la carga":
-                    MessageBox.Show("Error en carga");
-                    break;
-            }
+            MessageBox.Show(logicaRecetas1.BtnCrearReceta(NombreReceta.Text, CodigoReceta, checkSaludable.Checked, listaMomento.Text,grillaProductos));
+            Form volver = new AgregarReceta();
+            volver.Show();
+            this.Hide();
         }
 
         private void Principal_Load(object sender, EventArgs e)

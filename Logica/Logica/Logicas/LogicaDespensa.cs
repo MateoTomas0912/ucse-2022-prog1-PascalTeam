@@ -152,7 +152,7 @@ namespace Logica.Logicas
                 {
                     return "No ingresó ningún dato";
                 }
-                else if (String.IsNullOrEmpty(nombre))
+                else if (String.IsNullOrEmpty(nombre) || int.TryParse(nombre, out Numero) == true)
                 {
                     return "Ingrese correctamente el nombre";
                 }

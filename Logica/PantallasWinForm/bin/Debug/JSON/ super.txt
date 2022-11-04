@@ -1,1 +1,1 @@
-[{"Codigo":"M643TY00A5","Nombre":"Pollo","Precio":100.0,"Cantidad":1,"CantidadMinima":2,"TipoAlimento":2}]
+[]

@@ -19,8 +19,10 @@ namespace PantallasWinForm
             ActualizarGrilla(productos);
         }
 
+
         private void ActualizarGrilla(List<Producto> productos)
         {
+            grillaProductos.AutoGenerateColumns = false;
             grillaProductos.DataSource = productos;
         }
 

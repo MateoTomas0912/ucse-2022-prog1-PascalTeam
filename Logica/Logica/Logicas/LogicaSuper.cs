@@ -117,23 +117,44 @@ namespace Logica.Logicas
 
         public List<Producto> FiltrarSuperPrecio(string precio)
         {
+            int Numero;
             List<Producto> productos = LecturaSuper();
-
-            return productos.Where(x => x.Precio <= Convert.ToDouble(precio)).ToList();
+            if (int.TryParse(precio, out Numero) == true)
+            {
+                return productos.Where(x => x.Precio <= Convert.ToDouble(precio)).ToList();
+            }
+            else
+            {
+                return productos;
+            }
         }
 
         public List<Producto> FiltrarSuperCantidad(string cantidad)
         {
+            int Numero;
             List<Producto> productos = LecturaSuper();
-
-            return productos.Where(x => x.Cantidad >= Convert.ToDouble(cantidad)).ToList();
+            if (int.TryParse(cantidad, out Numero) == true)
+            {
+                return productos.Where(x => x.Cantidad >= Convert.ToDouble(cantidad)).ToList();
+            }
+            else
+            {
+                return productos;
+            }
         }
 
         public List<Producto> FiltrarSuperNombre(string nombre)
         {
+            int Numero;
             List<Producto> productos = LecturaSuper();
-
-            return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
+            if (int.TryParse(nombre, out Numero) == false)
+            {
+                return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
+            }
+            else
+            {
+                return productos;
+            }
         }
 
         public string ObtenerCostoCompra(DataGridView grillaProductos)

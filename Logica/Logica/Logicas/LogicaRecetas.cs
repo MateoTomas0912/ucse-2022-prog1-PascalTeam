@@ -161,9 +161,9 @@ namespace Logica.Logicas
         public string BtnCrearReceta(string nombreReceta, string CodigoReceta, bool checkSaludable, string listaMomento, DataGridView grillaProductos)
         {
             bool cargaCorrecta = true;
-
+            int Numero;
             //Validar los datos 
-            if (string.IsNullOrEmpty(nombreReceta))
+            if (string.IsNullOrEmpty(nombreReceta) || int.TryParse(nombreReceta, out Numero) == true)
             {
                 return "Error, nombre mal cargado";
             }
@@ -196,7 +196,7 @@ namespace Logica.Logicas
                     case "Cena":
                         receta.Momento = MomentosDelDia.Cena;
                         break;
-                    case null:
+                    default:
                         return "Falta cargar el momento del dia";
                 }
 
@@ -207,7 +207,11 @@ namespace Logica.Logicas
                 {
                     if (row.Cells[0].Value != null && row.Cells[1].Value != null)
                     {
-                        if (int.Parse(row.Cells[1].Value.ToString()) > 0)
+                        if (int.TryParse(row.Cells[1].Value.ToString(), out Numero) == false)
+                        {
+                            return "Debe ingresar una cantidad numerica";
+                        }
+                        else if (int.Parse(row.Cells[1].Value.ToString()) > 0)
                         {
                             //Buscar el producto con el codigo
                             Archivo archivo = new Archivo();
