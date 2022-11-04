@@ -1,0 +1,1 @@
+[{"Codigo":"FXWM8KVQ5Z","Nombre":"Manzana","Precio":200.0,"Cantidad":9,"CantidadMinima":3,"TipoAlimento":0}]

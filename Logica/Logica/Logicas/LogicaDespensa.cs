@@ -136,6 +136,7 @@ namespace Logica.Logicas
                 productoReceta.Precio = producto.Precio;
                 productoReceta.Cantidad = producto.Cantidad;
                 productoReceta.CantidadMinima = producto.CantidadMinima;
+                productoReceta.TipoAlimento = producto.TipoAlimento;
                 productosConCantidad.Add(productoReceta);
             }
 

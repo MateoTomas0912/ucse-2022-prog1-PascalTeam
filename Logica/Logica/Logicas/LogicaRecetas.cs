@@ -32,6 +32,7 @@ namespace Logica.Logicas
             List<RecetaArchivo> recetaArchivo = LecturaRecetas();
             foreach (var receta in recetaArchivo)
             {
+                LogicaRecetas logicaRecetas = new LogicaRecetas();
                 LogicaDespensa logicaDespensa = new LogicaDespensa();
                 receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
                 recetas.Add(receta);
