@@ -148,7 +148,7 @@ namespace Logica.Logicas
 
                     LogicaDespensa logicaDespensa = new LogicaDespensa();
                     bool hayProductos = logicaDespensa.DescontarProductos(comida.CodigoReceta);
-                    if (!hayProductos)
+                    if (!hayProductos || comida.Receta.CantidadPorProducto.Count != comida.Receta.ProductosNecesarios.Count)
                     {
                         return "No hay productos suficientes";
                     }

@@ -68,7 +68,7 @@ namespace Logica.Logicas
 
             foreach (DataGridViewRow row in grillaProductos.Rows)
             {
-                if(row.Cells[3].Value != null) //Esta chequeado
+                if(row.Cells[3].Value != null && Convert.ToBoolean(row.Cells[3].Value) != false) //Esta chequeado
                 {
                     LogicaDespensa logicaDespensa = new LogicaDespensa();
                     Producto prod = logicaDespensa.ObtenerProducto(row.Cells[0].Value.ToString());
