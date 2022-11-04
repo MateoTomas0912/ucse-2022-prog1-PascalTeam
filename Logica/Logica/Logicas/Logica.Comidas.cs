@@ -152,11 +152,13 @@ namespace Logica.Logicas
                     {
                         return "No hay productos suficientes";
                     }
+
+                    EscrituraComidas(comidas);
+                    return "Carga correcta";
                 }
             }
 
-            EscrituraComidas(comidas);
-            return "Carga correcta";
+            return "No se han seleccionado recetas";
         }
 
         private static string RandomString(int length)
