@@ -149,7 +149,7 @@ namespace Logica.Logicas
             List<Producto> productos = LecturaSuper();
             if (int.TryParse(nombre, out Numero) == false)
             {
-                return productos.Where(x => x.Nombre.StartsWith(nombre)).ToList();
+                return productos.Where(x => x.Nombre.ToLower().StartsWith(nombre.ToLower())).ToList();
             }
             else
             {

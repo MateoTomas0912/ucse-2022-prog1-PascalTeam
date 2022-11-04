@@ -100,6 +100,8 @@ namespace Logica.Logicas
             Receta recetaElegida = listaRecetas.Find(rec => rec.Codigo == codigoReceta);
 
             int index = 0;
+            if (recetaElegida.ProductosNecesarios.Count == 0) return false;
+
             foreach (var productoEnReceta in recetaElegida.ProductosNecesarios)
             {
                 LogicaDespensa logicaDespensa = new LogicaDespensa();

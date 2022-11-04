@@ -69,7 +69,7 @@ namespace Logica.Logicas
                 }
                 comidas.Add(comida);
             }
-            return comidas.FindAll(x => x.NombreReceta.StartsWith(palabra));
+            return comidas.FindAll(x => x.NombreReceta.ToLower().StartsWith(palabra.ToLower()));
         }
 
 
