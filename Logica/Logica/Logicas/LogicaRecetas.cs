@@ -34,10 +34,31 @@ namespace Logica.Logicas
             {
                 LogicaRecetas logicaRecetas = new LogicaRecetas();
                 LogicaDespensa logicaDespensa = new LogicaDespensa();
-                receta.ProductosNecesarios = logicaDespensa.ObtenerProductosReceta(receta.IngredientesCodigo);
+                receta.ProductosNecesarios = ObtenerProductosListaGeneral(receta.IngredientesCodigo);
                 recetas.Add(receta);
             }
             return recetas.Find(x => x.Codigo == codigo);
+        }
+
+        public List<Producto> ObtenerProductosListaGeneral(List<string> productos)
+        {
+            List<Producto> productosReceta = Lectura();
+            productosReceta = productosReceta.Where(x => productos.Contains(x.Codigo)).ToList();
+
+            List<Producto> productosConCantidad = new List<Producto>();
+            foreach (var producto in productosReceta)
+            {
+                Producto productoReceta = new Producto();
+                productoReceta.Codigo = producto.Codigo;
+                productoReceta.Nombre = producto.Nombre;
+                productoReceta.Precio = producto.Precio;
+                productoReceta.Cantidad = producto.Cantidad;
+                productoReceta.CantidadMinima = producto.CantidadMinima;
+                productoReceta.TipoAlimento = producto.TipoAlimento;
+                productosConCantidad.Add(productoReceta);
+            }
+
+            return productosConCantidad;
         }
 
         public List<Receta> ObtenerRecetas(string filtro)

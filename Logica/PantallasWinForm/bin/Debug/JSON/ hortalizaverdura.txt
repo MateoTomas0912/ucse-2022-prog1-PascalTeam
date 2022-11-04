@@ -1,1 +1,1 @@
-[{"Codigo":"X76K92PI3W","Nombre":"Arroz","Precio":190.0,"Cantidad":6,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"XKHNUYRQ24","Nombre":"Fideos","Precio":230.0,"Cantidad":6,"CantidadMinima":2,"TipoAlimento":0}]
+[{"Codigo":"X76K92PI3W","Nombre":"Arroz","Precio":190.0,"Cantidad":6,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"XKHNUYRQ24","Nombre":"Fideos","Precio":230.0,"Cantidad":6,"CantidadMinima":2,"TipoAlimento":0},{"Codigo":"KJ7OGGHK9V","Nombre":"Pimiento","Precio":100.0,"Cantidad":2,"CantidadMinima":1,"TipoAlimento":0}]
